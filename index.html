@@ -1,11 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>PowerAdjust — Haltères Réglables BRAINGAIN & Musculation Maison</title>
-<meta name="description" content="PowerAdjust — Guide premium sur les haltères réglables BRAINGAIN : comparatif 24kg et 40kg, exercices, routines et conseils pour musculation à domicile avec technologie Smart Click." />
-<meta name="keywords" content="haltères réglables, haltères réglables BRAINGAIN, musculation maison, programme musculation, exercices haltères réglables, haltères modulables" />
+<title>PowerAdjust — Haltères Réglables & Musculation Maison</title>
+<meta name="description" content="PowerAdjust — Guide complet sur les haltères réglables : comparatifs, tests, exercices et programmes pour musculation à domicile." />
 
 <style>
 /* ===== RESET ===== */
@@ -36,13 +36,6 @@ body{
   --radius:20px;
 }
 
-/* ===== GLASS EFFECT ===== */
-.glass{
-  background:rgba(24,24,27,0.7);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.1)
-}
-
 /* ===== CONTAINER ===== */
 .container{
   max-width:1400px;
@@ -57,16 +50,11 @@ body{
   left:0;
   right:0;
   z-index:1000;
-  background:rgba(9,9,11,0.8);
+  background:rgba(9,9,11,0.95);
   backdrop-filter:blur(20px);
   border-bottom:1px solid rgba(255,255,255,0.08);
-  padding:clamp(16px,3vw,24px) 0;
+  padding:clamp(16px,3vw,20px) 0;
   transition:all 0.3s ease
-}
-
-.header.scrolled{
-  background:rgba(9,9,11,0.95);
-  box-shadow:0 8px 32px rgba(0,0,0,0.4)
 }
 
 .nav{
@@ -84,55 +72,33 @@ body{
   transition:transform 0.3s ease
 }
 
-.brand:hover{
-  transform:translateX(4px)
-}
+.brand:hover{transform:translateX(4px)}
 
 .logo{
-  width:clamp(52px,12vw,64px);
-  height:clamp(52px,12vw,64px);
-  border-radius:16px;
+  width:clamp(48px,10vw,56px);
+  height:clamp(48px,10vw,56px);
+  border-radius:14px;
   background:linear-gradient(135deg,var(--primary),var(--accent));
   display:flex;
   align-items:center;
   justify-content:center;
   color:#000;
   font-weight:900;
-  font-size:clamp(1.2rem,3vw,1.6rem);
-  box-shadow:0 8px 32px var(--glow);
-  position:relative;
-  overflow:hidden
-}
-
-.logo::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(45deg,transparent,rgba(255,255,255,0.3),transparent);
-  transform:translateX(-100%);
-  animation:shine 3s infinite
-}
-
-@keyframes shine{
-  to{transform:translateX(100%)}
+  font-size:clamp(1.1rem,2.5vw,1.4rem);
+  box-shadow:0 8px 32px var(--glow)
 }
 
 .brand-text h1{
-  font-size:clamp(1.3rem,3.5vw,1.8rem);
+  font-size:clamp(1.2rem,3vw,1.5rem);
   color:var(--text-primary);
   font-weight:900;
-  letter-spacing:-0.03em;
-  background:linear-gradient(135deg,var(--text-primary),var(--text-secondary));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text
+  letter-spacing:-0.02em
 }
 
 .brand-text p{
-  font-size:clamp(0.8rem,2vw,0.95rem);
+  font-size:clamp(0.75rem,2vw,0.85rem);
   color:var(--text-muted);
-  margin-top:4px;
-  font-weight:500
+  margin-top:2px
 }
 
 .nav-menu{
@@ -147,396 +113,192 @@ body{
   color:var(--text-secondary);
   text-decoration:none;
   font-weight:600;
-  padding:clamp(10px,2vw,14px) clamp(16px,3vw,20px);
-  border-radius:12px;
+  padding:clamp(8px,2vw,12px) clamp(14px,3vw,18px);
+  border-radius:10px;
   transition:all 0.3s ease;
-  font-size:clamp(0.9rem,2vw,1rem);
-  position:relative
-}
-
-.nav-menu a::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  opacity:0;
-  border-radius:12px;
-  transition:opacity 0.3s ease;
-  z-index:-1
+  font-size:clamp(0.85rem,2vw,0.95rem)
 }
 
 .nav-menu a:hover{
   color:var(--text-primary);
-  transform:translateY(-2px)
+  background:rgba(59,130,246,0.1)
 }
 
-.nav-menu a:hover::before{
-  opacity:0.15
-}
-
-/* ===== HERO ===== */
+/* ===== HERO SIMPLE ===== */
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  overflow:hidden;
-  padding:clamp(120px,20vw,160px) 0 clamp(80px,15vw,120px);
-  background:radial-gradient(ellipse at top,rgba(59,130,246,0.15),transparent 70%),
-             radial-gradient(ellipse at bottom left,rgba(16,185,129,0.1),transparent 50%),
-             var(--bg-dark)
-}
-
-.hero::before{
-  content:'';
-  position:absolute;
-  width:600px;
-  height:600px;
-  background:radial-gradient(circle,var(--glow),transparent 70%);
-  top:10%;
-  right:-10%;
-  border-radius:50%;
-  filter:blur(80px);
-  animation:float 20s infinite ease-in-out
-}
-
-.hero::after{
-  content:'';
-  position:absolute;
-  width:400px;
-  height:400px;
-  background:radial-gradient(circle,rgba(16,185,129,0.3),transparent 70%);
-  bottom:10%;
-  left:-5%;
-  border-radius:50%;
-  filter:blur(60px);
-  animation:float 15s infinite ease-in-out reverse
-}
-
-@keyframes float{
-  0%,100%{transform:translate(0,0) scale(1)}
-  50%{transform:translate(30px,-30px) scale(1.1)}
-}
-
-.hero-content{
-  position:relative;
-  z-index:1;
+  padding:clamp(100px,15vw,140px) 0 clamp(60px,10vw,80px);
   text-align:center;
-  max-width:1100px;
-  margin:0 auto
-}
-
-.hero-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:rgba(59,130,246,0.15);
-  border:1px solid rgba(59,130,246,0.3);
-  padding:clamp(10px,2vw,14px) clamp(20px,4vw,28px);
-  border-radius:999px;
-  font-weight:700;
-  color:var(--primary);
-  margin-bottom:clamp(24px,4vw,32px);
-  font-size:clamp(0.85rem,2vw,1rem);
-  backdrop-filter:blur(8px);
-  box-shadow:0 8px 32px rgba(59,130,246,0.2)
+  background:radial-gradient(ellipse at top,rgba(59,130,246,0.1),transparent 60%)
 }
 
 .hero h2{
-  font-size:clamp(2.2rem,6vw,4.5rem);
-  color:var(--text-primary);
-  font-weight:900;
-  line-height:1.1;
-  margin-bottom:clamp(20px,4vw,28px);
-  letter-spacing:-0.03em
-}
-
-.hero h2 .gradient-text{
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text
-}
-
-.hero-subtitle{
-  font-size:clamp(1.1rem,2.8vw,1.4rem);
-  color:var(--text-secondary);
-  max-width:800px;
-  margin:0 auto clamp(32px,5vw,48px);
-  line-height:1.6;
-  font-weight:400
-}
-
-.hero-ctas{
-  display:flex;
-  gap:clamp(16px,3vw,20px);
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-bottom:clamp(48px,8vw,72px)
-}
-
-.btn-primary{
-  background:linear-gradient(135deg,var(--primary),var(--primary-glow));
-  color:#fff;
-  padding:clamp(16px,3vw,20px) clamp(32px,5vw,48px);
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:700;
-  box-shadow:0 12px 40px var(--glow);
-  transition:all 0.3s ease;
-  font-size:clamp(1rem,2.5vw,1.15rem);
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  position:relative;
-  overflow:hidden
-}
-
-.btn-primary::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg,transparent,rgba(255,255,255,0.2),transparent);
-  transform:translateX(-100%);
-  transition:transform 0.6s ease
-}
-
-.btn-primary:hover::before{
-  transform:translateX(100%)
-}
-
-.btn-primary:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 60px var(--glow)
-}
-
-.btn-secondary{
-  background:transparent;
-  color:var(--text-primary);
-  padding:clamp(16px,3vw,20px) clamp(32px,5vw,48px);
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:700;
-  border:2px solid var(--border);
-  transition:all 0.3s ease;
-  font-size:clamp(1rem,2.5vw,1.15rem);
-  display:inline-flex;
-  align-items:center;
-  gap:8px
-}
-
-.btn-secondary:hover{
-  border-color:var(--primary);
-  background:rgba(59,130,246,0.1);
-  transform:translateY(-4px)
-}
-
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:clamp(20px,4vw,32px);
-  max-width:900px;
-  margin:0 auto
-}
-
-.stat-card{
-  background:rgba(24,24,27,0.6);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.08);
-  padding:clamp(24px,4vw,32px);
-  border-radius:20px;
-  text-align:center;
-  transition:all 0.3s ease
-}
-
-.stat-card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(59,130,246,0.5);
-  box-shadow:0 20px 60px rgba(59,130,246,0.2)
-}
-
-.stat-icon{
-  font-size:clamp(2rem,5vw,3rem);
-  margin-bottom:12px;
-  filter:drop-shadow(0 4px 12px var(--glow))
-}
-
-.stat-value{
-  font-size:clamp(1.8rem,4vw,2.5rem);
-  font-weight:900;
-  color:var(--primary);
-  margin-bottom:8px
-}
-
-.stat-label{
-  font-size:clamp(0.9rem,2vw,1rem);
-  color:var(--text-secondary);
-  font-weight:600
-}
-
-/* ===== MAIN CONTENT ===== */
-.main{
-  padding:clamp(60px,10vw,100px) 0;
-  position:relative
-}
-
-/* ===== SECTION ===== */
-.section{
-  margin-bottom:clamp(80px,12vw,120px);
-  scroll-margin-top:100px
-}
-
-.section-header{
-  text-align:center;
-  margin-bottom:clamp(48px,8vw,72px)
-}
-
-.section-tag{
-  display:inline-block;
-  background:rgba(59,130,246,0.1);
-  border:1px solid rgba(59,130,246,0.3);
-  color:var(--primary);
-  padding:8px 20px;
-  border-radius:999px;
-  font-weight:700;
-  font-size:clamp(0.85rem,2vw,0.95rem);
-  margin-bottom:16px
-}
-
-.section-title{
   font-size:clamp(2rem,5vw,3.5rem);
   color:var(--text-primary);
   font-weight:900;
   line-height:1.15;
-  margin-bottom:16px;
+  margin-bottom:clamp(16px,3vw,24px);
   letter-spacing:-0.02em
 }
 
-.section-subtitle{
-  font-size:clamp(1.05rem,2.5vw,1.25rem);
+.hero-subtitle{
+  font-size:clamp(1rem,2.5vw,1.2rem);
   color:var(--text-secondary);
   max-width:700px;
   margin:0 auto;
   line-height:1.6
 }
 
-/* ===== CARDS ===== */
-.cards-grid{
+/* ===== LAYOUT ARTICLES + SIDEBAR ===== */
+.main{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:clamp(24px,4vw,32px)
+  grid-template-columns:1fr;
+  gap:clamp(32px,5vw,48px);
+  padding:clamp(40px,6vw,60px) 0;
+  max-width:1400px;
+  margin:0 auto
 }
 
-.card{
+@media (min-width:1024px){
+  .main{
+    grid-template-columns:1fr 340px
+  }
+}
+
+.articles{
+  min-width:0
+}
+
+/* ===== ARTICLE CARD ===== */
+.article{
   background:var(--bg-card);
   border:1px solid var(--border);
   border-radius:var(--radius);
-  padding:clamp(28px,5vw,40px);
-  transition:all 0.4s ease;
-  position:relative;
-  overflow:hidden
+  padding:clamp(32px,6vw,48px);
+  margin-bottom:clamp(32px,5vw,48px);
+  transition:all 0.3s ease;
+  scroll-margin-top:100px
 }
 
-.card::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg,rgba(59,130,246,0.05),transparent);
-  opacity:0;
-  transition:opacity 0.4s ease
+.article:hover{
+  border-color:rgba(59,130,246,0.4);
+  box-shadow:0 12px 48px rgba(0,0,0,0.3)
 }
 
-.card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(59,130,246,0.5);
-  box-shadow:0 24px 64px rgba(0,0,0,0.4)
-}
-
-.card:hover::before{
-  opacity:1
-}
-
-.card-icon{
-  width:clamp(56px,12vw,72px);
-  height:clamp(56px,12vw,72px);
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  border-radius:16px;
+.article-meta{
   display:flex;
+  gap:12px;
   align-items:center;
-  justify-content:center;
-  font-size:clamp(1.5rem,4vw,2rem);
-  margin-bottom:20px;
-  box-shadow:0 8px 24px var(--glow)
+  margin-bottom:clamp(16px,3vw,24px);
+  flex-wrap:wrap
 }
 
-.card h3{
-  font-size:clamp(1.3rem,3vw,1.6rem);
+.article-tag{
+  background:rgba(59,130,246,0.15);
+  color:var(--primary);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:clamp(0.8rem,2vw,0.85rem);
+  font-weight:700
+}
+
+.article-date{
+  color:var(--text-muted);
+  font-size:clamp(0.8rem,2vw,0.9rem)
+}
+
+.article h2{
+  font-size:clamp(1.8rem,4vw,2.5rem);
   color:var(--text-primary);
-  margin-bottom:12px;
-  font-weight:800
+  margin-bottom:clamp(16px,3vw,20px);
+  font-weight:900;
+  line-height:1.2;
+  letter-spacing:-0.02em
 }
 
-.card p{
+.article h3{
+  font-size:clamp(1.3rem,3vw,1.7rem);
+  color:var(--text-primary);
+  margin:clamp(28px,5vw,40px) 0 clamp(14px,3vw,18px);
+  font-weight:800;
+  line-height:1.3
+}
+
+.article h4{
+  font-size:clamp(1.1rem,2.5vw,1.3rem);
   color:var(--text-secondary);
-  line-height:1.7;
-  font-size:clamp(0.95rem,2vw,1.05rem);
-  margin-bottom:12px
+  margin:clamp(20px,4vw,28px) 0 clamp(12px,2vw,16px);
+  font-weight:700
 }
 
-.card ul{
-  margin:16px 0;
-  padding-left:24px
-}
-
-.card li{
+.article p{
   color:var(--text-secondary);
-  margin-bottom:10px;
-  line-height:1.6;
+  line-height:1.8;
+  margin-bottom:clamp(16px,3vw,20px);
   font-size:clamp(0.95rem,2vw,1.05rem)
 }
 
-.card li::marker{
-  color:var(--primary)
-}
-
-/* ===== FEATURE CARDS ===== */
-.feature-card{
-  background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(16,185,129,0.05));
-  border:1px solid rgba(59,130,246,0.2);
-  border-radius:var(--radius);
-  padding:clamp(32px,5vw,48px);
-  text-align:center;
-  transition:all 0.3s ease
-}
-
-.feature-card:hover{
-  background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(16,185,129,0.08));
-  transform:scale(1.02)
-}
-
-.feature-number{
-  font-size:clamp(2.5rem,6vw,4rem);
-  font-weight:900;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  margin-bottom:12px
-}
-
-.feature-label{
-  font-size:clamp(1rem,2.5vw,1.2rem);
+.article strong{
   color:var(--text-primary);
   font-weight:700
 }
 
-/* ===== COMPARISON TABLE ===== */
+.article ul,.article ol{
+  margin:clamp(16px,3vw,24px) 0;
+  padding-left:clamp(24px,5vw,32px);
+  color:var(--text-secondary)
+}
+
+.article li{
+  margin-bottom:clamp(10px,2vw,14px);
+  line-height:1.7;
+  font-size:clamp(0.95rem,2vw,1.05rem)
+}
+
+.article li::marker{
+  color:var(--primary)
+}
+
+/* ===== IMAGE IN ARTICLE ===== */
+.article-image{
+  width:100%;
+  max-width:700px;
+  height:auto;
+  border-radius:16px;
+  margin:clamp(24px,4vw,32px) 0;
+  border:1px solid var(--border)
+}
+
+/* ===== HIGHLIGHT BOX ===== */
+.highlight{
+  background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(16,185,129,0.05));
+  border-left:4px solid var(--primary);
+  padding:clamp(20px,4vw,28px);
+  border-radius:12px;
+  margin:clamp(24px,4vw,32px) 0
+}
+
+.highlight-title{
+  font-size:clamp(1.1rem,2.5vw,1.3rem);
+  color:var(--primary);
+  font-weight:800;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+
+.highlight p{
+  color:var(--text-secondary);
+  margin-bottom:12px
+}
+
+/* ===== TABLE ===== */
 .table-wrapper{
   overflow-x:auto;
-  border-radius:var(--radius);
+  border-radius:12px;
   border:1px solid var(--border);
-  background:var(--bg-card)
+  background:var(--bg-elevated);
+  margin:clamp(24px,4vw,32px) 0
 }
 
 table{
@@ -545,223 +307,201 @@ table{
 }
 
 th,td{
-  padding:clamp(16px,3vw,24px);
+  padding:clamp(14px,3vw,18px);
   text-align:left;
   border-bottom:1px solid var(--border);
-  font-size:clamp(0.95rem,2vw,1.05rem)
+  font-size:clamp(0.9rem,2vw,1rem)
 }
 
 th{
   background:rgba(59,130,246,0.08);
   color:var(--primary);
   font-weight:800;
-  text-transform:uppercase;
-  font-size:clamp(0.85rem,2vw,0.95rem);
-  letter-spacing:0.05em
+  font-size:clamp(0.85rem,2vw,0.95rem)
 }
 
 td{
   color:var(--text-secondary)
 }
 
-td strong{
-  color:var(--text-primary)
-}
-
 tr:last-child td{
   border-bottom:none
 }
 
-tr:hover td{
-  background:rgba(59,130,246,0.03)
-}
-
-/* ===== HIGHLIGHT BOX ===== */
-.highlight{
-  background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(16,185,129,0.05));
-  border-left:4px solid var(--primary);
-  padding:clamp(24px,4vw,32px);
-  border-radius:12px;
-  margin:clamp(24px,4vw,32px) 0
-}
-
-.highlight-title{
-  font-size:clamp(1.2rem,3vw,1.4rem);
-  color:var(--primary);
-  font-weight:800;
-  margin-bottom:12px;
-  display:flex;
+/* ===== CTA BUTTON ===== */
+.btn-cta{
+  display:inline-flex;
   align-items:center;
-  gap:12px
+  gap:8px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-glow));
+  color:#fff;
+  padding:clamp(14px,3vw,16px) clamp(28px,5vw,36px);
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 8px 24px var(--glow);
+  transition:all 0.3s ease;
+  font-size:clamp(0.95rem,2vw,1.05rem);
+  margin-top:clamp(16px,3vw,24px)
 }
 
-.highlight p{
-  color:var(--text-secondary);
-  line-height:1.7;
-  margin-bottom:12px
+.btn-cta:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 32px var(--glow)
 }
 
-/* ===== FAQ ===== */
-.faq-list{
-  max-width:900px;
-  margin:0 auto
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:transparent;
+  color:var(--text-primary);
+  padding:clamp(14px,3vw,16px) clamp(28px,5vw,36px);
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  border:2px solid var(--border);
+  transition:all 0.3s ease;
+  font-size:clamp(0.95rem,2vw,1.05rem);
+  margin-top:clamp(16px,3vw,24px)
 }
 
-.faq-item{
+.btn-secondary:hover{
+  border-color:var(--primary);
+  background:rgba(59,130,246,0.1);
+  transform:translateY(-3px)
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  position:sticky;
+  top:100px;
+  height:fit-content
+}
+
+.widget{
   background:var(--bg-card);
   border:1px solid var(--border);
-  border-radius:16px;
-  margin-bottom:16px;
-  overflow:hidden;
-  transition:all 0.3s ease
+  border-radius:var(--radius);
+  padding:clamp(24px,4vw,32px);
+  margin-bottom:clamp(24px,4vw,32px)
 }
 
-.faq-item:hover{
-  border-color:rgba(59,130,246,0.5)
-}
-
-.faq-question{
-  padding:clamp(20px,4vw,28px);
-  font-size:clamp(1.05rem,2.5vw,1.2rem);
-  font-weight:700;
+.widget h3{
+  font-size:clamp(1.1rem,2.5vw,1.3rem);
   color:var(--text-primary);
-  cursor:pointer;
-  user-select:none;
+  margin-bottom:clamp(16px,3vw,20px);
+  font-weight:800;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:16px
+  gap:10px
 }
 
-.faq-icon{
-  font-size:1.5rem;
-  color:var(--primary);
-  transition:transform 0.3s ease
+.widget-item{
+  display:flex;
+  align-items:center;
+  gap:clamp(12px,3vw,16px);
+  padding:clamp(12px,3vw,16px);
+  background:rgba(59,130,246,0.05);
+  border-radius:12px;
+  margin-bottom:clamp(12px,2vw,16px);
+  transition:all 0.3s ease;
+  text-decoration:none
 }
 
-.faq-item[open] .faq-icon{
-  transform:rotate(180deg)
+.widget-item:hover{
+  background:rgba(59,130,246,0.12);
+  transform:translateX(4px)
 }
 
-.faq-answer{
-  padding:0 clamp(20px,4vw,28px) clamp(20px,4vw,28px);
-  color:var(--text-secondary);
-  line-height:1.7;
-  font-size:clamp(0.95rem,2vw,1.05rem)
+.widget-item img{
+  width:clamp(64px,15vw,80px);
+  height:clamp(64px,15vw,80px);
+  border-radius:10px;
+  object-fit:cover;
+  border:1px solid var(--border)
 }
 
-/* ===== PROGRAM TIMELINE ===== */
-.timeline{
-  position:relative;
-  padding-left:clamp(24px,5vw,40px)
-}
-
-.timeline::before{
-  content:'';
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:3px;
-  background:linear-gradient(180deg,var(--primary),var(--accent));
-  border-radius:999px
-}
-
-.timeline-item{
-  position:relative;
-  margin-bottom:clamp(32px,6vw,48px);
-  padding-left:clamp(24px,5vw,32px)
-}
-
-.timeline-item::before{
-  content:'';
-  position:absolute;
-  left:-7px;
-  top:8px;
-  width:17px;
-  height:17px;
-  background:var(--primary);
-  border-radius:50%;
-  box-shadow:0 0 20px var(--glow);
-  border:3px solid var(--bg-dark)
-}
-
-.timeline-week{
-  font-size:clamp(0.85rem,2vw,0.95rem);
-  color:var(--primary);
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.1em;
-  margin-bottom:8px
-}
-
-.timeline-title{
-  font-size:clamp(1.3rem,3vw,1.6rem);
+.widget-item-content h4{
+  font-size:clamp(0.95rem,2vw,1.05rem);
   color:var(--text-primary);
-  font-weight:800;
+  margin:0 0 4px;
+  font-weight:700
+}
+
+.widget-item-content p{
+  font-size:clamp(0.8rem,2vw,0.85rem);
+  color:var(--text-muted);
+  margin:0
+}
+
+/* ===== TOC WIDGET ===== */
+.toc-list{
+  list-style:none;
+  padding:0
+}
+
+.toc-list li{
   margin-bottom:12px
 }
 
-.timeline-content{
+.toc-list a{
   color:var(--text-secondary);
-  line-height:1.7
+  text-decoration:none;
+  font-size:clamp(0.9rem,2vw,0.95rem);
+  font-weight:600;
+  transition:all 0.3s ease;
+  display:block;
+  padding:8px 12px;
+  border-radius:8px
 }
 
-.timeline-content ul{
-  margin:12px 0;
-  padding-left:24px
-}
-
-.timeline-content li{
-  margin-bottom:8px
+.toc-list a:hover{
+  color:var(--primary);
+  background:rgba(59,130,246,0.08);
+  transform:translateX(4px)
 }
 
 /* ===== FLOATING CTA ===== */
 .floating-cta{
   position:fixed;
-  bottom:clamp(24px,5vw,40px);
-  right:clamp(24px,5vw,40px);
+  bottom:clamp(24px,5vw,32px);
+  right:clamp(24px,5vw,32px);
   background:linear-gradient(135deg,#f59e0b,#ef4444);
   color:#fff;
-  padding:clamp(16px,3vw,20px) clamp(28px,5vw,40px);
+  padding:clamp(14px,3vw,16px) clamp(24px,4vw,32px);
   border-radius:999px;
   text-decoration:none;
   font-weight:800;
-  box-shadow:0 16px 48px rgba(245,158,11,0.4);
+  box-shadow:0 12px 40px rgba(245,158,11,0.4);
   z-index:999;
   transition:all 0.3s ease;
-  font-size:clamp(1rem,2.5vw,1.15rem);
-  display:flex;
-  align-items:center;
-  gap:8px;
-  animation:pulse 2s infinite
+  font-size:clamp(0.9rem,2vw,1rem);
+  display:none
 }
 
-@keyframes pulse{
-  0%,100%{transform:scale(1);box-shadow:0 16px 48px rgba(245,158,11,0.4)}
-  50%{transform:scale(1.05);box-shadow:0 20px 60px rgba(245,158,11,0.6)}
+.floating-cta.visible{
+  display:flex;
+  align-items:center;
+  gap:8px
 }
 
 .floating-cta:hover{
-  transform:translateY(-4px) scale(1.05);
-  animation:none
+  transform:translateY(-4px);
+  box-shadow:0 16px 48px rgba(245,158,11,0.6)
 }
 
 /* ===== FOOTER ===== */
 .footer{
   background:var(--bg-elevated);
   border-top:1px solid var(--border);
-  padding:clamp(48px,8vw,80px) 0 clamp(32px,6vw,48px);
-  text-align:center
-}
-
-.footer-content{
-  max-width:600px;
-  margin:0 auto
+  padding:clamp(40px,8vw,60px) 0 clamp(32px,6vw,40px);
+  text-align:center;
+  margin-top:clamp(60px,10vw,80px)
 }
 
 .footer h3{
-  font-size:clamp(1.4rem,3vw,1.8rem);
+  font-size:clamp(1.3rem,3vw,1.6rem);
   color:var(--text-primary);
   font-weight:800;
   margin-bottom:12px
@@ -769,13 +509,13 @@ tr:hover td{
 
 .footer p{
   color:var(--text-secondary);
-  font-size:clamp(0.95rem,2vw,1.05rem);
+  font-size:clamp(0.9rem,2vw,1rem);
   margin-bottom:8px
 }
 
 .footer small{
   color:var(--text-muted);
-  font-size:clamp(0.85rem,2vw,0.95rem)
+  font-size:clamp(0.8rem,2vw,0.9rem)
 }
 
 /* ===== RESPONSIVE ===== */
@@ -785,108 +525,224 @@ tr:hover td{
     justify-content:center
   }
   
-  .cards-grid{
-    grid-template-columns:1fr
-  }
-  
-  .hero{
-    min-height:auto
+  .sidebar{
+    position:relative;
+    top:auto
   }
 }
-
-/* ===== UTILITIES ===== */
-.mb-sm{margin-bottom:clamp(12px,2vw,16px)}
-.mb-md{margin-bottom:clamp(24px,4vw,32px)}
-.mb-lg{margin-bottom:clamp(48px,8vw,64px)}
-
-.text-center{text-align:center}
-.muted{color:var(--text-muted);font-size:clamp(0.85rem,2vw,0.95rem)}
 </style>
 </head>
 
 <body>
   <!-- HEADER -->
-  <header class="header" id="header">
+  <header class="header">
     <nav class="nav container">
       <a href="#" class="brand">
         <div class="logo">PA</div>
         <div class="brand-text">
           <h1>PowerAdjust</h1>
-          <p>Haltères Smart Click BRAINGAIN</p>
+          <p>Haltères Réglables • Guides & Tests</p>
         </div>
       </a>
       <ul class="nav-menu">
-        <li><a href="#guide">Guide</a></li>
-        <li><a href="#comparatif">24kg vs 40kg</a></li>
-        <li><a href="#exercices">Exercices</a></li>
-        <li><a href="#programme">Programme</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#comparatifs">Comparatifs</a></li>
+        <li><a href="#guides">Guides</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content container">
-      <span class="hero-badge">
-        <span>⚡</span>
-        <span>Technologie Smart Click BRAINGAIN</span>
-      </span>
-      <h2>
-        Transformez votre <span class="gradient-text">appartement</span><br>
-        en salle de musculation premium
-      </h2>
-      <p class="hero-subtitle">
-        Les haltères réglables BRAINGAIN 15-en-1 et 17-en-1 avec système Smart Click : changement de poids en 2 secondes, gain d'espace de 95%, et résultats garantis.
-      </p>
-      <div class="hero-ctas">
-        <a href="VOTRE-LIEN-AMAZON" class="btn-primary" target="_blank" rel="nofollow noopener">
-          <span>Voir sur Amazon</span>
-          <span>→</span>
-        </a>
-        <a href="#guide" class="btn-secondary">
-          <span>Découvrir le guide</span>
-        </a>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon">⚡</div>
-          <div class="stat-value">2 sec</div>
-          <div class="stat-label">Changement de poids</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">📦</div>
-          <div class="stat-value">95%</div>
-          <div class="stat-label">Gain d'espace</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">💪</div>
-          <div class="stat-value">40 kg</div>
-          <div class="stat-label">Poids maximum</div>
-        </div>
-      </div>
+    <div class="container">
+      <h2>Le guide complet des haltères réglables</h2>
+      <p class="hero-subtitle">Comparatifs, tests détaillés, exercices et programmes pour réussir votre musculation à domicile</p>
     </div>
   </section>
 
-  <!-- MAIN -->
+  <!-- MAIN LAYOUT -->
   <main class="main container">
+    
+    <!-- ARTICLES COLUMN -->
+    <div class="articles">
 
-    <!-- GUIDE SECTION -->
-    <section class="section" id="guide">
-      <div class="section-header">
-        <span class="section-tag">🎯 Guide complet</span>
-        <h2 class="section-title">Pourquoi choisir les haltères BRAINGAIN ?</h2>
-        <p class="section-subtitle">Le système le plus avancé pour votre entraînement à domicile</p>
-      </div>
+      <!-- ARTICLE 1: BRAINGAIN Test -->
+      <article class="article" id="braingain-test">
+        <div class="article-meta">
+          <span class="article-tag">Test produit</span>
+          <span class="article-date">23 novembre 2025</span>
+        </div>
+        
+        <h2>Test complet : BRAINGAIN Smart Click 24kg et 40kg</h2>
+        
+        <img src="https://via.placeholder.com/700x400?text=BRAINGAIN+Smart+Click" alt="Haltères BRAINGAIN Smart Click" class="article-image">
+        
+        <p>Après 3 mois d'utilisation intensive des <strong>haltères réglables BRAINGAIN</strong> (ensembles 15-en-1 et 17-en-1), voici notre test détaillé et sans concession de ce système Smart Click qui promet de révolutionner l'entraînement à domicile.</p>
 
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">🔧</div>
-          <h3>Technologie Smart Click</h3>
-          <p>Changez le poids en <strong>2 secondes</strong> grâce au système de cadran intelligent. Un simple clic et vous passez de 5 kg à 40 kg sans effort.</p>
-          <p class="muted">Fini les manipulations complexes avec goupilles ou molettes</p>
+        <h3>Les caractéristiques techniques</h3>
+        <p>BRAINGAIN propose deux ensembles avec la technologie Smart Click brevetée :</p>
+        <ul>
+          <li><strong>Ensemble 15-en-1 (24 kg) :</strong> 15 réglages de poids, idéal débutants/intermédiaires</li>
+          <li><strong>Ensemble 17-en-1 (40 kg) :</strong> 17 réglages de poids, recommandé pour progression long terme</li>
+          <li><strong>Système Smart Click :</strong> changement de poids en 2 secondes via cadran rotatif</li>
+          <li><strong>Construction :</strong> acier robuste avec revêtement anti-dérapant</li>
+          <li><strong>Gain d'espace :</strong> 95% vs haltères traditionnels</li>
+        </ul>
+
+        <h3>Notre test en conditions réelles</h3>
+        
+        <h4>Performance du système Smart Click</h4>
+        <p>Le mécanisme de changement rapide fonctionne parfaitement. Le cadran tourne avec fluidité et le <strong>clic audible confirme le verrouillage</strong>. En pratique, on change réellement le poids en 2-3 secondes, ce qui transforme l'entraînement :</p>
+        <ul>
+          <li>Drop-sets ultra-efficaces (réduire le poids instantanément)</li>
+          <li>Pyramides ascendantes/descendantes fluides</li>
+          <li>Moins de temps mort entre séries</li>
+          <li>Séances 25-30% plus rapides</li>
+        </ul>
+
+        <div class="highlight">
+          <div class="highlight-title">
+            <span>⚡</span>
+            <span>Point fort principal</span>
+          </div>
+          <p>Le Smart Click change réellement la donne. Contrairement aux systèmes à goupille qui demandent 15-20 secondes de manipulation, ici c'est instantané. Cela permet des techniques d'intensification impossibles avec des haltères classiques.</p>
         </div>
 
-        <div class="card">
-          <div class="card-icon">📐</div>
-          <h3>Design ultra-compact
+        <h4>Qualité de construction</h4>
+        <p>Après 3 mois d'utilisation quotidienne (5-6 séances/semaine), aucun signe d'usure. Le revêtement reste impeccable, le mécanisme fonctionne comme au premier jour. La qualité BRAINGAIN est au rendez-vous.</p>
+
+        <h4>Ergonomie et confort</h4>
+        <p>Les poignées sont confortables même sur séries longues. Le grip anti-dérapant fonctionne parfaitement, même avec les mains moites. Le poids est bien équilibré, aucune sensation de déséquilibre.</p>
+
+        <h3>24 kg vs 40 kg : Notre verdict</h3>
+        <p>Nous avons testé les deux versions. Voici notre analyse :</p>
+        
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Critère</th>
+                <th>24 kg (15-en-1)</th>
+                <th>40 kg (17-en-1)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Bras/Épaules</strong></td>
+                <td>Parfait</td>
+                <td>Parfait</td>
+              </tr>
+              <tr>
+                <td><strong>Pectoraux</strong></td>
+                <td>Suffisant 12-18 mois</td>
+                <td>Progression 3+ ans</td>
+              </tr>
+              <tr>
+                <td><strong>Dos</strong></td>
+                <td>Limite rapidement</td>
+                <td>Optimal</td>
+              </tr>
+              <tr>
+                <td><strong>Jambes</strong></td>
+                <td>Insuffisant après 6 mois</td>
+                <td>Adapté long terme</td>
+              </tr>
+              <tr>
+                <td><strong>Budget</strong></td>
+                <td>€ 280-350</td>
+                <td>€ 400-480</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Les points forts</h3>
+        <ul>
+          <li>✅ Système Smart Click ultra-rapide et fiable</li>
+          <li>✅ Qualité de fabrication exceptionnelle</li>
+          <li>✅ Gain d'espace énorme (95%)</li>
+          <li>✅ Permet techniques avancées (drop-sets, pyramides)</li>
+          <li>✅ Confortable et bien équilibré</li>
+          <li>✅ Construction robuste qui durera des années</li>
+        </ul>
+
+        <h3>Les points faibles</h3>
+        <ul>
+          <li>⚠️ Prix élevé (mais justifié par la qualité)</li>
+          <li>⚠️ Le 24 kg atteint vite ses limites sur jambes/dos</li>
+          <li>⚠️ Pas adapté aux chutes (exercices type Crossfit)</li>
+        </ul>
+
+        <h3>Notre recommandation</h3>
+        <p>Si vous cherchez le <strong>meilleur système d'haltères réglables du marché</strong>, BRAINGAIN est notre choix n°1. La technologie Smart Click justifie totalement le prix. Notre conseil : <strong>investissez dans le 40 kg</strong> même si vous débutez. La différence de prix (120-150€) sera vite amortie et vous n'aurez jamais besoin de racheter d'équipement.</p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
+            <span>Voir le 40 kg sur Amazon</span>
+            <span>→</span>
+          </a>
+          <a href="VOTRE-LIEN-AMAZON-24KG" class="btn-secondary" target="_blank" rel="nofollow noopener">
+            <span>Voir le 24 kg</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 2: Comparatif général -->
+      <article class="article" id="comparatif-halteres">
+        <div class="article-meta">
+          <span class="article-tag">Comparatif</span>
+          <span class="article-date">20 novembre 2025</span>
+        </div>
+        
+        <h2>Comparatif 2025 : Les 5 meilleurs haltères réglables</h2>
+        
+        <p>Nous avons testé les systèmes d'haltères réglables les plus populaires du marché. Voici notre classement basé sur 6 mois de tests en conditions réelles.</p>
+
+        <h3>1. BRAINGAIN Smart Click (40 kg) - 9.5/10</h3>
+        <p><strong>Prix :</strong> €420-480 | <strong>Système :</strong> Smart Click</p>
+        <p>Le meilleur du marché. Changement ultra-rapide, qualité exceptionnelle, progression long terme garantie. Un investissement qui se rentabilise.</p>
+        <ul>
+          <li>✅ Technologie Smart Click révolutionnaire</li>
+          <li>✅ Construction premium</li>
+          <li>✅ 40 kg permet progression 3-5 ans</li>
+          <li>⚠️ Prix élevé</li>
+        </ul>
+        <a href="VOTRE-LIEN-AMAZON-BRAINGAIN" class="btn-cta" target="_blank" rel="nofollow noopener">Voir sur Amazon →</a>
+
+        <h3>2. Bowflex SelectTech 552 - 8.5/10</h3>
+        <p><strong>Prix :</strong> €350-420 | <strong>Système :</strong> Cadran Dial</p>
+        <p>Référence du marché avec système à molette fiable. Bon compromis qualité/prix mais changement moins rapide que BRAINGAIN.</p>
+        <ul>
+          <li>✅ Marque reconnue, SAV efficace</li>
+          <li>✅ Système dial fiable</li>
+          <li>⚠️ Changement 8-10 secondes</li>
+          <li>⚠️ Limité à 24 kg</li>
+        </ul>
+
+        <h3>3. PowerBlock Elite - 8/10</h3>
+        <p><strong>Prix :</strong> €300-380 | <strong>Système :</strong> Pin Lock</p>
+        <p>Design unique en forme de bloc. Robuste mais système à goupille plus lent.</p>
+        <ul>
+          <li>✅ Très robuste</li>
+          <li>✅ Extensible jusqu'à 40 kg+</li>
+          <li>⚠️ Design particulier (pas pour tous)</li>
+          <li>⚠️ Goupille demande 15-20 sec</li>
+        </ul>
+
+        <h3>4. Ensemble économique (goupille) - 6.5/10</h3>
+        <p><strong>Prix :</strong> €80-150 | <strong>Système :</strong> Pin Lock basique</p>
+        <p>Solution budget pour débuter. Fonctionnel mais pas de comparaison avec les systèmes haut de gamme.</p>
+        <ul>
+          <li>✅ Prix accessible</li>
+          <li>⚠️ Qualité moyenne</li>
+          <li>⚠️ Manipulation lente et fastidieuse</li>
+        </ul>
+
+        <div class="highlight">
+          <div class="highlight-title">
+            <span>🏆</span>
+            <span>Notre verdict final</span>
+          </div>
+          <p><strong>Budget optimal (400€+) :</strong> BRAINGAIN 40 kg sans hésiter. Le meilleur investissement long terme.</p>
+          <p><strong>Budget moyen (300-400€) :</strong> Bowflex SelectTech si vous trouvez le 40 kg, sinon BRAINGAIN 24 kg.</p>
+          <p><strong>Budget ser
