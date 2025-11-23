@@ -1,435 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<link rel="sitemap" type="application/xml" title="Sitemap" href="https://poweradjust.vercel.app/sitemap.xml">
-<meta name="google-site-verification" content="OYInI8VwXMVQGWxIbAGBe0o_2B0PgRQw0oeBRaj5Y-o" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Turbo Info — BRAINGAIN Haltères réglables (15-en-1 & 17-en-1)</title>
-<meta name="description" content="Turbo Info — Guide premium : BRAINGAIN Ensemble d'Haltères Réglables – Paires 15-en-1 et 17-en-1 | Options 24 kg & 40 kg | Technologie Smart Click. Comparatif, exercices et programme pour musculation maison." />
-<meta name="keywords" content="BRAINGAIN, haltère réglable, haltères réglables, haltère modulable, haltères modulables, musculation maison, Smart Click, haltère 24 kg, haltère 40 kg" />
+<title>PowerAdjust — Le meilleur des haltères réglables</title>
+<meta name="description" content="PowerAdjust : Tout sur les haltères réglables. Programmes, exercices, conseils et focus sur BRAINGAIN Ensemble d'Haltères Réglables pour musculation à domicile." />
+<meta name="keywords" content="haltère réglable, haltères réglables, musculation maison, exercices haltère réglable, BRAINGAIN haltère, Smart Click" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="Turbo Info — BRAINGAIN Haltères réglables (15-en-1 & 17-en-1)" />
-<meta property="og:description" content="BRAINGAIN Ensemble d'Haltères Réglables – Paires 15-en-1 et 17-en-1. Options 24 kg et 40 kg, gain de place pour la salle de sport à domicile, technologie Smart Click." />
+<meta property="og:title" content="PowerAdjust — Le meilleur des haltères réglables" />
+<meta property="og:description" content="BRAINGAIN Ensemble d'Haltères Réglables – Paires 15-en-1 et 17-en-1 | Options 24 kg & 40 kg | Gain de place et technologie Smart Click." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://via.placeholder.com/1200x630?text=BRAINGAIN+Halt%C3%A8res+15-en-1+17-en-1" />
+<meta property="og:image" content="https://via.placeholder.com/1200x630?text=BRAINGAIN+Halt%C3%A8res" />
 <meta property="og:url" content="https://ton-site.com" />
 
-<!-- Structured data: WebSite + Product (BRAINGAIN) -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"WebSite",
-      "url":"https://ton-site.com",
-      "name":"Turbo Info",
-      "publisher":{"@type":"Organization","name":"Turbo Info"}
-    },
-    {
-      "@type":"Product",
-      "name":"BRAINGAIN Ensemble d'Haltères Réglables – Paires 15-en-1 et 17-en-1 | Options de 24 kg et 40 kg | Poids Gain de Place pour Salle de Sport à Domicile | Technologie Smart Click",
-      "image":["https://via.placeholder.com/800x800?text=BRAINGAIN+Halt%C3%A8res"],
-      "description":"BRAINGAIN Ensemble d'Haltères Réglables (15-en-1 / 17-en-1) disponible en options 24 kg et 40 kg. Design gain de place, technologie Smart Click pour changement de poids rapide.",
-      "sku":"BRAINGAIN-15-17-EX",
-      "brand":{"@type":"Brand","name":"BRAINGAIN"},
-      "offers":{
-        "@type":"Offer",
-        "url":"VOTRE-LIEN-AMAZON",
-        "priceCurrency":"EUR",
-        "price":"419.00",
-        "availability":"https://schema.org/InStock"
-      }
-    }
-  ]
-}
-</script>
-
 <style>
-/* ===== RESET SIMPLE ===== */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#0f1724;background:#f6f8fb;line-height:1.6}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* ===== THEME (Fitness Premium) ===== */
-:root{
-  --bg:#f6f8fb;
-  --card:#ffffff;
-  --accent:#0ea5e9;
-  --accent-2:#06b6d4;
-  --muted:#64748b;
-  --accent-cta:#ff6f61;
-  --radius:14px;
-  --maxw:1200px;
+body {
+    margin:0;
+    font-family:'Roboto',sans-serif;
+    background:#f0f4f8;
+    line-height:1.6;
+    color:#333;
 }
 
-/* header / nav */
-.header-hero{
-  background:linear-gradient(90deg, rgba(6,182,212,0.12), rgba(14,165,233,0.06)), url('https://via.placeholder.com/1600x600?text=BRAINGAIN+Halt%C3%A8res') center/cover no-repeat;
-  padding:72px 20px 48px;
-  text-align:center;
-  position:relative;
+header {
+    background: linear-gradient(135deg, #ff6f61, #ffb347, #ff8c42, #ff6f61);
+    background-size: 400% 400%;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+    animation: gradientBG 15s ease infinite;
 }
-nav.topnav{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  max-width:var(--maxw);margin:0 auto;padding:12px 18px;background:rgba(255,255,255,0.85);border-radius:12px;box-shadow:0 6px 22px rgba(2,6,23,0.06);
+@keyframes gradientBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
 }
-.brand{display:flex;gap:12px;align-items:center}
-.brand .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(14,165,233,0.18)}
-.brand h1{margin:0;font-size:1.05rem;color:#022;letter-spacing:0.4px}
-nav .menu{display:flex;gap:18px;align-items:center}
-nav .menu a{color:#022;text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px}
-nav .menu a:hover{background:rgba(14,165,233,0.08);color:var(--accent)}
-
-/* hero */
-.hero-title{font-size:2.2rem;margin:12px 0 6px;color:#022;font-weight:800}
-.hero-sub{color:var(--muted);font-size:1rem;margin-bottom:18px}
-.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-.cta-primary{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#fff;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 30px rgba(6,182,212,0.18)}
-.cta-secondary{background:transparent;border:2px solid rgba(2,6,23,0.06);padding:12px 18px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:700}
-
-/* main layout */
-.main{max-width:var(--maxw);margin:30px auto;padding:0 18px;display:grid;grid-template-columns: 1fr 320px;gap:28px}
-.content{min-width:0}
-
-/* article cards */
-.card-article{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 14px 40px rgba(2,6,23,0.06);margin-bottom:26px;overflow:hidden}
-.card-article h2{margin-top:0;color:var(--accent);font-size:1.6rem}
-.card-article h3{color:#022;margin-bottom:8px}
-.lead{color:var(--muted);margin-bottom:12px}
-
-/* split */
-.split{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center}
-.split img{width:100%;border-radius:12px;display:block;}
-
-/* compare table */
-.table-compare{width:100%;border-collapse:collapse;margin-top:12px}
-.table-compare th,.table-compare td{padding:10px 12px;border-bottom:1px solid #eef2f7;text-align:left}
-.table-compare th{background:#f8fbff;color:#023;padding-top:14px;padding-bottom:14px}
-
-/* sidebar */
-.sidebar{position:sticky;top:96px;background:var(--card);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
-.sidebar h4{margin:0 0 10px;color:var(--accent);font-size:1.05rem}
-.product-list{display:flex;flex-direction:column;gap:12px}
-.product-item{display:flex;gap:12px;align-items:center;padding:10px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfeff);box-shadow:0 6px 18px rgba(2,6,23,0.04)}
-.product-item img{width:64px;height:64px;border-radius:10px;object-fit:cover}
-.product-item a{text-decoration:none;color:#022;font-weight:700}
-
-/* FAQ */
-.faq{margin-top:18px}
-.faq details{background:#fbfdff;padding:12px;border-radius:8px;margin-bottom:10px}
-.faq summary{font-weight:700;color:#022;cursor:pointer}
-
-/* floating */
-.floating-buy{position:fixed;right:20px;bottom:28px;background:var(--accent);color:#fff;padding:14px 20px;border-radius:999px;box-shadow:0 18px 40px rgba(6,182,212,0.18);text-decoration:none;font-weight:800;z-index:999}
-.backtop{position:fixed;right:20px;bottom:90px;background:#fff;color:var(--accent);padding:10px;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.06);border:1px solid #e6f3fb;display:none}
-
-/* footer */
-.footer{margin-top:40px;padding:28px;text-align:center;color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:12px;margin-bottom:40px}
-
-/* responsive */
-@media (max-width:1100px){
-  .main{grid-template-columns:1fr 300px}
-  .split{grid-template-columns:1fr}
+header h1 {font-size: 3.5em; font-weight: 900; text-shadow: 2px 2px 12px rgba(0,0,0,0.2);}
+header p {font-size: 1.5em; font-weight: 500; margin-top: 15px;}
+.header-cta {
+    display:inline-block; margin-top:25px; padding:18px 30px; background:#fff; color:#ff6f61;
+    font-weight:bold; border-radius:50px; text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    transition:transform 0.3s, box-shadow 0.3s;
 }
-@media (max-width:860px){
-  nav.topnav{flex-direction:column;gap:12px;padding:12px}
-  .main{grid-template-columns:1fr; padding:0 12px}
-  .sidebar{position:relative;top:auto}
-  .split{grid-template-columns:1fr}
-  .header-hero{padding:48px 16px}
-  .hero-title{font-size:1.6rem}
+.header-cta:hover {transform:scale(1.05); box-shadow:0 12px 30px rgba(0,0,0,0.3);}
+
+.container {width:90%;max-width:1200px;margin:auto;padding:40px 0;}
+
+article {
+    background: linear-gradient(145deg,#ffffff,#f9fafc);
+    margin-bottom:50px;
+    padding:45px 35px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
 }
-small.muted{color:var(--muted);display:block;margin-top:8px}
+article:hover {
+    transform: translateY(-8px);
+    box-shadow:0 25px 50px rgba(0,0,0,0.2);
+    background: linear-gradient(145deg,#ffffff,#f3f6f9);
+}
+article h2 {font-size:2.4em;margin-bottom:25px;color:#ff6f61;text-shadow:1px 1px 3px rgba(0,0,0,0.1);}
+article h3 {color:#222;font-size:1.6em;margin-bottom:20px;}
+article p, article ul {font-size:1.1em;line-height:1.8;margin-bottom:18px;}
+article ul {list-style-type:square;padding-left:25px;}
+
+.flex-img {display:flex; gap:20px; flex-wrap:wrap; margin:25px 0;}
+.flex-img img {width:48%; border-radius:15px; transition: transform 0.3s;}
+.flex-img img:hover {transform:scale(1.05);}
+
+.buy-btn {
+    display:inline-block;
+    margin:20px 0;
+    padding:18px 35px;
+    background:linear-gradient(135deg,#ff6f61,#ffb347,#ff8c42);
+    color:#fff;
+    font-size:1.25em;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:50px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.buy-btn:hover {transform:scale(1.08); box-shadow:0 15px 40px rgba(0,0,0,0.3);}
+
+footer {
+    background: linear-gradient(135deg,#ff6f61,#ffb347);
+    color:#fff;
+    text-align:center;
+    padding:30px 0;
+    margin-top:40px;
+    border-top:5px solid #fff;
+}
+
+@keyframes fadeUp {from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);}}
+
+@media(max-width:768px){
+    header h1 {font-size:2.8em;}
+    header p {font-size:1.2em;}
+    article {padding:35px 20px;}
+    .flex-img img {width:100%;}
+}
 </style>
 </head>
-
 <body>
-  <!-- NAV / TOP -->
-  <div style="padding:16px 18px;background:transparent;">
-    <nav class="topnav" aria-label="Menu principal">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">TI</div>
-        <div>
-          <h1 style="font-size:1rem;margin:0">Turbo Info</h1>
-          <small class="muted">BRAINGAIN • Haltères réglables • Musculation maison</small>
-        </div>
-      </div>
-      <div class="menu" role="navigation" aria-label="Navigation principale">
-        <a href="#guide">Guide</a>
-        <a href="#exercices">Exercices</a>
-        <a href="#comparatif">Comparatif</a>
-        <a href="#erreurs">Erreurs</a>
-        <a href="#routine">Routine</a>
-      </div>
-    </nav>
-  </div>
 
-  <!-- HERO -->
-  <header class="header-hero" role="banner">
-    <div class="wrap">
-      <p style="margin:0;font-weight:700;color:#063244">Turbo Info — BRAINGAIN</p>
-      <h2 class="hero-title">BRAINGAIN Ensemble d'Haltères Réglables – Paires 15-en-1 et 17-en-1</h2>
-      <p class="hero-sub">Options de 24 kg et 40 kg • Poids gain de place pour salle de sport à domicile • Technologie Smart Click pour changement rapide.</p>
-      <div class="hero-ctas">
-        <a class="cta-primary" href="#guide">Découvrir le guide BRAINGAIN</a>
-        <a class="cta-secondary" href="#comparatif">Voir le comparatif</a>
-      </div>
+<header>
+<h1>PowerAdjust</h1>
+<p>Le meilleur des haltères réglables pour la musculation à domicile</p>
+<a href="#articles" class="header-cta">Découvrir BRAINGAIN</a>
+</header>
 
-      <div class="callout" style="max-width:900px;margin:22px auto 0">
-        <div class="icon" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12h2v-2H2v2zM20 10v2h2v-2h-2zM4 7h2V5H4v2zM18 5v2h2V5h-2zM6 17h2v2H6v-2zM16 19v-2h2v2h-2zM8 9h8v6H8V9z" fill="#06b6d4"/></svg>
-        </div>
-        <p><strong>Produit mis en avant :</strong> BRAINGAIN Ensemble d'Haltères Réglables – Paires 15-en-1 et 17-en-1 (24 kg & 40 kg) — Smart Click.</p>
-      </div>
-    </div>
-  </header>
+<div class="container" id="articles">
 
-  <!-- MAIN -->
-  <main class="main" id="main">
-    <section class="content">
+<!-- ARTICLE 1 : Focus BRAINGAIN -->
+<article class="article-animate">
+<h2>BRAINGAIN Haltères Réglables : présentation complète</h2>
+<p>L’ensemble BRAINGAIN 15-en-1 et 17-en-1 est conçu pour tous ceux qui veulent un équipement polyvalent et compact pour la musculation à domicile. Avec ses options de 24 kg et 40 kg et la technologie Smart Click, changez le poids en un clin d’œil pour travailler tous les groupes musculaires.</p>
+<h3>Pourquoi choisir BRAINGAIN</h3>
+<ul>
+<li>Gain de place : remplace plusieurs paires d’haltères.</li>
+<li>Polyvalence : exercices pour bras, dos, jambes, épaules.</li>
+<li>Smart Click : changement rapide et sécurisé.</li>
+<li>Matériaux robustes pour longue durée.</li>
+<li>Idéal pour débutants et avancés.</li>
+</ul>
+<a class="buy-btn" href="VOTRE-LIEN-AMAZON" target="_blank">Acheter BRAINGAIN sur Amazon</a>
+</article>
 
-      <!-- ARTICLE 1: Guide (split) -->
-      <article class="card-article" id="guide">
-        <div class="split">
-          <div>
-            <h2>Guide BRAINGAIN — choisir la bonne option</h2>
-            <p class="lead">BRAINGAIN Ensemble d'Haltères Réglables – Paires 15-en-1 et 17-en-1 est proposé en options 24 kg et 40 kg. Ce guide vous aide à choisir la version adaptée à votre niveau, espace et objectifs de musculation maison.</p>
+<!-- ARTICLE 2 : Exercices avec haltères réglables -->
+<article class="article-animate">
+<h2>Exercices avec haltères réglables</h2>
+<p>Les haltères réglables permettent une grande variété d’exercices pour tous les muscles :</p>
+<ul>
+<li>Développé couché</li>
+<li>Curl biceps</li>
+<li>Élévations latérales</li>
+<li>Rowing unilatéral</li>
+<li>Fentes, squats, hip thrust</li>
+</ul>
+<p>Avec un haltère modulable, vous pouvez progresser sans encombrer votre espace et en ajustant facilement la charge selon votre niveau.</p>
+</article>
 
-            <h3>Pourquoi la version BRAINGAIN ?</h3>
-            <p>BRAINGAIN se distingue par son <strong>technologie Smart Click</strong> qui permet de changer le poids rapidement — idéal pour les circuits et supersets. L'ensemble 15-en-1/17-en-1 offre une grande plage de réglages tout en restant compact.</p>
+<!-- ARTICLE 3 : Comparatif des haltères réglables -->
+<article class="article-animate">
+<h2>Comparatif : haltères réglables</h2>
+<p>Il existe plusieurs types d’haltères modulables :</p>
+<ul>
+<li>Haltère classique : simple, changement de poids lent.</li>
+<li>Haltère Smart Click : rapide, idéal pour séances intensives.</li>
+<li>Haltères haut de gamme : premium, design compact, prix élevé.</li>
+</ul>
+<p>BRAINGAIN se distingue par sa polyvalence, sa qualité et la simplicité du Smart Click.</p>
+</article>
 
-            <h3>Quel modèle choisir ?</h3>
-            <p><strong>24 kg</strong> — parfait pour débutants et utilisateurs avec espace limité. <strong>40 kg</strong> — recommandé si vous êtes intermédiaire/confirmé ou si vous prévoyez progresser sérieusement.</p>
+<!-- ARTICLE 4 : FAQ sur haltères réglables -->
+<article class="article-animate">
+<h2>FAQ haltères réglables</h2>
+<ul>
+<li>Quel poids pour débuter ? 24 kg suffit pour débutants.</li>
+<li>Comment progresser ? Augmentez la charge progressivement.</li>
+<li>Entretien ? Essuyez après usage et rangez au sec.</li>
+<li>Quels muscles travailler ? Tous : bras, dos, jambes, épaules.</li>
+</ul>
+</article>
 
-            <div class="conseil">💡 Conseil Turbo Info : prenez en compte vos objectifs (force vs tonification). Si vous prévoyez d’augmenter fortement les charges, la version 40 kg est plus durable.</div>
+</div>
 
-            <a class="buy-btn" href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">Voir BRAINGAIN (24 kg / 40 kg) sur Amazon</a>
-            <p style="margin-top:10px"><small class="muted">Produit : BRAINGAIN Ensemble d'Haltères Réglables – Paires 15-en-1 et 17-en-1 | Technologie Smart Click.</small></p>
-          </div>
-
-          <div>
-            <img src="https://via.placeholder.com/360x300?text=BRAINGAIN+24kg+40kg" alt="BRAINGAIN Ensemble d'Haltères Réglables 15-en-1 17-en-1 24kg 40kg Smart Click" loading="lazy">
-            <small class="muted">Image illustrative — remplace par photos produit BRAINGAIN pour améliorer la conversion.</small>
-          </div>
-        </div>
-      </article>
-
-      <!-- ARTICLE 2: Exercises -->
-      <article class="card-article" id="exercices">
-        <h2>Exercices avec le BRAINGAIN haltère réglable</h2>
-        <p class="lead">Utilisez BRAINGAIN pour construire des séances complètes : pectoraux, dos, jambes, épaules et bras. Avec Smart Click, passez rapidement d'un poids à l'autre.</p>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:14px">
-          <div style="background:#fff;border-radius:12px;padding:14px;box-shadow:0 10px 26px rgba(2,6,23,0.04)">
-            <h3 style="margin:0 0 8px;color:#022">Pectoraux</h3>
-            <p style="margin:0">Développé couché, écartés inclinés — 3x8–12. BRAINGAIN facilite l'ajustement pour chaque série.</p>
-          </div>
-          <div style="background:#fff;border-radius:12px;padding:14px;box-shadow:0 10px 26px rgba(2,6,23,0.04)">
-            <h3 style="margin:0 0 8px;color:#022">Biceps / Triceps</h3>
-            <p style="margin:0">Curl, curl marteau, extensions — variez les charges grâce au mécanisme 15/17 réglages.</p>
-          </div>
-          <div style="background:#fff;border-radius:12px;padding:14px;box-shadow:0 10px 26px rgba(2,6,23,0.04)">
-            <h3 style="margin:0 0 8px;color:#022">Jambes</h3>
-            <p style="margin:0">Squat goblet, fentes et soulevé de terre jambes tendues — BRAINGAIN 40 kg est recommandé pour les progressions sérieuses.</p>
-          </div>
-          <div style="background:#fff;border-radius:12px;padding:14px;box-shadow:0 10px 26px rgba(2,6,23,0.04)">
-            <h3 style="margin:0 0 8px;color:#022">Dos & Épaules</h3>
-            <p style="margin:0">Rowing unilatéral, élévations latérales — contrôlez la charge précisément.</p>
-          </div>
-        </div>
-
-        <div style="margin-top:18px">
-          <h3>Routine hebdomadaire avec BRAINGAIN</h3>
-          <ol>
-            <li>Lundi — Pectoraux + Triceps (utilisez 15–17 réglages pour varier intensité)</li>
-            <li>Mardi — Dos + Biceps</li>
-            <li>Jeudi — Jambes</li>
-            <li>Vendredi — Full body & mobilité</li>
-          </ol>
-        </div>
-
-        <div class="conseil">💡 Astuce : profitez du Smart Click pour maintenir un tempo d'entraînement élevé (peu de perte de temps entre séries).</div>
-
-        <a class="buy-btn" href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">Acheter BRAINGAIN — Smart Click</a>
-      </article>
-
-      <!-- ARTICLE 3: Comparatif -->
-      <article class="card-article" id="comparatif">
-        <h2>Comparatif — BRAINGAIN vs autres haltères modulables</h2>
-        <p class="lead">Focus sur rapidité d'ajustement, compacité et rapport qualité/prix.</p>
-
-        <table class="table-compare" aria-label="Comparatif haltères">
-          <thead>
-            <tr><th>Modèle</th><th>Poids</th><th>Mécanisme</th><th>Idéal pour</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>BRAINGAIN (15/17-en-1)</td><td>24 kg / 40 kg</td><td>Smart Click</td><td>Gain de place + séance fluide</td></tr>
-            <tr><td>Haltère à goupille</td><td>2–32 kg</td><td>Pin Lock</td><td>Budget serré</td></tr>
-            <tr><td>Haltère Dial (haut de gamme)</td><td>2–40 kg</td><td>Dial</td><td>Usage intensif & design</td></tr>
-          </tbody>
-        </table>
-
-        <p style="margin-top:12px">Pour la majorité des utilisateurs qui veulent rapidité et compacité, le BRAINGAIN (Smart Click) offre un bon équilibre entre prix et praticité.</p>
-
-        <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
-          <a class="buy-btn" href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">Voir BRAINGAIN sur Amazon</a>
-          <a class="cta-secondary" href="#guide">Conseils d'achat détaillés</a>
-        </div>
-      </article>
-
-      <!-- ARTICLE 4: Erreurs -->
-      <article class="card-article" id="erreurs">
-        <h2>Erreurs fréquentes & sécurité — avec BRAINGAIN</h2>
-        <p class="lead">Même avec du bon matériel comme BRAINGAIN, la technique et la sécurité priment.</p>
-
-        <h3>Mauvaise fixation / vérification</h3>
-        <p>Avec les haltères réglables BRAINGAIN Smart Click, vérifiez toujours que le cadran/cliquet est bien enclenché avant chaque série.</p>
-
-        <h3>Sauter l'échauffement</h3>
-        <p>Échauffez-vous 8–10 minutes (mobility + cardio léger) — crucial pour séries lourdes même avec 24 kg.</p>
-
-        <div class="conseil">💡 Sécurité : rangez les plaques et le support correctement pour éviter que le set ne roule ou tombe.</div>
-
-        <h3>Technique avant charge</h3>
-        <p>Travaillez le contrôle et la cadence (2s concentrique / 3s excentrique) avec BRAINGAIN pour stimuler la force sans blessure.</p>
-
-        <a class="buy-btn" href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">Acheter BRAINGAIN — Pack sécurisé</a>
-      </article>
-
-      <!-- ARTICLE 5: Routine 4 semaines -->
-      <article class="card-article" id="routine">
-        <h2>Programme 4 semaines — avec BRAINGAIN</h2>
-        <p class="lead">Un plan simple pour progresser rapidement avec un haltère réglable BRAINGAIN.</p>
-
-        <h3>Semaine 1 — Technique</h3>
-        <ul>
-          <li>3 séances full body, charges légères (24 kg conseillé pour débutants)</li>
-          <li>Apprenez amplitude et posture</li>
-        </ul>
-
-        <h3>Semaine 2 — Volume</h3>
-        <ul>
-          <li>4 séances, split push/pull/legs</li>
-          <li>Augmentez le volume et maîtrisez le Smart Click</li>
-        </ul>
-
-        <h3>Semaine 3 — Intensité</h3>
-        <ul>
-          <li>Supersets, tempo contrôlé, progression de charge (40kg pour confirmés)</li>
-        </ul>
-
-        <h3>Semaine 4 — Peak</h3>
-        <ul>
-          <li>Testez vos meilleures séries et notez vos charges</li>
-          <li>Planifiez la suite (cycle 8–12 semaines)</li>
-        </ul>
-
-        <div class="conseil">💡 Astuce : passez de la version 24 kg à 40 kg seulement si vos principaux mouvements restent maîtrisés.</div>
-
-        <a class="buy-btn" href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">Voir BRAINGAIN — Acheter maintenant</a>
-      </article>
-
-      <!-- FAQ block (site-level) -->
-      <article class="card-article" id="faq">
-        <h2>FAQ — BRAINGAIN & haltères réglables</h2>
-        <div class="faq">
-          <details><summary>Quelles sont les différences entre 15-en-1 et 17-en-1 ?</summary><p>Le nombre de réglages (15 vs 17) correspond aux incréments disponibles ; choisissez selon la précision de charge souhaitée.</p></details>
-          <details><summary>Le Smart Click est-il sécurisé ?</summary><p>Oui, la technologie Smart Click verrouille la charge ; vérifiez simplement l’enclenchement avant l’utilisation.</p></details>
-          <details><summary>Quelle option pour un petit appartement ?</summary><p>La version 24 kg est souvent suffisante et prend moins de place ; le set BRAINGAIN reste compact.</p></details>
-        </div>
-      </article>
-
-    </section>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar" aria-labelledby="sidebar-title">
-      <h4 id="sidebar-title">Produits BRAINGAIN recommandés</h4>
-      <div class="product-list">
-        <div class="product-item">
-          <img src="https://via.placeholder.com/80x80?text=24kg" alt="BRAINGAIN haltère réglable 24 kg" loading="lazy">
-          <div><a href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">BRAINGAIN 24 kg — Paires 15-en-1</a><br><small class="muted">Compact — débutant</small></div>
-        </div>
-
-        <div class="product-item">
-          <img src="https://via.placeholder.com/80x80?text=40kg" alt="BRAINGAIN haltère réglable 40 kg" loading="lazy">
-          <div><a href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">BRAINGAIN 40 kg — Paires 17-en-1</a><br><small class="muted">Progression — intermédiaire/confirmé</small></div>
-        </div>
-
-        <div class="product-item">
-          <img src="https://via.placeholder.com/80x80?text=Smart+Click" alt="BRAINGAIN Smart Click" loading="lazy">
-          <div><a href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">BRAINGAIN — Technologie Smart Click</a><br><small class="muted">Changement rapide</small></div>
-        </div>
-      </div>
-
-      <div style="margin-top:18px">
-        <h4 style="margin-bottom:8px;color:#022">Ressources rapides</h4>
-        <ul style="margin:0;padding-left:18px;color:var(--muted)">
-          <li><a href="#exercices" style="color:var(--accent)">Exercices essentiels</a></li>
-          <li><a href="#routine" style="color:var(--accent)">Programme 4 semaines</a></li>
-          <li><a href="#comparatif" style="color:var(--accent)">Comparatif rapide</a></li>
-        </ul>
-      </div>
-    </aside>
-  </main>
-
-  <!-- Floating CTA + back to top -->
-  <a class="floating-buy" href="VOTRE-LIEN-AMAZON" target="_blank" rel="nofollow noopener">Acheter BRAINGAIN maintenant</a>
-  <button class="backtop" id="backtop" aria-label="Retour en haut">↑</button>
-
-  <!-- Footer -->
-  <div class="footer">
-    <div style="max-width:var(--maxw);margin:0 auto;padding:4px 18px">
-      <p style="margin:0;font-weight:700">Turbo Info — BRAINGAIN Haltères réglables • Musculation maison</p>
-      <small style="opacity:0.95">Site indépendant — affilié Amazon</small>
-    </div>
-  </div>
-
-  <!-- JSON-LD FAQ for rich snippets -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Quelle option BRAINGAIN choisir (24 kg ou 40 kg) ?","acceptedAnswer":{"@type":"Answer","text":"24 kg pour débutants et petits espaces, 40 kg pour progression et entraînement intensif."}},
-      {"@type":"Question","name":"La technologie Smart Click est-elle fiable ?","acceptedAnswer":{"@type":"Answer","text":"Oui, Smart Click permet un verrouillage rapide et sûr du poids, idéal pour circuits rapides."}},
-      {"@type":"Question","name":"Comment entretenir les haltères BRAINGAIN ?","acceptedAnswer":{"@type":"Answer","text":"Essuyez après usage, évitez l'humidité et vérifiez les parties mobiles périodiquement."}}
-    ]
-  }
-  </script>
+<footer>
+<p>&copy; 2025 PowerAdjust – Affilié Amazon</p>
+</footer>
 
 <script>
-/* ========== INTERACTIVITY ========== */
-document.addEventListener('DOMContentLoaded',function(){
-
-  // back to top
-  const back = document.getElementById('backtop');
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 360) back.style.display = 'block'; else back.style.display = 'none';
-  });
-  back.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
-
-  // Smooth anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      const href = a.getAttribute('href');
-      if(href.startsWith('#') && href.length>1){
-        e.preventDefault();
-        const el = document.querySelector(href);
-        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-      }
+// Animation scroll
+const articles = document.querySelectorAll('.article-animate');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.animation = 'fadeUp 1s ease forwards';
+        }
     });
-  });
-
-  // Accessibility: focus outline when keyboard used
-  function handleFirstTab(e) {
-    if(e.key === 'Tab') document.documentElement.classList.add('user-is-tabbing');
-    window.removeEventListener('keydown', handleFirstTab);
-  }
-  window.addEventListener('keydown', handleFirstTab);
-
-});
+},{threshold:0.2});
+articles.forEach(a => observer.observe(a));
 </script>
+
 </body>
 </html>
