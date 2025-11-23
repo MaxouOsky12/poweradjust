@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>PowerAdjust — Haltères Réglables & Musculation Maison</title>
-<meta name="description" content="PowerAdjust — Guide complet sur les haltères réglables : comparatifs, tests, exercices et programmes pour musculation à domicile." />
+<title>PowerAdjust — Haltères Réglables BRAINGAIN</title>
+<meta name="description" content="PowerAdjust — Guide complet sur les haltères réglables BRAINGAIN : tests, exercices et programmes pour musculation à domicile." />
 
 <style>
 /* ===== RESET ===== */
@@ -38,7 +37,7 @@ body{
 
 /* ===== CONTAINER ===== */
 .container{
-  max-width:1400px;
+  max-width:900px;
   margin:0 auto;
   padding:0 clamp(20px,5vw,40px)
 }
@@ -148,24 +147,11 @@ body{
   line-height:1.6
 }
 
-/* ===== LAYOUT ARTICLES + SIDEBAR ===== */
+/* ===== MAIN ===== */
 .main{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:clamp(32px,5vw,48px);
   padding:clamp(40px,6vw,60px) 0;
-  max-width:1400px;
+  max-width:900px;
   margin:0 auto
-}
-
-@media (min-width:1024px){
-  .main{
-    grid-template-columns:1fr 340px
-  }
-}
-
-.articles{
-  min-width:0
 }
 
 /* ===== ARTICLE CARD ===== */
@@ -261,7 +247,7 @@ body{
 /* ===== IMAGE IN ARTICLE ===== */
 .article-image{
   width:100%;
-  max-width:700px;
+  max-width:100%;
   height:auto;
   border-radius:16px;
   margin:clamp(24px,4vw,32px) 0;
@@ -342,7 +328,8 @@ tr:last-child td{
   box-shadow:0 8px 24px var(--glow);
   transition:all 0.3s ease;
   font-size:clamp(0.95rem,2vw,1.05rem);
-  margin-top:clamp(16px,3vw,24px)
+  margin-top:clamp(16px,3vw,24px);
+  margin-right:12px
 }
 
 .btn-cta:hover{
@@ -372,125 +359,6 @@ tr:last-child td{
   transform:translateY(-3px)
 }
 
-/* ===== SIDEBAR ===== */
-.sidebar{
-  position:sticky;
-  top:100px;
-  height:fit-content
-}
-
-.widget{
-  background:var(--bg-card);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:clamp(24px,4vw,32px);
-  margin-bottom:clamp(24px,4vw,32px)
-}
-
-.widget h3{
-  font-size:clamp(1.1rem,2.5vw,1.3rem);
-  color:var(--text-primary);
-  margin-bottom:clamp(16px,3vw,20px);
-  font-weight:800;
-  display:flex;
-  align-items:center;
-  gap:10px
-}
-
-.widget-item{
-  display:flex;
-  align-items:center;
-  gap:clamp(12px,3vw,16px);
-  padding:clamp(12px,3vw,16px);
-  background:rgba(59,130,246,0.05);
-  border-radius:12px;
-  margin-bottom:clamp(12px,2vw,16px);
-  transition:all 0.3s ease;
-  text-decoration:none
-}
-
-.widget-item:hover{
-  background:rgba(59,130,246,0.12);
-  transform:translateX(4px)
-}
-
-.widget-item img{
-  width:clamp(64px,15vw,80px);
-  height:clamp(64px,15vw,80px);
-  border-radius:10px;
-  object-fit:cover;
-  border:1px solid var(--border)
-}
-
-.widget-item-content h4{
-  font-size:clamp(0.95rem,2vw,1.05rem);
-  color:var(--text-primary);
-  margin:0 0 4px;
-  font-weight:700
-}
-
-.widget-item-content p{
-  font-size:clamp(0.8rem,2vw,0.85rem);
-  color:var(--text-muted);
-  margin:0
-}
-
-/* ===== TOC WIDGET ===== */
-.toc-list{
-  list-style:none;
-  padding:0
-}
-
-.toc-list li{
-  margin-bottom:12px
-}
-
-.toc-list a{
-  color:var(--text-secondary);
-  text-decoration:none;
-  font-size:clamp(0.9rem,2vw,0.95rem);
-  font-weight:600;
-  transition:all 0.3s ease;
-  display:block;
-  padding:8px 12px;
-  border-radius:8px
-}
-
-.toc-list a:hover{
-  color:var(--primary);
-  background:rgba(59,130,246,0.08);
-  transform:translateX(4px)
-}
-
-/* ===== FLOATING CTA ===== */
-.floating-cta{
-  position:fixed;
-  bottom:clamp(24px,5vw,32px);
-  right:clamp(24px,5vw,32px);
-  background:linear-gradient(135deg,#f59e0b,#ef4444);
-  color:#fff;
-  padding:clamp(14px,3vw,16px) clamp(24px,4vw,32px);
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:800;
-  box-shadow:0 12px 40px rgba(245,158,11,0.4);
-  z-index:999;
-  transition:all 0.3s ease;
-  font-size:clamp(0.9rem,2vw,1rem);
-  display:none
-}
-
-.floating-cta.visible{
-  display:flex;
-  align-items:center;
-  gap:8px
-}
-
-.floating-cta:hover{
-  transform:translateY(-4px);
-  box-shadow:0 16px 48px rgba(245,158,11,0.6)
-}
-
 /* ===== FOOTER ===== */
 .footer{
   background:var(--bg-elevated);
@@ -518,16 +386,35 @@ tr:last-child td{
   font-size:clamp(0.8rem,2vw,0.9rem)
 }
 
+.footer a{
+  color:var(--text-secondary);
+  text-decoration:none;
+  margin:0 12px
+}
+
+.footer a:hover{
+  color:var(--primary)
+}
+
+.footer-legal{
+  margin:40px 0 24px;
+  padding-top:32px;
+  border-top:1px solid var(--border)
+}
+
+.footer-disclaimer{
+  font-size:0.85rem;
+  color:var(--text-muted);
+  line-height:1.6;
+  max-width:700px;
+  margin:16px auto 0
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width:768px){
   .nav-menu{
     width:100%;
     justify-content:center
-  }
-  
-  .sidebar{
-    position:relative;
-    top:auto
   }
 }
 </style>
@@ -541,13 +428,13 @@ tr:last-child td{
         <div class="logo">PA</div>
         <div class="brand-text">
           <h1>PowerAdjust</h1>
-          <p>Haltères Réglables • Guides & Tests</p>
+          <p>Haltères BRAINGAIN • Guides & Tests</p>
         </div>
       </a>
       <ul class="nav-menu">
         <li><a href="#articles">Articles</a></li>
-        <li><a href="#comparatifs">Comparatifs</a></li>
-        <li><a href="#guides">Guides</a></li>
+        <li><a href="#test">Test</a></li>
+        <li><a href="#guide">Guide</a></li>
       </ul>
     </nav>
   </header>
@@ -555,194 +442,254 @@ tr:last-child td{
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <h2>Le guide complet des haltères réglables</h2>
-      <p class="hero-subtitle">Comparatifs, tests détaillés, exercices et programmes pour réussir votre musculation à domicile</p>
+      <h2>Le guide complet des haltères BRAINGAIN</h2>
+      <p class="hero-subtitle">Tests détaillés, exercices et programmes pour réussir votre musculation à domicile avec la technologie Smart Click</p>
     </div>
   </section>
 
   <!-- MAIN LAYOUT -->
-  <main class="main container">
-    
-    <!-- ARTICLES COLUMN -->
-    <div class="articles">
+  <main class="main container" id="articles">
 
-      <!-- ARTICLE 1: BRAINGAIN Test -->
-      <article class="article" id="braingain-test">
-        <div class="article-meta">
-          <span class="article-tag">Test produit</span>
-          <span class="article-date">23 novembre 2025</span>
+    <!-- ARTICLE 1: BRAINGAIN Test -->
+    <article class="article" id="test">
+      <div class="article-meta">
+        <span class="article-tag">Test produit</span>
+        <span class="article-date">23 novembre 2025</span>
+      </div>
+      
+      <h2>Test complet : BRAINGAIN Smart Click 24kg et 40kg</h2>
+      
+      <img src="https://via.placeholder.com/700x400?text=BRAINGAIN+Smart+Click" alt="Haltères BRAINGAIN Smart Click" class="article-image">
+      
+      <p>Après 3 mois d'utilisation intensive des <strong>haltères réglables BRAINGAIN</strong> (ensembles 15-en-1 et 17-en-1), voici notre test détaillé et sans concession de ce système Smart Click qui promet de révolutionner l'entraînement à domicile.</p>
+
+      <h3>Les caractéristiques techniques</h3>
+      <p>BRAINGAIN propose deux ensembles avec la technologie Smart Click brevetée :</p>
+      <ul>
+        <li><strong>Ensemble 15-en-1 (24 kg) :</strong> 15 réglages de poids, idéal débutants/intermédiaires</li>
+        <li><strong>Ensemble 17-en-1 (40 kg) :</strong> 17 réglages de poids, recommandé pour progression long terme</li>
+        <li><strong>Système Smart Click :</strong> changement de poids en 2 secondes via cadran rotatif</li>
+        <li><strong>Construction :</strong> acier robuste avec revêtement anti-dérapant</li>
+        <li><strong>Gain d'espace :</strong> 95% vs haltères traditionnels</li>
+      </ul>
+
+      <h3>Notre test en conditions réelles</h3>
+      
+      <h4>Performance du système Smart Click</h4>
+      <p>Le mécanisme de changement rapide fonctionne parfaitement. Le cadran tourne avec fluidité et le <strong>clic audible confirme le verrouillage</strong>. En pratique, on change réellement le poids en 2-3 secondes, ce qui transforme l'entraînement :</p>
+      <ul>
+        <li>Drop-sets ultra-efficaces (réduire le poids instantanément)</li>
+        <li>Pyramides ascendantes/descendantes fluides</li>
+        <li>Moins de temps mort entre séries</li>
+        <li>Séances 25-30% plus rapides</li>
+      </ul>
+
+      <div class="highlight">
+        <div class="highlight-title">
+          <span>⚡</span>
+          <span>Point fort principal</span>
         </div>
-        
-        <h2>Test complet : BRAINGAIN Smart Click 24kg et 40kg</h2>
-        
-        <img src="https://via.placeholder.com/700x400?text=BRAINGAIN+Smart+Click" alt="Haltères BRAINGAIN Smart Click" class="article-image">
-        
-        <p>Après 3 mois d'utilisation intensive des <strong>haltères réglables BRAINGAIN</strong> (ensembles 15-en-1 et 17-en-1), voici notre test détaillé et sans concession de ce système Smart Click qui promet de révolutionner l'entraînement à domicile.</p>
+        <p>Le Smart Click change réellement la donne. Contrairement aux systèmes à goupille qui demandent 15-20 secondes de manipulation, ici c'est instantané. Cela permet des techniques d'intensification impossibles avec des haltères classiques.</p>
+      </div>
 
-        <h3>Les caractéristiques techniques</h3>
-        <p>BRAINGAIN propose deux ensembles avec la technologie Smart Click brevetée :</p>
-        <ul>
-          <li><strong>Ensemble 15-en-1 (24 kg) :</strong> 15 réglages de poids, idéal débutants/intermédiaires</li>
-          <li><strong>Ensemble 17-en-1 (40 kg) :</strong> 17 réglages de poids, recommandé pour progression long terme</li>
-          <li><strong>Système Smart Click :</strong> changement de poids en 2 secondes via cadran rotatif</li>
-          <li><strong>Construction :</strong> acier robuste avec revêtement anti-dérapant</li>
-          <li><strong>Gain d'espace :</strong> 95% vs haltères traditionnels</li>
-        </ul>
+      <h4>Qualité de construction</h4>
+      <p>Après 3 mois d'utilisation quotidienne (5-6 séances/semaine), aucun signe d'usure. Le revêtement reste impeccable, le mécanisme fonctionne comme au premier jour. La qualité BRAINGAIN est au rendez-vous.</p>
 
-        <h3>Notre test en conditions réelles</h3>
-        
-        <h4>Performance du système Smart Click</h4>
-        <p>Le mécanisme de changement rapide fonctionne parfaitement. Le cadran tourne avec fluidité et le <strong>clic audible confirme le verrouillage</strong>. En pratique, on change réellement le poids en 2-3 secondes, ce qui transforme l'entraînement :</p>
-        <ul>
-          <li>Drop-sets ultra-efficaces (réduire le poids instantanément)</li>
-          <li>Pyramides ascendantes/descendantes fluides</li>
-          <li>Moins de temps mort entre séries</li>
-          <li>Séances 25-30% plus rapides</li>
-        </ul>
+      <h4>Ergonomie et confort</h4>
+      <p>Les poignées sont confortables même sur séries longues. Le grip anti-dérapant fonctionne parfaitement, même avec les mains moites. Le poids est bien équilibré, aucune sensation de déséquilibre.</p>
 
-        <div class="highlight">
-          <div class="highlight-title">
-            <span>⚡</span>
-            <span>Point fort principal</span>
-          </div>
-          <p>Le Smart Click change réellement la donne. Contrairement aux systèmes à goupille qui demandent 15-20 secondes de manipulation, ici c'est instantané. Cela permet des techniques d'intensification impossibles avec des haltères classiques.</p>
+      <h3>24 kg vs 40 kg : Notre verdict</h3>
+      <p>Nous avons testé les deux versions. Voici notre analyse :</p>
+      
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Critère</th>
+              <th>24 kg (15-en-1)</th>
+              <th>40 kg (17-en-1)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bras/Épaules</strong></td>
+              <td>Parfait</td>
+              <td>Parfait</td>
+            </tr>
+            <tr>
+              <td><strong>Pectoraux</strong></td>
+              <td>Suffisant 12-18 mois</td>
+              <td>Progression 3+ ans</td>
+            </tr>
+            <tr>
+              <td><strong>Dos</strong></td>
+              <td>Limite rapidement</td>
+              <td>Optimal</td>
+            </tr>
+            <tr>
+              <td><strong>Jambes</strong></td>
+              <td>Insuffisant après 6 mois</td>
+              <td>Adapté long terme</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Les points forts</h3>
+      <ul>
+        <li>✅ Système Smart Click ultra-rapide et fiable</li>
+        <li>✅ Qualité de fabrication exceptionnelle</li>
+        <li>✅ Gain d'espace énorme (95%)</li>
+        <li>✅ Permet techniques avancées (drop-sets, pyramides)</li>
+        <li>✅ Confortable et bien équilibré</li>
+        <li>✅ Construction robuste qui durera des années</li>
+      </ul>
+
+      <h3>Les points faibles</h3>
+      <ul>
+        <li>⚠️ Le 24 kg atteint vite ses limites sur jambes/dos</li>
+        <li>⚠️ Pas adapté aux chutes (exercices type Crossfit)</li>
+      </ul>
+
+      <h3>Notre recommandation</h3>
+      <p>Si vous cherchez le <strong>meilleur système d'haltères réglables du marché</strong>, BRAINGAIN est notre choix n°1. La technologie Smart Click justifie totalement le prix. Notre conseil : <strong>investissez dans le 40 kg</strong> même si vous débutez. Vous n'aurez jamais besoin de racheter d'équipement.</p>
+
+      <div style="margin-top:32px">
+        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
+          <span>Acheter le 40 kg sur Amazon</span>
+          <span>→</span>
+        </a>
+        <a href="VOTRE-LIEN-AMAZON-24KG" class="btn-secondary" target="_blank" rel="nofollow noopener">
+          <span>Voir le 24 kg</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- ARTICLE 2: Pourquoi BRAINGAIN -->
+    <article class="article" id="pourquoi-braingain">
+      <div class="article-meta">
+        <span class="article-tag">Guide</span>
+        <span class="article-date">20 novembre 2025</span>
+      </div>
+      
+      <h2>Pourquoi choisir les haltères réglables BRAINGAIN ?</h2>
+      
+      <img src="https://via.placeholder.com/700x400?text=BRAINGAIN+Avantages" alt="Avantages BRAINGAIN" class="article-image">
+      
+      <p>Les <strong>haltères réglables BRAINGAIN</strong> se démarquent sur le marché grâce à leur technologie Smart Click innovante et leur construction premium. Voici pourquoi ils représentent le meilleur choix pour votre salle de sport à domicile.</p>
+
+      <h3>Technologie Smart Click : Un vrai game-changer</h3>
+      <p>Le système Smart Click breveté de BRAINGAIN révolutionne l'entraînement à domicile :</p>
+      <ul>
+        <li><strong>Changement de poids en 2 secondes</strong> via un simple cadran rotatif</li>
+        <li><strong>Clic de confirmation audible</strong> pour garantir la sécurité</li>
+        <li><strong>Aucune goupille à manipuler</strong> - fini les pertes de temps</li>
+        <li><strong>Parfait pour les drop-sets</strong> et techniques d'intensification</li>
+      </ul>
+
+      <h3>Gain d'espace exceptionnel</h3>
+      <p>Avec BRAINGAIN, économisez <strong>95% d'espace</strong> par rapport à un ensemble d'haltères classiques. Une seule paire remplace jusqu'à 17 paires d'haltères traditionnelles !</p>
+
+      <div class="highlight">
+        <div class="highlight-title">
+          <span>💡</span>
+          <span>Le saviez-vous ?</span>
         </div>
+        <p>Un ensemble complet d'haltères fixes de 2 à 40 kg occuperait environ 3 mètres de rack. Avec BRAINGAIN, vous n'avez besoin que de 40 cm d'espace sur le sol ou sur une étagère.</p>
+      </div>
 
-        <h4>Qualité de construction</h4>
-        <p>Après 3 mois d'utilisation quotidienne (5-6 séances/semaine), aucun signe d'usure. Le revêtement reste impeccable, le mécanisme fonctionne comme au premier jour. La qualité BRAINGAIN est au rendez-vous.</p>
+      <h3>Deux options adaptées à tous les niveaux</h3>
+      
+      <h4>Ensemble 15-en-1 (24 kg)</h4>
+      <ul>
+        <li>15 niveaux de poids réglables</li>
+        <li>Idéal pour débutants et intermédiaires</li>
+        <li>Parfait pour bras, épaules et pectoraux</li>
+        <li>Investissement initial plus accessible</li>
+      </ul>
 
-        <h4>Ergonomie et confort</h4>
-        <p>Les poignées sont confortables même sur séries longues. Le grip anti-dérapant fonctionne parfaitement, même avec les mains moites. Le poids est bien équilibré, aucune sensation de déséquilibre.</p>
+      <h4>Ensemble 17-en-1 (40 kg) - Notre recommandation</h4>
+      <ul>
+        <li>17 niveaux de poids pour progression maximale</li>
+        <li>Permet de travailler efficacement TOUS les groupes musculaires</li>
+        <li>Idéal pour dos, jambes et progression long terme</li>
+        <li>Investissement qui durera des années</li>
+      </ul>
 
-        <h3>24 kg vs 40 kg : Notre verdict</h3>
-        <p>Nous avons testé les deux versions. Voici notre analyse :</p>
-        
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Critère</th>
-                <th>24 kg (15-en-1)</th>
-                <th>40 kg (17-en-1)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Bras/Épaules</strong></td>
-                <td>Parfait</td>
-                <td>Parfait</td>
-              </tr>
-              <tr>
-                <td><strong>Pectoraux</strong></td>
-                <td>Suffisant 12-18 mois</td>
-                <td>Progression 3+ ans</td>
-              </tr>
-              <tr>
-                <td><strong>Dos</strong></td>
-                <td>Limite rapidement</td>
-                <td>Optimal</td>
-              </tr>
-              <tr>
-                <td><strong>Jambes</strong></td>
-                <td>Insuffisant après 6 mois</td>
-                <td>Adapté long terme</td>
-              </tr>
-              <tr>
-                <td><strong>Budget</strong></td>
-                <td>€ 280-350</td>
-                <td>€ 400-480</td>
-              </tr>
-            </tbody>
-          </table>
+      <h3>Construction premium et durabilité</h3>
+      <p>BRAINGAIN ne fait aucun compromis sur la qualité :</p>
+      <ul>
+        <li><strong>Acier robuste</strong> de haute qualité</li>
+        <li><strong>Revêtement anti-dérapant</strong> pour une prise sûre</li>
+        <li><strong>Mécanisme testé</strong> pour des milliers de cycles</li>
+        <li><strong>Garantie constructeur</strong> pour votre tranquillité d'esprit</li>
+      </ul>
+
+      <div style="margin-top:32px">
+        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
+          <span>Acheter le 40 kg sur Amazon</span>
+          <span>→</span>
+        </a>
+        <a href="VOTRE-LIEN-AMAZON-24KG" class="btn-secondary" target="_blank" rel="nofollow noopener">
+          <span>Acheter le 24 kg</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- ARTICLE 3: Programme d'entraînement -->
+    <article class="article" id="programme">
+      <div class="article-meta">
+        <span class="article-tag">Programme</span>
+        <span class="article-date">18 novembre 2025</span>
+      </div>
+      
+      <h2>Programme complet avec haltères BRAINGAIN</h2>
+      
+      <img src="https://via.placeholder.com/700x400?text=Programme+BRAINGAIN" alt="Programme d'entraînement BRAINGAIN" class="article-image">
+      
+      <p>Découvrez comment tirer le maximum de vos <strong>haltères réglables BRAINGAIN</strong> avec ce programme d'entraînement complet de 12 semaines.</p>
+
+      <h3>Programme débutant (Semaines 1-4)</h3>
+      <p>3 séances par semaine, focus sur la technique et l'adaptation musculaire.</p>
+
+      <h4>Séance A : Haut du corps</h4>
+      <ul>
+        <li>Développé couché : 3×12 (8-12 kg avec BRAINGAIN)</li>
+        <li>Rowing haltères : 3×12 (10-14 kg)</li>
+        <li>Développé épaules : 3×10 (6-10 kg)</li>
+        <li>Curl biceps : 3×12 (6-10 kg)</li>
+        <li>Extensions triceps : 3×12 (6-10 kg)</li>
+      </ul>
+
+      <h4>Séance B : Jambes et corps complet</h4>
+      <ul>
+        <li>Squats haltères : 3×15 (12-16 kg)</li>
+        <li>Fentes alternées : 3×10/jambe (8-12 kg)</li>
+        <li>Soulevé de terre roumain : 3×12 (14-18 kg)</li>
+        <li>Développé couché : 2×12</li>
+      </ul>
+
+      <div class="highlight">
+        <div class="highlight-title">
+          <span>⚡</span>
+          <span>Astuce Smart Click</span>
         </div>
+        <p>Profitez du changement rapide pour faire des drop-sets : terminez chaque série en réduisant le poids de 20% et faites 5 répétitions supplémentaires. Avec BRAINGAIN, cela prend 2 secondes !</p>
+      </div>
 
-        <h3>Les points forts</h3>
-        <ul>
-          <li>✅ Système Smart Click ultra-rapide et fiable</li>
-          <li>✅ Qualité de fabrication exceptionnelle</li>
-          <li>✅ Gain d'espace énorme (95%)</li>
-          <li>✅ Permet techniques avancées (drop-sets, pyramides)</li>
-          <li>✅ Confortable et bien équilibré</li>
-          <li>✅ Construction robuste qui durera des années</li>
-        </ul>
+      <h3>Programme intermédiaire (Semaines 5-8)</h3>
+      <p>4 séances par semaine, augmentation de l'intensité.</p>
+      
+      <ul>
+        <li><strong>Lundi :</strong> Pectoraux + Triceps (16-24 kg BRAINGAIN)</li>
+        <li><strong>Mercredi :</strong> Dos + Biceps (18-28 kg)</li>
+        <li><strong>Vendredi :</strong> Épaules + Abdos (12-20 kg)</li>
+        <li><strong>Samedi :</strong> Jambes (20-32 kg pour squats/fentes)</li>
+      </ul>
 
-        <h3>Les points faibles</h3>
-        <ul>
-          <li>⚠️ Prix élevé (mais justifié par la qualité)</li>
-          <li>⚠️ Le 24 kg atteint vite ses limites sur jambes/dos</li>
-          <li>⚠️ Pas adapté aux chutes (exercices type Crossfit)</li>
-        </ul>
-
-        <h3>Notre recommandation</h3>
-        <p>Si vous cherchez le <strong>meilleur système d'haltères réglables du marché</strong>, BRAINGAIN est notre choix n°1. La technologie Smart Click justifie totalement le prix. Notre conseil : <strong>investissez dans le 40 kg</strong> même si vous débutez. La différence de prix (120-150€) sera vite amortie et vous n'aurez jamais besoin de racheter d'équipement.</p>
-
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-            <span>Voir le 40 kg sur Amazon</span>
-            <span>→</span>
-          </a>
-          <a href="VOTRE-LIEN-AMAZON-24KG" class="btn-secondary" target="_blank" rel="nofollow noopener">
-            <span>Voir le 24 kg</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- ARTICLE 2: Comparatif général -->
-      <article class="article" id="comparatif-halteres">
-        <div class="article-meta">
-          <span class="article-tag">Comparatif</span>
-          <span class="article-date">20 novembre 2025</span>
-        </div>
-        
-        <h2>Comparatif 2025 : Les 5 meilleurs haltères réglables</h2>
-        
-        <p>Nous avons testé les systèmes d'haltères réglables les plus populaires du marché. Voici notre classement basé sur 6 mois de tests en conditions réelles.</p>
-
-        <h3>1. BRAINGAIN Smart Click (40 kg) - 9.5/10</h3>
-        <p><strong>Prix :</strong> €420-480 | <strong>Système :</strong> Smart Click</p>
-        <p>Le meilleur du marché. Changement ultra-rapide, qualité exceptionnelle, progression long terme garantie. Un investissement qui se rentabilise.</p>
-        <ul>
-          <li>✅ Technologie Smart Click révolutionnaire</li>
-          <li>✅ Construction premium</li>
-          <li>✅ 40 kg permet progression 3-5 ans</li>
-          <li>⚠️ Prix élevé</li>
-        </ul>
-        <a href="VOTRE-LIEN-AMAZON-BRAINGAIN" class="btn-cta" target="_blank" rel="nofollow noopener">Voir sur Amazon →</a>
-
-        <h3>2. Bowflex SelectTech 552 - 8.5/10</h3>
-        <p><strong>Prix :</strong> €350-420 | <strong>Système :</strong> Cadran Dial</p>
-        <p>Référence du marché avec système à molette fiable. Bon compromis qualité/prix mais changement moins rapide que BRAINGAIN.</p>
-        <ul>
-          <li>✅ Marque reconnue, SAV efficace</li>
-          <li>✅ Système dial fiable</li>
-          <li>⚠️ Changement 8-10 secondes</li>
-          <li>⚠️ Limité à 24 kg</li>
-        </ul>
-
-        <h3>3. PowerBlock Elite - 8/10</h3>
-        <p><strong>Prix :</strong> €300-380 | <strong>Système :</strong> Pin Lock</p>
-        <p>Design unique en forme de bloc. Robuste mais système à goupille plus lent.</p>
-        <ul>
-          <li>✅ Très robuste</li>
-          <li>✅ Extensible jusqu'à 40 kg+</li>
-          <li>⚠️ Design particulier (pas pour tous)</li>
-          <li>⚠️ Goupille demande 15-20 sec</li>
-        </ul>
-
-        <h3>4. Ensemble économique (goupille) - 6.5/10</h3>
-        <p><strong>Prix :</strong> €80-150 | <strong>Système :</strong> Pin Lock basique</p>
-        <p>Solution budget pour débuter. Fonctionnel mais pas de comparaison avec les systèmes haut de gamme.</p>
-        <ul>
-          <li>✅ Prix accessible</li>
-          <li>⚠️ Qualité moyenne</li>
-          <li>⚠️ Manipulation lente et fastidieuse</li>
-        </ul>
-
-        <div class="highlight">
-          <div class="highlight-title">
-            <span>🏆</span>
-            <span>Notre verdict final</span>
-          </div>
-          <p><strong>Budget optimal (400€+) :</strong> BRAINGAIN 40 kg sans hésiter. Le meilleur investissement long terme.</p>
-          <p><strong>Budget moyen (300-400€) :</strong> Bowflex SelectTech si vous trouvez le 40 kg, sinon BRAINGAIN 24 kg.</p>
-          <p><strong>Budget ser
+      <h3>Programme avancé (Semaines 9-12)</h3>
+      <p>5 séances par semaine, techniques avancées possibles grâce au Smart Click.</p>
+      
+      <p>Intégrez des techniques d'intensification :</p>
+      <ul>
+        <li><strong>Drop-sets
