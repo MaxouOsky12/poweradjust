@@ -5,10 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>PowerAdjust — Haltères Réglables & Musculation Maison 2025</title>
 <meta name="description" content="Guide complet haltères réglables 2025 : tests BRAINGAIN, comparatifs, exercices et programmes musculation maison. Conseils d'experts pour choisir et progresser." />
-<meta name="keywords" content="haltères réglables, BRAINGAIN, musculation maison, haltères 40kg, smart click, comparatif haltères, exercices haltères, programme musculation" />
 
 <style>
-/* ===== RESET ===== */
 *{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;scroll-behavior:smooth}
 body{
@@ -19,31 +17,19 @@ body{
   overflow-x:hidden
 }
 
-/* ===== THEME DARK ===== */
 :root{
   --primary:#3b82f6;
-  --primary-glow:#2563eb;
   --accent:#10b981;
-  --accent-warm:#f59e0b;
-  --bg-dark:#09090b;
   --bg-card:#18181b;
-  --bg-elevated:#27272a;
   --text-primary:#fafafa;
   --text-secondary:#a1a1aa;
-  --text-muted:#71717a;
   --border:#3f3f46;
   --glow:rgba(59,130,246,0.4);
-  --radius:20px;
 }
 
-/* ===== CONTAINER ===== */
-.container{
-  max-width:900px;
-  margin:0 auto;
-  padding:0 clamp(20px,5vw,40px)
-}
+.container{max-width:900px;margin:0 auto;padding:0 20px}
 
-/* ===== HEADER ===== */
+/* Header */
 .header{
   position:fixed;
   top:0;
@@ -53,1164 +39,336 @@ body{
   background:rgba(9,9,11,0.95);
   backdrop-filter:blur(20px);
   border-bottom:1px solid rgba(255,255,255,0.08);
-  padding:clamp(16px,3vw,20px) 0;
-  transition:all 0.3s ease
+  padding:16px 0;
 }
 
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:clamp(20px,4vw,48px)
-}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
 
 .brand{
   display:flex;
   align-items:center;
-  gap:16px;
+  gap:12px;
   text-decoration:none;
-  transition:transform 0.3s ease
 }
 
-.brand:hover{transform:translateX(4px)}
-
 .logo{
-  width:clamp(48px,10vw,56px);
-  height:clamp(48px,10vw,56px);
-  border-radius:14px;
+  width:48px;
+  height:48px;
+  border-radius:12px;
   background:linear-gradient(135deg,var(--primary),var(--accent));
   display:flex;
   align-items:center;
   justify-content:center;
   color:#000;
   font-weight:900;
-  font-size:clamp(1.1rem,2.5vw,1.4rem);
+  font-size:1.3rem;
   box-shadow:0 8px 32px var(--glow)
 }
 
 .brand-text h1{
-  font-size:clamp(1.2rem,3vw,1.5rem);
+  font-size:1.3rem;
   color:var(--text-primary);
   font-weight:900;
-  letter-spacing:-0.02em
 }
 
 .brand-text p{
-  font-size:clamp(0.75rem,2vw,0.85rem);
-  color:var(--text-muted);
+  font-size:0.8rem;
+  color:#71717a;
   margin-top:2px
 }
 
-.nav-menu{
-  display:flex;
-  gap:clamp(8px,2vw,16px);
-  list-style:none;
-  align-items:center;
-  flex-wrap:wrap
-}
-
-.nav-menu a{
-  color:var(--text-secondary);
-  text-decoration:none;
-  font-weight:600;
-  padding:clamp(8px,2vw,12px) clamp(14px,3vw,18px);
-  border-radius:10px;
-  transition:all 0.3s ease;
-  font-size:clamp(0.85rem,2vw,0.95rem)
-}
-
-.nav-menu a:hover{
-  color:var(--text-primary);
-  background:rgba(59,130,246,0.1)
-}
-
-/* ===== HERO SIMPLE ===== */
+/* Hero */
 .hero{
-  padding:clamp(100px,15vw,140px) 0 clamp(60px,10vw,80px);
+  padding:120px 0 60px;
   text-align:center;
-  background:radial-gradient(ellipse at top,rgba(59,130,246,0.1),transparent 60%)
+  background:radial-gradient(ellipse at top,rgba(59,130,246,0.15),transparent 60%)
 }
 
 .hero h2{
-  font-size:clamp(2rem,5vw,3.5rem);
+  font-size:2.8rem;
   color:var(--text-primary);
   font-weight:900;
   line-height:1.15;
-  margin-bottom:clamp(16px,3vw,24px);
-  letter-spacing:-0.02em
+  margin-bottom:20px;
 }
 
 .hero-subtitle{
-  font-size:clamp(1rem,2.5vw,1.2rem);
+  font-size:1.1rem;
   color:var(--text-secondary);
   max-width:700px;
-  margin:0 auto;
-  line-height:1.6
+  margin:0 auto 32px;
 }
 
-/* ===== MAIN ===== */
-.main{
-  padding:clamp(40px,6vw,60px) 0;
-  max-width:900px;
-  margin:0 auto
+/* Product Card */
+.product-card{
+  background:var(--bg-card);
+  border:2px solid var(--primary);
+  border-radius:20px;
+  padding:32px;
+  max-width:700px;
+  margin:0 auto 60px;
+  box-shadow:0 20px 60px rgba(59,130,246,0.3);
 }
 
-/* ===== ARTICLE CARD ===== */
-.article{
+.product-header{
+  text-align:center;
+  margin-bottom:24px;
+}
+
+.product-badge{
+  background:var(--primary);
+  color:#000;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:0.85rem;
+  font-weight:800;
+  display:inline-block;
+  margin-bottom:12px;
+}
+
+.product-header h3{
+  font-size:1.8rem;
+  color:var(--text-primary);
+  margin-bottom:8px;
+}
+
+.product-price{
+  font-size:2rem;
+  color:var(--accent);
+  font-weight:900;
+}
+
+.product-features{
+  background:rgba(59,130,246,0.1);
+  border-radius:12px;
+  padding:20px;
+  margin:24px 0;
+}
+
+.product-features ul{
+  list-style:none;
+  padding:0;
+}
+
+.product-features li{
+  padding:8px 0;
+  color:var(--text-secondary);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.product-features li:before{
+  content:"✓";
+  color:var(--accent);
+  font-weight:900;
+  font-size:1.2rem;
+}
+
+.btn-buy{
+  display:block;
+  width:100%;
+  background:linear-gradient(135deg,var(--primary),#2563eb);
+  color:#fff;
+  padding:18px 36px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:1.1rem;
+  box-shadow:0 12px 32px var(--glow);
+  transition:all 0.3s ease;
+  text-align:center;
+}
+
+.btn-buy:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 40px var(--glow);
+}
+
+/* Articles Grid */
+.articles-grid{
+  display:grid;
+  gap:24px;
+  margin-bottom:60px;
+}
+
+.article-card{
   background:var(--bg-card);
   border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:clamp(32px,6vw,48px);
-  margin-bottom:clamp(32px,5vw,48px);
+  border-radius:16px;
+  padding:28px;
   transition:all 0.3s ease;
-  scroll-margin-top:100px
+  cursor:pointer;
 }
 
-.article.hidden{
-  display:none
-}
-
-.article:hover{
-  border-color:rgba(59,130,246,0.4);
-  box-shadow:0 12px 48px rgba(0,0,0,0.3)
-}
-
-.article-meta{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  margin-bottom:clamp(16px,3vw,24px);
-  flex-wrap:wrap
+.article-card:hover{
+  border-color:var(--primary);
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px rgba(0,0,0,0.3);
 }
 
 .article-tag{
   background:rgba(59,130,246,0.15);
   color:var(--primary);
-  padding:6px 14px;
-  border-radius:20px;
-  font-size:clamp(0.8rem,2vw,0.85rem);
-  font-weight:700
-}
-
-.article-date{
-  color:var(--text-muted);
-  font-size:clamp(0.8rem,2vw,0.9rem)
-}
-
-.article h2{
-  font-size:clamp(1.8rem,4vw,2.5rem);
-  color:var(--text-primary);
-  margin-bottom:clamp(16px,3vw,20px);
-  font-weight:900;
-  line-height:1.2;
-  letter-spacing:-0.02em
-}
-
-.article h3{
-  font-size:clamp(1.3rem,3vw,1.7rem);
-  color:var(--text-primary);
-  margin:clamp(28px,5vw,40px) 0 clamp(14px,3vw,18px);
-  font-weight:800;
-  line-height:1.3
-}
-
-.article h4{
-  font-size:clamp(1.1rem,2.5vw,1.3rem);
-  color:var(--text-secondary);
-  margin:clamp(20px,4vw,28px) 0 clamp(12px,2vw,16px);
-  font-weight:700
-}
-
-.article p{
-  color:var(--text-secondary);
-  line-height:1.8;
-  margin-bottom:clamp(16px,3vw,20px);
-  font-size:clamp(0.95rem,2vw,1.05rem)
-}
-
-.article strong{
-  color:var(--text-primary);
-  font-weight:700
-}
-
-.article ul,.article ol{
-  margin:clamp(16px,3vw,24px) 0;
-  padding-left:clamp(24px,5vw,32px);
-  color:var(--text-secondary)
-}
-
-.article li{
-  margin-bottom:clamp(10px,2vw,14px);
-  line-height:1.7;
-  font-size:clamp(0.95rem,2vw,1.05rem)
-}
-
-.article li::marker{
-  color:var(--primary)
-}
-
-/* ===== IMAGE IN ARTICLE ===== */
-.article-image{
-  width:100%;
-  max-width:100%;
-  height:auto;
+  padding:6px 12px;
   border-radius:16px;
-  margin:clamp(24px,4vw,32px) 0;
-  border:1px solid var(--border)
-}
-
-/* ===== HIGHLIGHT BOX ===== */
-.highlight{
-  background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(16,185,129,0.05));
-  border-left:4px solid var(--primary);
-  padding:clamp(20px,4vw,28px);
-  border-radius:12px;
-  margin:clamp(24px,4vw,32px) 0
-}
-
-.highlight-title{
-  font-size:clamp(1.1rem,2.5vw,1.3rem);
-  color:var(--primary);
-  font-weight:800;
+  font-size:0.8rem;
+  font-weight:700;
+  display:inline-block;
   margin-bottom:12px;
-  display:flex;
-  align-items:center;
-  gap:10px
 }
 
-.highlight p{
-  color:var(--text-secondary);
-  margin-bottom:12px
-}
-
-/* ===== TABLE ===== */
-.table-wrapper{
-  overflow-x:auto;
-  border-radius:12px;
-  border:1px solid var(--border);
-  background:var(--bg-elevated);
-  margin:clamp(24px,4vw,32px) 0
-}
-
-table{
-  width:100%;
-  border-collapse:collapse
-}
-
-th,td{
-  padding:clamp(14px,3vw,18px);
-  text-align:left;
-  border-bottom:1px solid var(--border);
-  font-size:clamp(0.9rem,2vw,1rem)
-}
-
-th{
-  background:rgba(59,130,246,0.08);
-  color:var(--primary);
-  font-weight:800;
-  font-size:clamp(0.85rem,2vw,0.95rem)
-}
-
-td{
-  color:var(--text-secondary)
-}
-
-tr:last-child td{
-  border-bottom:none
-}
-
-/* ===== CTA BUTTON ===== */
-.btn-cta{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:linear-gradient(135deg,var(--primary),var(--primary-glow));
-  color:#fff;
-  padding:clamp(14px,3vw,16px) clamp(28px,5vw,36px);
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:700;
-  box-shadow:0 8px 24px var(--glow);
-  transition:all 0.3s ease;
-  font-size:clamp(0.95rem,2vw,1.05rem);
-  margin-top:clamp(16px,3vw,24px);
-  margin-right:12px
-}
-
-.btn-cta:hover{
-  transform:translateY(-3px);
-  box-shadow:0 12px 32px var(--glow)
-}
-
-.btn-secondary{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:transparent;
+.article-card h3{
+  font-size:1.4rem;
   color:var(--text-primary);
-  padding:clamp(14px,3vw,16px) clamp(28px,5vw,36px);
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:700;
-  border:2px solid var(--border);
-  transition:all 0.3s ease;
-  font-size:clamp(0.95rem,2vw,1.05rem);
-  margin-top:clamp(16px,3vw,24px)
+  margin-bottom:12px;
+  font-weight:800;
 }
 
-.btn-secondary:hover{
-  border-color:var(--primary);
-  background:rgba(59,130,246,0.1);
-  transform:translateY(-3px)
-}
-
-.btn-load-more{
-  display:block;
-  width:100%;
-  max-width:300px;
-  margin:clamp(40px,6vw,60px) auto;
-  text-align:center;
-  background:rgba(59,130,246,0.1);
-  color:var(--primary);
-  padding:clamp(14px,3vw,18px) clamp(28px,5vw,36px);
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:700;
-  border:2px solid var(--primary);
-  transition:all 0.3s ease;
-  font-size:clamp(0.95rem,2vw,1.05rem);
-  cursor:pointer
-}
-
-.btn-load-more:hover{
-  background:var(--primary);
-  color:#fff;
-  transform:translateY(-3px);
-  box-shadow:0 12px 32px var(--glow)
-}
-
-.btn-load-more.hidden{
-  display:none
-}
-
-/* ===== FOOTER ===== */
-.footer{
-  background:var(--bg-elevated);
-  border-top:1px solid var(--border);
-  padding:clamp(40px,8vw,60px) 0 clamp(32px,6vw,40px);
-  text-align:center;
-  margin-top:clamp(60px,10vw,80px)
-}
-
-.footer a{
+.article-card p{
   color:var(--text-secondary);
-  text-decoration:none;
-  margin:0 12px
-}
-
-.footer a:hover{
-  color:var(--primary)
-}
-
-.footer-legal{
-  margin:40px 0 24px;
-  padding-top:32px;
-  border-top:1px solid var(--border)
-}
-
-.footer-disclaimer{
-  font-size:0.85rem;
-  color:var(--text-muted);
+  font-size:0.95rem;
   line-height:1.6;
-  max-width:700px;
-  margin:16px auto 0
 }
 
-/* ===== RESPONSIVE ===== */
+.article-link{
+  color:var(--primary);
+  font-weight:700;
+  margin-top:12px;
+  display:inline-block;
+}
+
+/* Footer */
+.footer{
+  background:#18181b;
+  border-top:1px solid var(--border);
+  padding:40px 0;
+  text-align:center;
+  margin-top:60px;
+}
+
+.footer p{
+  color:#71717a;
+  font-size:0.9rem;
+}
+
 @media (max-width:768px){
-  .nav-menu{
-    width:100%;
-    justify-content:center
-  }
+  .hero h2{font-size:2rem}
+  .hero-subtitle{font-size:1rem}
+  .product-card{padding:24px}
+  .product-header h3{font-size:1.5rem}
+  .product-price{font-size:1.6rem}
 }
 </style>
 </head>
 
 <body>
-  <!-- HEADER -->
   <header class="header">
     <nav class="nav container">
       <a href="#" class="brand">
         <div class="logo">PA</div>
         <div class="brand-text">
           <h1>PowerAdjust</h1>
-          <p>Haltères BRAINGAIN • Guides & Tests</p>
+          <p>Guides Haltères Réglables</p>
         </div>
       </a>
-      <ul class="nav-menu">
-        <li><a href="#articles">Articles</a></li>
-      </ul>
     </nav>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <h2>Le guide complet des haltères réglables 2025</h2>
-      <p class="hero-subtitle">Tests détaillés, comparatifs, exercices et programmes pour réussir votre musculation à domicile avec les meilleurs haltères réglables du marché</p>
+      <h2>Guide Complet des Haltères Réglables 2025</h2>
+      <p class="hero-subtitle">Tests, comparatifs et programmes pour réussir votre musculation à domicile</p>
+      
+      <!-- PRODUCT HIGHLIGHT -->
+      <div class="product-card">
+        <div class="product-header">
+          <span class="product-badge">🏆 NOTRE CHOIX N°1</span>
+          <h3>BRAINGAIN Smart Click 40kg</h3>
+          <div class="product-price">449€</div>
+        </div>
+        
+        <div class="product-features">
+          <ul>
+            <li>Technologie Smart Click - Changement en 2 secondes</li>
+            <li>17 niveaux de poids réglables (jusqu'à 40kg)</li>
+            <li>Construction acier premium ultra-robuste</li>
+            <li>Gain d'espace 95% vs haltères classiques</li>
+            <li>Idéal pour tous niveaux et progression long terme</li>
+          </ul>
+        </div>
+        
+        <a href="https://amzn.to/3ZxYzQm" class="btn-buy" target="_blank" rel="nofollow noopener">
+          Voir sur Amazon →
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- MAIN LAYOUT -->
-  <main class="main container" id="articles">
-
-    <!-- ARTICLE 1: BRAINGAIN Test -->
-    <article class="article" id="test">
-      <div class="article-meta">
+  <main class="container">
+    <div class="articles-grid">
+      
+      <article class="article-card" onclick="window.location.href='#test'">
         <span class="article-tag">Test produit</span>
-        <span class="article-date">23 novembre 2025</span>
-      </div>
-      
-      <h2>Test complet : BRAINGAIN Smart Click 24kg et 40kg</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=BRAINGAIN+Smart+Click" alt="Haltères BRAINGAIN Smart Click" class="article-image">
-      
-      <p>Après 3 mois d'utilisation intensive des <strong>haltères réglables BRAINGAIN</strong> (ensembles 15-en-1 et 17-en-1), voici notre test détaillé et sans concession de ce système Smart Click qui promet de révolutionner l'entraînement à domicile.</p>
+        <h3>Test complet BRAINGAIN Smart Click 24kg et 40kg</h3>
+        <p>Après 3 mois d'utilisation intensive, notre test détaillé et sans concession du système Smart Click qui révolutionne l'entraînement à domicile.</p>
+        <span class="article-link">Lire le test →</span>
+      </article>
 
-      <h3>Les caractéristiques techniques</h3>
-      <p>BRAINGAIN propose deux ensembles avec la technologie Smart Click brevetée :</p>
-      <ul>
-        <li><strong>Ensemble 15-en-1 (24 kg) :</strong> 15 réglages de poids, idéal débutants/intermédiaires</li>
-        <li><strong>Ensemble 17-en-1 (40 kg) :</strong> 17 réglages de poids, recommandé pour progression long terme</li>
-        <li><strong>Système Smart Click :</strong> changement de poids en 2 secondes via cadran rotatif</li>
-        <li><strong>Construction :</strong> acier robuste avec revêtement anti-dérapant</li>
-        <li><strong>Gain d'espace :</strong> 95% vs haltères traditionnels</li>
-      </ul>
-
-      <h3>Notre test en conditions réelles</h3>
-      
-      <h4>Performance du système Smart Click</h4>
-      <p>Le mécanisme de changement rapide fonctionne parfaitement. Le cadran tourne avec fluidité et le <strong>clic audible confirme le verrouillage</strong>. En pratique, on change réellement le poids en 2-3 secondes, ce qui transforme l'entraînement :</p>
-      <ul>
-        <li>Drop-sets ultra-efficaces (réduire le poids instantanément)</li>
-        <li>Pyramides ascendantes/descendantes fluides</li>
-        <li>Moins de temps mort entre séries</li>
-        <li>Séances 25-30% plus rapides</li>
-      </ul>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>⚡</span>
-          <span>Point fort principal</span>
-        </div>
-        <p>Le Smart Click change réellement la donne. Contrairement aux systèmes à goupille qui demandent 15-20 secondes de manipulation, ici c'est instantané. Cela permet des techniques d'intensification impossibles avec des haltères classiques.</p>
-      </div>
-
-      <h4>Qualité de construction</h4>
-      <p>Après 3 mois d'utilisation quotidienne (5-6 séances/semaine), aucun signe d'usure. Le revêtement reste impeccable, le mécanisme fonctionne comme au premier jour. La qualité BRAINGAIN est au rendez-vous.</p>
-
-      <h4>Ergonomie et confort</h4>
-      <p>Les poignées sont confortables même sur séries longues. Le grip anti-dérapant fonctionne parfaitement, même avec les mains moites. Le poids est bien équilibré, aucune sensation de déséquilibre.</p>
-
-      <h3>24 kg vs 40 kg : Notre verdict</h3>
-      <p>Nous avons testé les deux versions. Voici notre analyse :</p>
-      
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Critère</th>
-              <th>24 kg (15-en-1)</th>
-              <th>40 kg (17-en-1)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Bras/Épaules</strong></td>
-              <td>Parfait</td>
-              <td>Parfait</td>
-            </tr>
-            <tr>
-              <td><strong>Pectoraux</strong></td>
-              <td>Suffisant 12-18 mois</td>
-              <td>Progression 3+ ans</td>
-            </tr>
-            <tr>
-              <td><strong>Dos</strong></td>
-              <td>Limite rapidement</td>
-              <td>Optimal</td>
-            </tr>
-            <tr>
-              <td><strong>Jambes</strong></td>
-              <td>Insuffisant après 6 mois</td>
-              <td>Adapté long terme</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Les points forts</h3>
-      <ul>
-        <li>✅ Système Smart Click ultra-rapide et fiable</li>
-        <li>✅ Qualité de fabrication exceptionnelle</li>
-        <li>✅ Gain d'espace énorme (95%)</li>
-        <li>✅ Permet techniques avancées (drop-sets, pyramides)</li>
-        <li>✅ Confortable et bien équilibré</li>
-        <li>✅ Construction robuste qui durera des années</li>
-      </ul>
-
-      <h3>Les points faibles</h3>
-      <ul>
-        <li>⚠️ Le 24 kg atteint vite ses limites sur jambes/dos</li>
-        <li>⚠️ Pas adapté aux chutes (exercices type Crossfit)</li>
-      </ul>
-
-      <h3>Notre recommandation</h3>
-      <p>Si vous cherchez le <strong>meilleur système d'haltères réglables du marché</strong>, BRAINGAIN est notre choix n°1. La technologie Smart Click justifie totalement le prix. Notre conseil : <strong>investissez dans le 40 kg</strong> même si vous débutez. Vous n'aurez jamais besoin de racheter d'équipement.</p>
-
-      <div style="margin-top:32px">
-        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-          <span>Voir sur Amazon</span>
-          <span>→</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ARTICLE 2: Pourquoi BRAINGAIN -->
-    <article class="article">
-      <div class="article-meta">
+      <article class="article-card" onclick="window.location.href='#guide'">
         <span class="article-tag">Guide</span>
-        <span class="article-date">20 novembre 2025</span>
-      </div>
-      
-      <h2>Pourquoi choisir les haltères réglables BRAINGAIN ?</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=BRAINGAIN+Avantages" alt="Avantages BRAINGAIN" class="article-image">
-      
-      <p>Les <strong>haltères réglables BRAINGAIN</strong> se démarquent sur le marché grâce à leur technologie Smart Click innovante et leur construction premium. Voici pourquoi ils représentent le meilleur choix pour votre salle de sport à domicile.</p>
+        <h3>Pourquoi choisir les haltères réglables BRAINGAIN ?</h3>
+        <p>Découvrez les avantages de la technologie Smart Click, le gain d'espace exceptionnel et pourquoi c'est le meilleur investissement pour votre home gym.</p>
+        <span class="article-link">Lire le guide →</span>
+      </article>
 
-      <h3>Technologie Smart Click : Un vrai game-changer</h3>
-      <p>Le système Smart Click breveté de BRAINGAIN révolutionne l'entraînement à domicile :</p>
-      <ul>
-        <li><strong>Changement de poids en 2 secondes</strong> via un simple cadran rotatif</li>
-        <li><strong>Clic de confirmation audible</strong> pour garantir la sécurité</li>
-        <li><strong>Aucune goupille à manipuler</strong> - fini les pertes de temps</li>
-        <li><strong>Parfait pour les drop-sets</strong> et techniques d'intensification</li>
-      </ul>
-
-      <h3>Gain d'espace exceptionnel</h3>
-      <p>Avec BRAINGAIN, économisez <strong>95% d'espace</strong> par rapport à un ensemble d'haltères classiques. Une seule paire remplace jusqu'à 17 paires d'haltères traditionnelles !</p>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>💡</span>
-          <span>Le saviez-vous ?</span>
-        </div>
-        <p>Un ensemble complet d'haltères fixes de 2 à 40 kg occuperait environ 3 mètres de rack. Avec BRAINGAIN, vous n'avez besoin que de 40 cm d'espace sur le sol ou sur une étagère.</p>
-      </div>
-
-      <h3>Deux options adaptées à tous les niveaux</h3>
-      
-      <h4>Ensemble 15-en-1 (24 kg)</h4>
-      <ul>
-        <li>15 niveaux de poids réglables</li>
-        <li>Idéal pour débutants et intermédiaires</li>
-        <li>Parfait pour bras, épaules et pectoraux</li>
-        <li>Investissement initial plus accessible</li>
-      </ul>
-
-      <h4>Ensemble 17-en-1 (40 kg) - Notre recommandation</h4>
-      <ul>
-        <li>17 niveaux de poids pour progression maximale</li>
-        <li>Permet de travailler efficacement TOUS les groupes musculaires</li>
-        <li>Idéal pour dos, jambes et progression long terme</li>
-        <li>Investissement qui durera des années</li>
-      </ul>
-
-      <h3>Construction premium et durabilité</h3>
-      <p>BRAINGAIN ne fait aucun compromis sur la qualité :</p>
-      <ul>
-        <li><strong>Acier robuste</strong> de haute qualité</li>
-        <li><strong>Revêtement anti-dérapant</strong> pour une prise sûre</li>
-        <li><strong>Mécanisme testé</strong> pour des milliers de cycles</li>
-        <li><strong>Garantie constructeur</strong> pour votre tranquillité d'esprit</li>
-      </ul>
-
-      <div style="margin-top:32px">
-        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-          <span>Voir sur Amazon</span>
-          <span>→</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ARTICLE 3: Programme d'entraînement -->
-    <article class="article">
-      <div class="article-meta">
+      <article class="article-card" onclick="window.location.href='#programme'">
         <span class="article-tag">Programme</span>
-        <span class="article-date">18 novembre 2025</span>
-      </div>
-      
-      <h2>Programme complet avec haltères BRAINGAIN</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=Programme+BRAINGAIN" alt="Programme d'entraînement BRAINGAIN" class="article-image">
-      
-      <p>Découvrez comment tirer le maximum de vos <strong>haltères réglables BRAINGAIN</strong> avec ce programme d'entraînement complet de 12 semaines.</p>
+        <h3>Programme complet avec haltères BRAINGAIN</h3>
+        <p>Programme d'entraînement de 12 semaines pour maximiser vos résultats avec des haltères réglables. Du débutant à l'avancé.</p>
+        <span class="article-link">Voir le programme →</span>
+      </article>
 
-      <h3>Programme débutant (Semaines 1-4)</h3>
-      <p>3 séances par semaine, focus sur la technique et l'adaptation musculaire.</p>
-
-      <h4>Séance A : Haut du corps</h4>
-      <ul>
-        <li>Développé couché : 3×12 (8-12 kg avec BRAINGAIN)</li>
-        <li>Rowing haltères : 3×12 (10-14 kg)</li>
-        <li>Développé épaules : 3×10 (6-10 kg)</li>
-        <li>Curl biceps : 3×12 (6-10 kg)</li>
-        <li>Extensions triceps : 3×12 (6-10 kg)</li>
-      </ul>
-
-      <h4>Séance B : Jambes et corps complet</h4>
-      <ul>
-        <li>Squats haltères : 3×15 (12-16 kg)</li>
-        <li>Fentes alternées : 3×10/jambe (8-12 kg)</li>
-        <li>Soulevé de terre roumain : 3×12 (14-18 kg)</li>
-        <li>Développé couché : 2×12</li>
-      </ul>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>⚡</span>
-          <span>Astuce Smart Click</span>
-        </div>
-        <p>Profitez du changement rapide pour faire des drop-sets : terminez chaque série en réduisant le poids de 20% et faites 5 répétitions supplémentaires. Avec BRAINGAIN, cela prend 2 secondes !</p>
-      </div>
-
-      <h3>Programme intermédiaire (Semaines 5-8)</h3>
-      <p>4 séances par semaine, augmentation de l'intensité.</p>
-      
-      <ul>
-        <li><strong>Lundi :</strong> Pectoraux + Triceps (16-24 kg BRAINGAIN)</li>
-        <li><strong>Mercredi :</strong> Dos + Biceps (18-28 kg)</li>
-        <li><strong>Vendredi :</strong> Épaules + Abdos (12-20 kg)</li>
-        <li><strong>Samedi :</strong> Jambes (20-32 kg pour squats/fentes)</li>
-      </ul>
-
-      <h3>Programme avancé (Semaines 9-12)</h3>
-      <p>5 séances par semaine, techniques avancées possibles grâce au Smart Click.</p>
-      
-      <p>Intégrez des techniques d'intensification :</p>
-      <ul>
-        <li><strong>Drop-sets :</strong> Utilisez le Smart Click pour réduire le poids instantanément</li>
-        <li><strong>Pyramides :</strong> Montez/descendez en poids sans temps mort</li>
-        <li><strong>Rest-pause :</strong> Séries courtes avec repos minimal</li>
-        <li><strong>Superset :</strong> Enchaînez deux exercices avec changement rapide</li>
-      </ul>
-
-      <div style="margin-top:32px">
-        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-          <span>Voir sur Amazon</span>
-          <span>→</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ARTICLE 4: Guide d'achat 2025 -->
-    <article class="article hidden">
-      <div class="article-meta">
-        <span class="article-tag">Guide d'achat</span>
-        <span class="article-date">17 novembre 2025</span>
-      </div>
-      
-      <h2>Haltères réglables 2025 : Le guide d'achat complet</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=Guide+Achat+2025" alt="Guide achat haltères réglables 2025" class="article-image">
-      
-      <p>Choisir des <strong>haltères réglables en 2025</strong> peut sembler complexe avec tous les modèles disponibles. Ce guide vous aide à faire le bon choix selon votre niveau, budget et objectifs de musculation à domicile.</p>
-
-      <h3>Les critères essentiels pour choisir</h3>
-      
-      <h4>1. Le système de réglage</h4>
-      <p>Trois technologies dominent le marché en 2025 :</p>
-      <ul>
-        <li><strong>Smart Click (BRAINGAIN) :</strong> Le plus rapide, changement en 2 secondes</li>
-        <li><strong>Cadran rotatif (Bowflex) :</strong> Fiable, 8-10 secondes de manipulation</li>
-        <li><strong>Goupille classique :</strong> Économique mais lent (15-20 secondes)</li>
-      </ul>
-
-      <h4>2. La charge maximale</h4>
-      <p>Selon votre profil :</p>
-      <ul>
-        <li><strong>Débutant :</strong> 20-24 kg suffisent pour 12-18 mois</li>
-        <li><strong>Intermédiaire :</strong> 30-40 kg pour progression long terme</li>
-        <li><strong>Avancé :</strong> 40 kg+ indispensable pour dos et jambes</li>
-      </ul>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>💰</span>
-          <span>Budget vs Qualité</span>
-        </div>
-        <p>Un ensemble entrée de gamme coûte 80-150€ mais s'use rapidement. Investir 400-500€ dans du BRAINGAIN ou Bowflex garantit 5-10 ans d'utilisation. Le coût par séance devient dérisoire sur le long terme.</p>
-      </div>
-
-      <h3>Les erreurs à éviter absolument</h3>
-      <ul>
-        <li>❌ Sous-estimer vos besoins de poids - vous progressez vite</li>
-        <li>❌ Négliger la qualité pour économiser 100€</li>
-        <li>❌ Choisir un système de réglage trop lent</li>
-        <li>❌ Ignorer les dimensions de rangement</li>
-      </ul>
-
-      <h3>Notre recommandation 2025</h3>
-      <p>Pour un investissement optimal, le <strong>BRAINGAIN 40 kg</strong> combine tous les avantages : technologie Smart Click, construction premium, charge suffisante pour tous les exercices, et gain d'espace maximal.</p>
-
-      <div style="margin-top:32px">
-        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-          <span>Voir sur Amazon</span>
-          <span>→</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ARTICLE 5: BRAINGAIN vs Bowflex -->
-    <article class="article hidden">
-      <div class="article-meta">
+      <article class="article-card" onclick="window.location.href='#comparatif'">
         <span class="article-tag">Comparatif</span>
-        <span class="article-date">15 novembre 2025</span>
-      </div>
-      
-      <h2>BRAINGAIN vs Bowflex SelectTech : Quel est le meilleur ?</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=BRAINGAIN+vs+Bowflex" alt="Comparatif BRAINGAIN Bowflex" class="article-image">
-      
-      <p>Le match des titans des <strong>haltères réglables</strong> : BRAINGAIN Smart Click face au légendaire Bowflex SelectTech. Nous les avons testés côte à côte pendant 2 mois. Verdict sans concession.</p>
+        <h3>BRAINGAIN vs Bowflex : Quel est le meilleur ?</h3>
+        <p>Test comparatif détaillé entre BRAINGAIN Smart Click et Bowflex SelectTech après 2 mois d'utilisation côte à côte.</p>
+        <span class="article-link">Voir le comparatif →</span>
+      </article>
 
-      <h3>Vitesse de changement de poids</h3>
-      <p>Le critère le plus important pour un entraînement efficace :</p>
-      <ul>
-        <li><strong>BRAINGAIN Smart Click :</strong> 2-3 secondes réelles</li>
-        <li><strong>Bowflex SelectTech :</strong> 8-10 secondes en pratique</li>
-      </ul>
-      <p><strong>Gagnant : BRAINGAIN</strong> - La différence est massive sur des techniques comme les drop-sets.</p>
-
-      <h3>Qualité de construction</h3>
-      <p>Les deux marques excellent :</p>
-      <ul>
-        <li><strong>BRAINGAIN :</strong> Acier premium, revêtement impeccable, mécanisme ultra-robuste</li>
-        <li><strong>Bowflex :</strong> Construction solide, réputation éprouvée depuis 20 ans</li>
-      </ul>
-      <p><strong>Égalité</strong> - Aucun signe d'usure après 2 mois d'utilisation intensive.</p>
-
-      <h3>Charge maximale</h3>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Modèle</th>
-              <th>Charge max</th>
-              <th>Réglages</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>BRAINGAIN 40kg</strong></td>
-              <td>40 kg</td>
-              <td>17 niveaux</td>
-            </tr>
-            <tr>
-              <td><strong>Bowflex 552</strong></td>
-              <td>24 kg</td>
-              <td>15 niveaux</td>
-            </tr>
-            <tr>
-              <td><strong>Bowflex 1090</strong></td>
-              <td>41 kg</td>
-              <td>17 niveaux</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p><strong>Gagnant : BRAINGAIN</strong> - Le 40 kg coûte moins cher que le Bowflex 1090.</p>
-
-      <h3>Prix et rapport qualité/prix</h3>
-      <ul>
-        <li><strong>BRAINGAIN 40 kg :</strong> 420-480€ avec technologie Smart Click</li>
-        <li><strong>Bowflex 552 (24kg) :</strong> 350-420€</li>
-        <li><strong>Bowflex 1090 (41kg) :</strong> 550-650€</li>
-      </ul>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>🏆</span>
-          <span>Notre verdict final</span>
-        </div>
-        <p><strong>BRAINGAIN Smart Click 40 kg</strong> remporte ce comparatif. Pour un prix similaire au Bowflex 552 limité à 24 kg, vous obtenez 40 kg + la technologie Smart Click révolutionnaire. Le Bowflex reste excellent, mais BRAINGAIN offre simplement plus pour votre argent.</p>
-      </div>
-
-      <div style="margin-top:32px">
-        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-          <span>Voir BRAINGAIN sur Amazon</span>
-          <span>→</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ARTICLE 6: Meilleurs exercices -->
-    <article class="article hidden">
-      <div class="article-meta">
+      <article class="article-card" onclick="window.location.href='#exercices'">
         <span class="article-tag">Exercices</span>
-        <span class="article-date">13 novembre 2025</span>
-      </div>
-      
-      <h2>Les 15 meilleurs exercices avec haltères réglables</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=Exercices+Halteres" alt="Exercices haltères réglables" class="article-image">
-      
-      <p>Découvrez les <strong>exercices les plus efficaces avec des haltères réglables</strong> pour développer force et masse musculaire. Idéal avec BRAINGAIN grâce au changement rapide de poids.</p>
+        <h3>Les 15 meilleurs exercices avec haltères réglables</h3>
+        <p>Découvrez les exercices les plus efficaces pour développer force et masse musculaire avec des haltères réglables.</p>
+        <span class="article-link">Voir les exercices →</span>
+      </article>
 
-      <h3>Exercices pour les pectoraux</h3>
-      
-      <h4>1. Développé couché avec haltères</h4>
-      <p>L'exercice roi pour les pectoraux. Avec BRAINGAIN, ajustez facilement le poids entre séries.</p>
-      <ul>
-        <li><strong>Débutant :</strong> 3×12 reps (8-12 kg)</li>
-        <li><strong>Intermédiaire :</strong> 4×10 reps (14-20 kg)</li>
-        <li><strong>Avancé :</strong> 5×8 reps (22-32 kg)</li>
-      </ul>
-
-      <h4>2. Écartés inclinés</h4>
-      <p>Isolation parfaite des pectoraux supérieurs. Le Smart Click permet des drop-sets efficaces.</p>
-      <ul>
-        <li><strong>Tous niveaux :</strong> 3-4×12 reps (6-16 kg)</li>
-      </ul>
-
-      <h3>Exercices pour le dos</h3>
-      
-      <h4>3. Rowing haltère unilatéral</h4>
-      <p>Meilleur exercice pour l'épaisseur du dos. Nécessite des charges lourdes (d'où l'importance du 40 kg).</p>
-      <ul>
-        <li><strong>Débutant :</strong> 3×12 reps/bras (10-14 kg)</li>
-        <li><strong>Avancé :</strong> 4×8 reps/bras (24-36 kg)</li>
-      </ul>
-
-      <h4>4. Soulevé de terre roumain</h4>
-      <p>Développe toute la chaîne postérieure. Avec 2 haltères BRAINGAIN 40 kg, vous avez 80 kg total.</p>
-      <ul>
-        <li><strong>Tous niveaux :</strong> 4×10 reps (50-80 kg total)</li>
-      </ul>
-
-      <h3>Exercices pour les épaules</h3>
-      
-      <h4>5. Développé militaire</h4>
-      <p>Construction de masse pour les deltoïdes. Le changement rapide permet des pyramides efficaces.</p>
-      <ul>
-        <li><strong>Débutant :</strong> 3×12 reps (6-10 kg)</li>
-        <li><strong>Avancé :</strong> 4×8 reps (16-24 kg)</li>
-      </ul>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>⚡</span>
-          <span>Astuce BRAINGAIN</span>
-        </div>
-        <p>Profitez du Smart Click pour faire des pyramides inversées : commencez lourd (6-8 reps), réduisez de 20% et continuez sans repos jusqu'à l'échec. Impossible avec des haltères classiques !</p>
-      </div>
-
-      <h3>Exercices pour les bras</h3>
-      
-      <h4>6. Curl biceps alterné</h4>
-      <ul>
-        <li><strong>Tous niveaux :</strong> 3×12 reps/bras (8-16 kg)</li>
-      </ul>
-
-      <h4>7. Extensions triceps au-dessus de la tête</h4>
-      <ul>
-        <li><strong>Tous niveaux :</strong> 3×12 reps (10-20 kg)</li>
-      </ul>
-
-      <h3>Exercices pour les jambes</h3>
-      
-      <h4>8. Squats gobelet</h4>
-      <p>Parfait pour débuter les squats avec charge. Le BRAINGAIN 40 kg permet une vraie progression.</p>
-      <ul>
-        <li><strong>Tous niveaux :</strong> 4×15 reps (16-36 kg)</li>
-      </ul>
-
-      <h4>9. Fentes bulgares</h4>
-      <p>L'exercice le plus intense pour les cuisses. Chaque jambe travaille indépendamment.</p>
-      <ul>
-        <li><strong>Tous niveaux :</strong> 3×12 reps/jambe (12-28 kg)</li>
-      </ul>
-
-      <div style="margin-top:32px">
-        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-          <span>Voir sur Amazon</span>
-          <span>→</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ARTICLE 7: Musculation débutant -->
-    <article class="article hidden">
-      <div class="article-meta">
+      <article class="article-card" onclick="window.location.href='#debutant'">
         <span class="article-tag">Débutant</span>
-        <span class="article-date">10 novembre 2025</span>
+        <h3>Débuter la musculation à domicile en 2025</h3>
+        <p>Guide complet pour les débutants : équipement minimal, principes de base et programme progressif sur 12 semaines.</p>
+        <span class="article-link">Commencer →</span>
+      </article>
+
+    </div>
+
+    <!-- CTA Final -->
+    <div class="product-card" style="margin-top:60px">
+      <div class="product-header">
+        <h3>Prêt à transformer votre entraînement ?</h3>
+        <p style="color:var(--text-secondary);margin-top:12px">Investissez dans le meilleur système d'haltères réglables du marché</p>
       </div>
-      
-      <h2>Débuter la musculation à domicile : Guide complet 2025</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=Musculation+Debutant" alt="Débuter musculation maison" class="article-image">
-      
-      <p>Vous débutez la <strong>musculation à domicile</strong> ? Ce guide vous explique comment progresser efficacement avec des haltères réglables, sans commettre les erreurs classiques des débutants.</p>
+      <a href="https://amzn.to/3ZxYzQm" class="btn-buy" target="_blank" rel="nofollow noopener">
+        Voir BRAINGAIN sur Amazon →
+      </a>
+    </div>
+  </main>
 
-      <h3>L'équipement minimal pour commencer</h3>
-      <p>Pour débuter sérieusement, vous avez besoin de :</p>
-      <ul>
-        <li><strong>Haltères réglables 40 kg (BRAINGAIN) :</strong> Investissement principal, durera 5+ ans</li>
-        <li><strong>Tapis de sol :</strong> 30-50€, protège votre dos</li>
-        <li><strong>Banc réglable (optionnel) :</strong> 150-300€, démultiplie les exercices possibles</li>
-      </ul>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>💡</span>
-          <span>Erreur fréquente</span>
-        </div>
-        <p>Beaucoup de débutants achètent des haltères 20-24 kg "pour commencer". 6 mois plus tard, ils doivent racheter du matériel. Investissez directement dans du 40 kg, vous économiserez de l'argent et éviterez de stagner.</p>
-      </div>
-
-      <h3>Les principes de base pour progresser</h3>
-      
-      <h4>1. La surcharge progressive</h4>
-      <p>Augmentez régulièrement la difficulté :</p>
-      <ul>
-        <li>Ajoutez 2-4 kg toutes les 2-3 semaines sur les exercices polyarticulaires</li>
-        <li>Augmentez le nombre de répétitions avant d'augmenter le poids</li>
-        <li>Le Smart Click de BRAINGAIN permet des micro-progressions faciles</li>
-      </ul>
-
-      <h4>2. La technique avant tout</h4>
-      <p>Maîtrisez la forme parfaite avec des charges légères avant de monter en poids. Un mauvais mouvement = risque de blessure.</p>
-
-      <h4>3. La récupération</h4>
-      <p>En tant que débutant :</p>
-      <ul>
-        <li><strong>Repos :</strong> 48h minimum entre deux séances du même muscle</li>
-        <li><strong>Sommeil :</strong> 7-8h par nuit indispensables</li>
-        <li><strong>Alimentation :</strong> 1.6-2g de protéines par kg de poids de corps</li>
-      </ul>
-
-      <h3>Programme débutant simple (12 semaines)</h3>
-      
-      <h4>Semaines 1-4 : Adaptation</h4>
-      <p>3 séances/semaine, corps entier à chaque fois :</p>
-      <ul>
-        <li>Développé couché : 3×12</li>
-        <li>Rowing : 3×12</li>
-        <li>Squats : 3×15</li>
-        <li>Développé épaules : 3×10</li>
-        <li>Curl biceps : 2×12</li>
-      </ul>
-
-      <h4>Semaines 5-8 : Intensification</h4>
-      <p>Même programme mais ajoutez 10-20% de poids sur chaque exercice.</p>
-
-      <h4>Semaines 9-12 : Spécialisation</h4>
-      <p>Passez à 4 séances/semaine avec split haut/bas du corps.</p>
-
-      <h3>Les erreurs mortelles à éviter</h3>
-      <ul>
-        <li>❌ Faire trop de volume dès le début (risque de blessure)</li>
-        <li>❌ Négliger les jambes (80% des débutants)</li>
-        <li>❌ Changer de programme toutes les 2 semaines</li>
-        <li>❌ S'entraîner 7j/7 sans repos</li>
-        <li>❌ Copier les programmes des bodybuildeurs avancés</li>
-      </ul>
-
-      <div style="margin-top:32px">
-        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-          <span>Voir sur Amazon</span>
-          <span>→</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ARTICLE 8: Programme prise de masse -->
-    <article class="article hidden">
-      <div class="article-meta">
-        <span class="article-tag">Programme</span>
-        <span class="article-date">8 novembre 2025</span>
-      </div>
-      
-      <h2>Programme prise de masse avec haltères réglables</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=Prise+de+Masse" alt="Programme prise de masse" class="article-image">
-      
-      <p>Programme complet de <strong>prise de masse musculaire avec haltères réglables</strong>. Optimisé pour les haltères BRAINGAIN grâce au changement rapide permettant des techniques d'intensification.</p>
-
-      <h3>Structure du programme (16 semaines)</h3>
-      <p>4 séances par semaine en split :</p>
-      <ul>
-        <li><strong>Lundi :</strong> Pectoraux + Triceps</li>
-        <li><strong>Mercredi :</strong> Dos + Biceps</li>
-        <li><strong>Vendredi :</strong> Épaules + Abdos</li>
-        <li><strong>Samedi :</strong> Jambes + Mollets</li>
-      </ul>
-
-      <h3>Séance Pectoraux + Triceps</h3>
-      <ul>
-        <li>Développé couché : 4×8-10 reps (24-32 kg BRAINGAIN)</li>
-        <li>Développé incliné : 4×10-12 reps (18-26 kg)</li>
-        <li>Écartés : 3×12-15 reps (10-16 kg)</li>
-        <li>Dips lesté : 3×8-12 reps</li>
-        <li>Extensions triceps : 3×12-15 reps (12-18 kg)</li>
-        <li>Kickbacks : 3×15 reps (6-10 kg)</li>
-      </ul>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>⚡</span>
-          <span>Technique Smart Click</span>
-        </div>
-        <p>Sur le dernier exercice de chaque muscle, faites un triple drop-set : arrivé à l'échec, réduisez de 20% avec le Smart Click et continuez immédiatement. Répétez 2 fois. Congestion maximale garantie !</p>
-      </div>
-
-      <h3>Séance Dos + Biceps</h3>
-      <ul>
-        <li>Rowing unilatéral : 4×8-10 reps/bras (28-36 kg)</li>
-        <li>Soulevé de terre roumain : 4×10 reps (70-80 kg total)</li>
-        <li>Rowing coudes écartés : 3×12 reps (18-24 kg)</li>
-        <li>Pullover : 3×12-15 reps (16-24 kg)</li>
-        <li>Curl incliné : 3×10-12 reps (12-18 kg)</li>
-        <li>Curl marteau : 3×12 reps (14-20 kg)</li>
-      </ul>
-
-      <h3>Nutrition pour la prise de masse</h3>
-      <p>L'entraînement ne représente que 30% des résultats :</p>
-      <ul>
-        <li><strong>Calories :</strong> Surplus de 300-500 kcal/jour</li>
-        <li><strong>Protéines :</strong> 2g par kg de poids (180g pour 90kg)</li>
-        <li><strong>Glucides :</strong> 4-6g par kg autour des entraînements</li>
-        <li><strong>Lipides :</strong> 1g par kg minimum</li>
-      </ul>
-
-      <h3>Progression attendue</h3>
-      <p>Avec ce programme et une nutrition correcte :</p>
-      <ul>
-        <li><strong>Semaines 1-4 :</strong> +2-3 kg (eau + glycogène)</li>
-        <li><strong>Semaines 5-12 :</strong> +0.5-1 kg de muscle par mois</li>
-        <li><strong>Semaines 13-16 :</strong> +0.3-0.5 kg par mois (ralentissement normal)</li>
-      </ul>
-
-      <div style="margin-top:32px">
-        <a href="VOTRE-LIEN-AMAZON-40KG" class="btn-cta" target="_blank" rel="nofollow noopener">
-          <span>Voir sur Amazon</span>
-          <span>→</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ARTICLE 9: Haltères 40kg guide -->
-    <article class="article hidden">
-      <div class="article-meta">
-        <span class="article-tag">Guide</span>
-        <span class="article-date">5 novembre 2025</span>
-      </div>
-      
-      <h2>Haltères 40 kg : Pour qui et pourquoi ?</h2>
-      
-      <img src="https://via.placeholder.com/700x400?text=Halteres+40kg" alt="Haltères 40 kg guide" class="article-image">
-      
-      <p>Les <strong>haltères réglables 40 kg</strong> représentent le sweet spot pour la musculation à domicile. Voici pourquoi investir dans cette gamme de poids, même en tant que débutant.</p>
-
-      <h3>Pourquoi 40 kg et pas moins ?</h3>
-      
-      <h4>1. Progression rapide des débutants</h4>
-      <p>En 6 mois, un débutant progresse typiquement de :</p>
-      <ul>
-        <li><strong>Développé couché :</strong> 8 kg → 20-24 kg par haltère</li>
-        <li><strong>Rowing :</strong> 10 kg → 24-30 kg par haltère</li>
-        <li><strong>Squats gobelet :</strong> 12 kg → 28-36 kg</li>
-      </ul>
-      <p>Des haltères 24 kg deviennent limitants en moins d'un an.</p>
-
-      <h4>2. Nécessité pour dos et jambes</h4>
-      <p>Les grands groupes musculaires demandent des charges lourdes :</p>
-      <ul>
-        <li><strong>Rowing unilatéral :</strong> 30-36 kg nécessaires niveau intermédiaire</li>
-        <li><strong>Soulevé de terre :</strong> 2×40 kg = 80 kg total, parfait pour progresser</li>
-        <li><strong>Fentes bulgares :</strong> 24-32 kg pour vraiment stimuler les cuisses</li>
-      </ul>
-
-      <div class="highlight">
-        <div class="highlight-title">
-          <span>💰</span>
-          <span>Calcul économique</span>
-        </div>
-        <p>Acheter du 24 kg puis racheter du 40 kg un an plus tard = 700-800€ total. Investir directement dans le BRAINGAIN 40 kg = 450-480€. Vous économisez 250€+ et évitez de stagner pendant des mois.</p>
-      </div>
-
-      <h3>Les exercices qui nécessitent 40 kg</h3>
-      
-      <h4>Exercices dos</h4>
-      <ul>
-        <li>Rowing unilatéral lourd : 28-38 kg</li>
-        <li>Shrugs : 32-40 kg</li>
-        <li>Soulevé de terre (2 haltères) : 70-80 kg total</li>
-      </ul>
-
-      <h4>Exercices jambes</h4>
-      <ul>
-        <li>Squats gobelet : 28-36 kg</li>
-        <li>Fentes bulgares : 24-32 kg</li>
-        <li>Romanian Deadlift : 32-40 kg par haltère</li>
-      </ul>
-
-      <h4>Exercices pectoraux (niveaux avancés)</h4>
-      <ul>
-        <li>Développé couché : 28-36 kg</li>
-        <li>Développé incliné : 24-32 kg</li>
-      </ul>
-
-      <h3>40 kg réglables vs haltères fixes</h3>
-      
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Critère</th>
-              <th>BRAINGAIN 40kg</th>
-              <th>Haltères fixes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Prix</strong></td>
-              <td>450-480€ (paire)</td>
-              <td>1200-1500€ (set complet)</td>
-            </tr>
-            <tr>
-              <td><strong>Espace</strong></td>
-              <td>40 cm × 30 cm</td>
-              <td>2-3 mètres de rack</td>
-            </tr>
-            <tr>
-              <td><strong>Polyvalence</strong></td>
-              <td>17 poids différents</td>
-              <td>8-10 paires</td>
-            </tr>
-            <tr>
-              <td><strong>Changement</strong></td>
-              <td>2 secondes</td>
-              <td>5-10 secondes</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Notre verdict final</h3>
-      <p>Les <strong>haltères réglables 40 kg</strong> sont le meilleur investissement pour 95% des pratiquants de musculation à domicile. Seuls les powerlifters très avancés auront éventuellement besoin de plus.</p>
-
-      <p>Avec le système BRAINGAIN Smart Click, vous combinez la polyvalence du réglable avec la rapidité de changement qui rivalise avec des haltères fixes. C'est le meilleur des deux mondes.</p>
-
-      <div style="margin-top:
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 PowerAdjust - Guide haltères réglables et musculation maison</p>
+      <p style="margin-top:16px;font-size:0.85rem">En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises.</p>
+    </div>
+  </footer>
+</body>
+</html>
