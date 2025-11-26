@@ -3,372 +3,350 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>PowerAdjust — Haltères Réglables & Musculation Maison 2025</title>
-<meta name="description" content="Guide complet haltères réglables 2025 : tests BRAINGAIN, comparatifs, exercices et programmes musculation maison. Conseils d'experts pour choisir et progresser." />
+<title>PowerAdjust 2025 — L'Autorité des Haltères Réglables</title>
+<meta name="description" content="Test complet BRAINGAIN 2025, comparatif Bowflex et programme musculation maison. Ne perdez plus d'argent : lisez notre guide expert avant d'acheter." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;scroll-behavior:smooth}
-body{
-  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  color:#e4e4e7;
-  background:#09090b;
-  line-height:1.7;
-  overflow-x:hidden
+/* --- RESET & BASE --- */
+:root {
+  --neon: #ccff00; /* Jaune acide pour le peps */
+  --primary: #3b82f6;
+  --dark-bg: #050505;
+  --card-bg: #111111;
+  --border: #333;
+  --text-main: #e0e0e0;
+  --text-muted: #888;
 }
 
-:root{
-  --primary:#3b82f6;
-  --accent:#10b981;
-  --bg-card:#18181b;
-  --text-primary:#fafafa;
-  --text-secondary:#a1a1aa;
-  --border:#3f3f46;
-  --glow:rgba(59,130,246,0.4);
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-main);
+  font-family: 'Space Grotesk', sans-serif; /* Police corps technique */
+  line-height: 1.6;
+  font-size: 17px;
+  overflow-x: hidden;
 }
 
-.container{max-width:900px;margin:0 auto;padding:0 20px}
-
-/* Header */
-.header{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-  background:rgba(9,9,11,0.95);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(255,255,255,0.08);
-  padding:16px 0;
+/* Texture de fond pour casser le "lisse" */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
 }
 
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  text-decoration:none;
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif; /* Police titres condensée */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
-.logo{
-  width:48px;
-  height:48px;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#000;
-  font-weight:900;
-  font-size:1.3rem;
-  box-shadow:0 8px 32px var(--glow)
-}
+a { text-decoration: none; color: inherit; transition: 0.2s; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
 
-.brand-text h1{
-  font-size:1.3rem;
-  color:var(--text-primary);
-  font-weight:900;
+/* --- HEADER --- */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  background: rgba(5,5,5,0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Oswald'; font-size: 1.5rem; font-weight: 700; border: 2px solid var(--neon); padding: 5px 10px; color: var(--neon); }
 
-.brand-text p{
-  font-size:0.8rem;
-  color:#71717a;
-  margin-top:2px
+/* --- HERO SECTION --- */
+.hero {
+  padding: 100px 0 60px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
 }
-
-/* Hero */
-.hero{
-  padding:120px 0 60px;
-  text-align:center;
-  background:radial-gradient(ellipse at top,rgba(59,130,246,0.15),transparent 60%)
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  margin-bottom: 20px;
 }
+.hero span { color: var(--neon); }
+.hero p { color: var(--text-muted); max-width: 600px; font-size: 1.1rem; margin-bottom: 30px; }
 
-.hero h2{
-  font-size:2.8rem;
-  color:var(--text-primary);
-  font-weight:900;
-  line-height:1.15;
-  margin-bottom:20px;
+/* --- BUTTONS --- */
+.btn {
+  display: inline-block;
+  background: var(--neon);
+  color: #000;
+  font-family: 'Oswald';
+  font-weight: 700;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 0 15px rgba(204, 255, 0, 0.4); }
 
-.hero-subtitle{
-  font-size:1.1rem;
-  color:var(--text-secondary);
-  max-width:700px;
-  margin:0 auto 32px;
+/* --- PRODUCT HIGHLIGHT --- */
+.highlight-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 30px;
+  margin: 40px 0;
+  position: relative;
 }
-
-/* Product Card */
-.product-card{
-  background:var(--bg-card);
-  border:2px solid var(--primary);
-  border-radius:20px;
-  padding:32px;
-  max-width:700px;
-  margin:0 auto 60px;
-  box-shadow:0 20px 60px rgba(59,130,246,0.3);
+.highlight-box::after {
+  content: "TOP PICK 2025";
+  position: absolute;
+  top: -12px; right: 20px;
+  background: var(--primary);
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  font-weight: bold;
 }
-
-.product-header{
-  text-align:center;
-  margin-bottom:24px;
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
 }
-
-.product-badge{
-  background:var(--primary);
-  color:#000;
-  padding:8px 16px;
-  border-radius:20px;
-  font-size:0.85rem;
-  font-weight:800;
-  display:inline-block;
-  margin-bottom:12px;
+.spec-item {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
 }
+.spec-val { display: block; font-weight: 700; color: #fff; font-size: 1.1rem; }
+.spec-label { font-size: 0.8rem; color: var(--text-muted); }
 
-.product-header h3{
-  font-size:1.8rem;
-  color:var(--text-primary);
-  margin-bottom:8px;
+/* --- CONTENT BLOCKS (SEO ARTICLES) --- */
+.content-section { padding: 60px 0; border-bottom: 1px dashed #333; }
+.section-tag { color: var(--primary); font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+.article-body { margin-top: 30px; }
+.article-body h3 { font-size: 1.5rem; margin: 30px 0 15px; border-left: 3px solid var(--neon); padding-left: 15px; }
+.article-body p { margin-bottom: 15px; color: #ccc; }
+.article-body ul { margin-left: 20px; margin-bottom: 20px; color: #ccc; }
+.article-body li { margin-bottom: 8px; }
+
+/* Table Comparatif */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95rem;
 }
-
-.product-price{
-  font-size:2rem;
-  color:var(--accent);
-  font-weight:900;
+.comparison-table th, .comparison-table td {
+  border: 1px solid #333;
+  padding: 12px;
+  text-align: left;
 }
+.comparison-table th { background: #1a1a1a; color: #fff; }
+.comparison-table td.winner { color: var(--neon); font-weight: bold; }
 
-.product-features{
-  background:rgba(59,130,246,0.1);
-  border-radius:12px;
-  padding:20px;
-  margin:24px 0;
+/* Programme Cards */
+.workout-day {
+  background: #161616;
+  border-left: 4px solid var(--primary);
+  padding: 20px;
+  margin-bottom: 20px;
 }
-
-.product-features ul{
-  list-style:none;
-  padding:0;
-}
-
-.product-features li{
-  padding:8px 0;
-  color:var(--text-secondary);
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.product-features li:before{
-  content:"✓";
-  color:var(--accent);
-  font-weight:900;
-  font-size:1.2rem;
-}
-
-.btn-buy{
-  display:block;
-  width:100%;
-  background:linear-gradient(135deg,var(--primary),#2563eb);
-  color:#fff;
-  padding:18px 36px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:800;
-  font-size:1.1rem;
-  box-shadow:0 12px 32px var(--glow);
-  transition:all 0.3s ease;
-  text-align:center;
-}
-
-.btn-buy:hover{
-  transform:translateY(-3px);
-  box-shadow:0 16px 40px var(--glow);
-}
-
-/* Articles Grid */
-.articles-grid{
-  display:grid;
-  gap:24px;
-  margin-bottom:60px;
-}
-
-.article-card{
-  background:var(--bg-card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:28px;
-  transition:all 0.3s ease;
-  cursor:pointer;
-}
-
-.article-card:hover{
-  border-color:var(--primary);
-  transform:translateY(-4px);
-  box-shadow:0 12px 32px rgba(0,0,0,0.3);
-}
-
-.article-tag{
-  background:rgba(59,130,246,0.15);
-  color:var(--primary);
-  padding:6px 12px;
-  border-radius:16px;
-  font-size:0.8rem;
-  font-weight:700;
-  display:inline-block;
-  margin-bottom:12px;
-}
-
-.article-card h3{
-  font-size:1.4rem;
-  color:var(--text-primary);
-  margin-bottom:12px;
-  font-weight:800;
-}
-
-.article-card p{
-  color:var(--text-secondary);
-  font-size:0.95rem;
-  line-height:1.6;
-}
-
-.article-link{
-  color:var(--primary);
-  font-weight:700;
-  margin-top:12px;
-  display:inline-block;
+.workout-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.exercise-list div {
+  display: flex; justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
+  font-size: 0.9rem;
 }
 
 /* Footer */
-.footer{
-  background:#18181b;
-  border-top:1px solid var(--border);
-  padding:40px 0;
-  text-align:center;
-  margin-top:60px;
-}
-
-.footer p{
-  color:#71717a;
-  font-size:0.9rem;
-}
-
-@media (max-width:768px){
-  .hero h2{font-size:2rem}
-  .hero-subtitle{font-size:1rem}
-  .product-card{padding:24px}
-  .product-header h3{font-size:1.5rem}
-  .product-price{font-size:1.6rem}
-}
+footer { padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
 </style>
 </head>
 
 <body>
-  <header class="header">
-    <nav class="nav container">
-      <a href="#" class="brand">
-        <div class="logo">PA</div>
-        <div class="brand-text">
-          <h1>PowerAdjust</h1>
-          <p>Guides Haltères Réglables</p>
-        </div>
-      </a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Guide Complet des Haltères Réglables 2025</h2>
-      <p class="hero-subtitle">Tests, comparatifs et programmes pour réussir votre musculation à domicile</p>
-      
-      <!-- PRODUCT HIGHLIGHT -->
-      <div class="product-card">
-        <div class="product-header">
-          <span class="product-badge">🏆 NOTRE CHOIX N°1</span>
-          <h3>BRAINGAIN Smart Click 40kg</h3>
-          <div class="product-price">449€</div>
-        </div>
-        
-        <div class="product-features">
-          <ul>
-            <li>Technologie Smart Click - Changement en 2 secondes</li>
-            <li>17 niveaux de poids réglables (jusqu'à 40kg)</li>
-            <li>Construction acier premium ultra-robuste</li>
-            <li>Gain d'espace 95% vs haltères classiques</li>
-            <li>Idéal pour tous niveaux et progression long terme</li>
-          </ul>
-        </div>
-        
-        <a href="https://amzn.to/3ZxYzQm" class="btn-buy" target="_blank" rel="nofollow noopener">
-          Voir sur Amazon →
-        </a>
+<header>
+  <div class="container nav-flex">
+    <div class="logo">PA // 25</div>
+    <a href="https://amzn.to/3ZxYzQm" class="btn" style="font-size:0.9rem; padding:8px 16px;">VOIR LE PRIX</a>
+  </div>
+</header>
+
+<section class="hero container">
+  <h1>La Fin des <br><span>Gyms Bondés.</span></h1>
+  <p>Guide technique et sans concession des haltères réglables. Analyse approfondie des BRAINGAIN 40KG, comparatifs et protocoles d'entraînement.</p>
+  
+  <div class="highlight-box">
+    <h2>Le Choix de la Rédaction : Braingain 40kg</h2>
+    <p>Le meilleur rapport qualité/prix/durabilité testé cette année. Fini les mécanismes en plastique fragile.</p>
+    
+    <div class="specs-grid">
+      <div class="spec-item">
+        <span class="spec-val">40 KG</span>
+        <span class="spec-label">Charge Max</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-val">2 SEC</span>
+        <span class="spec-label">Changement</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-val">ACIER</span>
+        <span class="spec-label">Mécanisme</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-val">17</span>
+        <span class="spec-label">Niveaux</span>
       </div>
     </div>
-  </section>
+    
+    <a href="https://amzn.to/3ZxYzQm" class="btn" target="_blank" rel="nofollow">VÉRIFIER LE STOCK AMAZON →</a>
+  </div>
+</section>
 
-  <main class="container">
-    <div class="articles-grid">
-      
-      <article class="article-card" onclick="window.location.href='#test'">
-        <span class="article-tag">Test produit</span>
-        <h3>Test complet BRAINGAIN Smart Click 24kg et 40kg</h3>
-        <p>Après 3 mois d'utilisation intensive, notre test détaillé et sans concession du système Smart Click qui révolutionne l'entraînement à domicile.</p>
-        <span class="article-link">Lire le test →</span>
-      </article>
+<section id="test" class="content-section container">
+  <span class="section-tag">// TEST TERRAIN & ANALYSE</span>
+  <h2>Avis Braingain Smart Click : Pourquoi tout le monde en parle ?</h2>
+  
+  <div class="article-body">
+    <p>Soyons honnêtes : le marché des haltères réglables est inondé de copies chinoises de mauvaise qualité. Des mécanismes qui se bloquent, des poids qui ont du jeu (le fameux "rattle") et des poignées inconfortables. Après 90 jours de test avec les <strong>Braingain 40kg Octogonaux</strong>, voici pourquoi ils sortent du lot.</p>
 
-      <article class="article-card" onclick="window.location.href='#guide'">
-        <span class="article-tag">Guide</span>
-        <h3>Pourquoi choisir les haltères réglables BRAINGAIN ?</h3>
-        <p>Découvrez les avantages de la technologie Smart Click, le gain d'espace exceptionnel et pourquoi c'est le meilleur investissement pour votre home gym.</p>
-        <span class="article-link">Lire le guide →</span>
-      </article>
+    <h3>1. La Technologie "Smart Click"</h3>
+    <p>Contrairement au système à molette des Bowflex (souvent fragile), Braingain utilise une rotation de la poignée. Posez l'haltère dans le socle, tournez la poignée jusqu'au poids désiré (le clic est audible et satisfaisant), et levez. C'est mécanique, pas de plastique cheap sur les zones de tension.</p>
 
-      <article class="article-card" onclick="window.location.href='#programme'">
-        <span class="article-tag">Programme</span>
-        <h3>Programme complet avec haltères BRAINGAIN</h3>
-        <p>Programme d'entraînement de 12 semaines pour maximiser vos résultats avec des haltères réglables. Du débutant à l'avancé.</p>
-        <span class="article-link">Voir le programme →</span>
-      </article>
+    <h3>2. Sensation "Fonte" Authentique</h3>
+    <p>Le défaut majeur des haltères réglables est souvent leur longueur. Même à 5kg, ils font 40cm de long. Ici, la technologie Braingain fait que l'haltère <strong>grossit avec le poids</strong>. À 10kg, il est compact. À 40kg, il est massif. Cela permet une amplitude de mouvement (ROM) bien meilleure sur les développés couchés ou les curls.</p>
 
-      <article class="article-card" onclick="window.location.href='#comparatif'">
-        <span class="article-tag">Comparatif</span>
-        <h3>BRAINGAIN vs Bowflex : Quel est le meilleur ?</h3>
-        <p>Test comparatif détaillé entre BRAINGAIN Smart Click et Bowflex SelectTech après 2 mois d'utilisation côte à côte.</p>
-        <span class="article-link">Voir le comparatif →</span>
-      </article>
+    <h3>3. Durabilité et Matériaux</h3>
+    <p>Les plaques sont en fonte peinte, pas en plastique rempli de ciment. Le socle est robuste. Le seul point d'attention : il faut toujours bien réaligner l'haltère dans le socle avant de tourner. C'est un coup de main à prendre en 2 séances.</p>
 
-      <article class="article-card" onclick="window.location.href='#exercices'">
-        <span class="article-tag">Exercices</span>
-        <h3>Les 15 meilleurs exercices avec haltères réglables</h3>
-        <p>Découvrez les exercices les plus efficaces pour développer force et masse musculaire avec des haltères réglables.</p>
-        <span class="article-link">Voir les exercices →</span>
-      </article>
+    <p><strong>Verdict :</strong> Si vous voulez un Home Gym sérieux sans sacrifier 4m² pour un rack d'haltères, c'est le "Gold Standard" actuel en Europe.</p>
+  </div>
+</section>
 
-      <article class="article-card" onclick="window.location.href='#debutant'">
-        <span class="article-tag">Débutant</span>
-        <h3>Débuter la musculation à domicile en 2025</h3>
-        <p>Guide complet pour les débutants : équipement minimal, principes de base et programme progressif sur 12 semaines.</p>
-        <span class="article-link">Commencer →</span>
-      </article>
+<section id="comparatif" class="content-section container">
+  <span class="section-tag">// COMPARATIF TECHNIQUE</span>
+  <h2>Braingain vs La Concurrence</h2>
+  
+  <div class="article-body">
+    <p>Pourquoi mettre 450€ dans une paire de Braingain alors qu'on trouve des modèles à 200€ ? La réponse est dans la longévité. Voici le comparatif brutal.</p>
 
-    </div>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Critère</th>
+          <th>BRAINGAIN 40kg</th>
+          <th>Bowflex SelectTech 552</th>
+          <th>Haltères à vis (Classique)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vitesse changement</strong></td>
+          <td class="winner">Ultrarapide (poignée)</td>
+          <td>Rapide (molettes)</td>
+          <td>Lent (dévisser/revisser)</td>
+        </tr>
+        <tr>
+          <td><strong>Forme</strong></td>
+          <td class="winner">Octogonale (stable)</td>
+          <td>Ronde (roule au sol)</td>
+          <td>Ronde</td>
+        </tr>
+        <tr>
+          <td><strong>Encombrement</strong></td>
+          <td class="winner">Compact (évolutif)</td>
+          <td>Encombrant (longueur fixe)</td>
+          <td>Variable</td>
+        </tr>
+        <tr>
+          <td><strong>Poids Max</strong></td>
+          <td class="winner">40 KG (par main)</td>
+          <td>24 KG (souvent limite)</td>
+          <td>Illimité (selon disques)</td>
+        </tr>
+        <tr>
+          <td><strong>Prix</strong></td>
+          <td>~449€</td>
+          <td>~499€</td>
+          <td class="winner">~150€ (mais prend de la place)</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p><em>Note : Le modèle 40kg est essentiel si vous comptez progresser sur les pectoraux et le dos. Le modèle 24kg (souvent vendu par Bowflex ou PowerBlock entrée de gamme) devient trop léger après 6 mois de pratique sérieuse.</em></p>
+  </div>
+</section>
 
-    <!-- CTA Final -->
-    <div class="product-card" style="margin-top:60px">
-      <div class="product-header">
-        <h3>Prêt à transformer votre entraînement ?</h3>
-        <p style="color:var(--text-secondary);margin-top:12px">Investissez dans le meilleur système d'haltères réglables du marché</p>
+<section id="programme" class="content-section container">
+  <span class="section-tag">// PROTOCOLE D'ENTRAÎNEMENT</span>
+  <h2>Programme "Home Hypertrophy" (PPL)</h2>
+  <div class="article-body">
+    <p>Avoir le matériel ne suffit pas. Voici un programme Push/Pull/Legs optimisé spécifiquement pour les haltères réglables. 3 à 4 séances par semaine.</p>
+
+    <div class="workout-day">
+      <div class="workout-header">
+        <h3>SÉANCE A : PUSH (Pectoraux / Épaules / Triceps)</h3>
       </div>
-      <a href="https://amzn.to/3ZxYzQm" class="btn-buy" target="_blank" rel="nofollow noopener">
-        Voir BRAINGAIN sur Amazon →
-      </a>
+      <div class="exercise-list">
+        <div><span>1. Développé Couché Haltères</span> <span>4 x 8-12 reps</span></div>
+        <div><span>2. Développé Incliné (ou sol incliné)</span> <span>3 x 10-12 reps</span></div>
+        <div><span>3. Élévations Latérales</span> <span>4 x 15-20 reps</span></div>
+        <div><span>4. Développé Militaire Assis</span> <span>3 x 10-12 reps</span></div>
+        <div><span>5. Extensions Triceps derrière la tête</span> <span>3 x 12-15 reps</span></div>
+      </div>
     </div>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 PowerAdjust - Guide haltères réglables et musculation maison</p>
-      <p style="margin-top:16px;font-size:0.85rem">En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises.</p>
+    <div class="workout-day">
+      <div class="workout-header">
+        <h3>SÉANCE B : PULL (Dos / Arrière d'épaule / Biceps)</h3>
+      </div>
+      <div class="exercise-list">
+        <div><span>1. Rowing Haltère Unilatéral (Lourd)</span> <span>4 x 8-10 reps</span></div>
+        <div><span>2. Rowing Buste Penché (2 haltères)</span> <span>3 x 12 reps</span></div>
+        <div><span>3. Shrugs (Trapèzes)</span> <span>3 x 15 reps</span></div>
+        <div><span>4. Curl Haltères Incliné</span> <span>3 x 10-12 reps</span></div>
+        <div><span>5. Curl Marteau (Hammer)</span> <span>3 x 10-12 reps</span></div>
+      </div>
     </div>
-  </footer>
+
+    <div class="workout-day">
+      <div class="workout-header">
+        <h3>SÉANCE C : LEGS (Jambes)</h3>
+      </div>
+      <div class="exercise-list">
+        <div><span>1. Goblet Squat (Haltère lourd contre poitrine)</span> <span>4 x 10-12 reps</span></div>
+        <div><span>2. Fentes Bulgares (Le roi des jambes maison)</span> <span>3 x 10 reps / jambe</span></div>
+        <div><span>3. Soulevé de Terre Jambes Tendues</span> <span>4 x 12 reps</span></div>
+        <div><span>4. Mollets debout (unilatéral)</span> <span>4 x 15 reps</span></div>
+      </div>
+    </div>
+    
+    <p><strong>Progression :</strong> Avec les Braingain, vous pouvez augmenter de 2kg par incrément. Dès que vous validez le haut de la fourchette de répétitions (ex: 12 reps) avec une technique parfaite, montez le poids à la séance suivante.</p>
+  </div>
+</section>
+
+<section class="container" style="text-align:center; padding: 80px 0;">
+  <h2>Prêt à équiper votre Home Gym ?</h2>
+  <p style="margin: 20px 0; color: #888;">Le stock varie souvent. Ne ratez pas l'opportunité.</p>
+  <a href="https://amzn.to/3ZxYzQm" class="btn" style="font-size: 1.5rem; padding: 20px 40px;">ACHETER SUR AMAZON</a>
+</section>
+
+<footer>
+  <div class="container">
+    <p>PowerAdjust 2025. Tous droits réservés.</p>
+    <p style="opacity: 0.5; margin-top: 10px;">Lien affilié : En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises.</p>
+  </div>
+</footer>
+
 </body>
 </html>
