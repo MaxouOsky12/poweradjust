@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Haltère Réglable N°1 🏆 : Test BRAINGAIN Smart Click 40kg (Guide d'Achat 2025)</title>
-<meta name="description" content="Découvrez notre verdict 2025 sur l'haltère réglable BRAINGAIN Smart Click (17-en-1). Gagnez 95% d'espace. Comparatif 24kg vs 40kg et FAQ complète avant d'acheter." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+<title>Haltère Réglable N°1 🏆 : Test BRAINGAIN Smart Click 40kg (Guide 2025)</title>
+<meta name="description" content="Verdict 2025 sur l'haltère réglable BRAINGAIN Smart Click (17-en-1). Comparatif 24kg vs 40kg, avis technique et meilleure offre." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,35 +18,21 @@
     {
       "@type": "Question",
       "name": "Quel est le poids maximum des haltères réglables BRAINGAIN ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Le modèle BRAINGAIN 17-en-1 va jusqu'à 40 kg par main. C'est l'option recommandée pour la progression et l'hypertrophie (développé couché, rowing). Le modèle 15-en-1 va jusqu'à 24 kg."
-      }
+      "acceptedAnswer": { "@type": "Answer", "text": "Le modèle BRAINGAIN 17-en-1 va jusqu'à 40 kg par main. C'est l'option recommandée pour la progression." }
     },
     {
       "@type": "Question",
-      "name": "Les haltères réglables BRAINGAIN font-ils du bruit (rattling) ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Le système Smart Click minimise le jeu des disques (rattling) grâce à son verrouillage centralisé. Un léger jeu est inhérent à tout haltère réglable, mais la conception BRAINGAIN est l'une des plus silencieuses du marché, contrairement aux modèles à molette latérale."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Comment fonctionne la garantie du système Smart Click ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La plupart des vendeurs officiels offrent 2 ans de garantie contre les défauts de fabrication sur le mécanisme interne. Attention : cette garantie ne couvre pas les dommages liés à une chute ou un usage abusif de l'haltère réglable."
-      }
+      "name": "Les haltères réglables BRAINGAIN font-ils du bruit ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le système Smart Click minimise le jeu des disques grâce à son verrouillage centralisé, rendant l'haltère plus silencieux que les modèles à molette." }
     }
   ]
 }
 </script>
 
 <style>
-/* --- STYLES INCHANGÉS (identiques à la version précédente) --- */
+/* --- VARIABLES --- */
 :root {
-  --neon: #ccff00; /* Jaune Cyberpunk */
+  --neon: #ccff00;
   --neon-dim: #aacc00;
   --primary: #3b82f6;
   --dark-bg: #050505;
@@ -54,10 +40,17 @@
   --border: #2a2a2a;
   --text-main: #e0e0e0;
   --text-muted: #888;
+  --header-height: 70px;
+  --promo-height: 40px;
 }
 
+/* --- RESET & BASE --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth; 
+    /* Empêche le header de cacher le contenu lors du scroll */
+    scroll-padding-top: calc(var(--header-height) + var(--promo-height) + 20px);
+}
 
 body {
   background-color: var(--dark-bg);
@@ -66,10 +59,10 @@ body {
   line-height: 1.6;
   font-size: 17px;
   overflow-x: hidden;
-  padding-top: 40px; 
+  padding-top: var(--promo-height); /* Espace pour la barre promo */
 }
 
-/* Texture Noise */
+/* Texture Noise de fond */
 body::before {
   content: "";
   position: fixed;
@@ -90,6 +83,16 @@ h1, h2, h3, h4 {
 a { text-decoration: none; color: inherit; transition: 0.2s; }
 .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
+/* --- ANIMATIONS (NOUVEAU) --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-entry { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.5s; }
+
 /* --- PROMO BAR --- */
 .promo-bar {
   background: var(--neon);
@@ -97,12 +100,11 @@ a { text-decoration: none; color: inherit; transition: 0.2s; }
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 0.9rem;
-  padding: 10px 0;
+  font-size: 0.85rem;
+  height: var(--promo-height);
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  letter-spacing: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,177 +115,129 @@ a { text-decoration: none; color: inherit; transition: 0.2s; }
 /* --- HEADER --- */
 header {
   border-bottom: 1px solid var(--border);
-  padding: 20px 0;
-  background: rgba(5,5,5,0.9);
+  height: var(--header-height);
+  background: rgba(5,5,5,0.95);
   backdrop-filter: blur(10px);
   position: sticky;
-  top: 40px; 
-  z-index: 100;
+  top: var(--promo-height); 
+  z-index: 999;
+  display: flex;
+  align-items: center;
 }
-.nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: 'Oswald'; font-size: 1.5rem; font-weight: 700; border: 2px solid #fff; padding: 5px 12px; color: #fff; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo { font-family: 'Oswald'; font-size: 1.4rem; font-weight: 700; border: 2px solid #fff; padding: 4px 10px; color: #fff; white-space: nowrap; }
 .logo span { color: var(--neon); }
 
 /* --- HERO SECTION --- */
-.hero {
-  padding: 80px 0 60px;
-  border-bottom: 1px solid var(--border);
-}
+.hero { padding: 60px 0 60px; border-bottom: 1px solid var(--border); }
 .hero-tag { color: var(--neon); font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; display: block; font-family: 'Oswald'; letter-spacing: 2px; }
-.hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  margin-bottom: 20px;
-}
-.hero h1 .highlight {
-  -webkit-text-stroke: 1px var(--neon);
-  color: transparent;
-}
+.hero h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); margin-bottom: 20px; }
+.hero h1 .highlight { -webkit-text-stroke: 1px var(--neon); color: transparent; }
+.hero p { max-width: 650px; margin-bottom: 30px; color: #aaa; font-size: 1.1rem; }
+.hero-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
 
 /* --- BUTTONS --- */
 .btn {
-  display: inline-block;
-  background: var(--neon);
-  color: #000;
-  font-family: 'Oswald';
-  font-weight: 700;
-  padding: 14px 28px;
-  font-size: 1.1rem;
-  border: none;
-  cursor: pointer;
+  display: inline-flex; justify-content: center; align-items: center;
+  background: var(--neon); color: #000;
+  font-family: 'Oswald'; font-weight: 700;
+  padding: 14px 28px; font-size: 1.1rem;
+  border: none; cursor: pointer;
   clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-  text-transform: uppercase;
+  text-transform: uppercase; white-space: nowrap;
 }
-.btn:hover { background: #fff; transform: translateY(-2px); }
-.btn-outline {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: #fff;
-  margin-left: 10px;
-}
-.btn-outline:hover { border-color: #fff; }
+.btn:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 0 15px rgba(255,255,255,0.3); }
 
-/* --- CONTENT GRID & ARTICLES --- */
+.btn-outline { background: transparent; border: 1px solid var(--border); color: #fff; margin-left: 0; }
+.btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+
+/* --- TECH GRID (MOBILE OPTIMIZED) --- */
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  /* Minmax ajusté à 280px pour passer sur les petits écrans (iPhone SE etc) */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
   padding: 80px 0;
   border-bottom: 1px solid var(--border);
 }
+.tech-card { background: var(--card-bg); border: 1px solid var(--border); padding: 30px; position: relative; transition: 0.3s; }
+.tech-card:hover { border-color: var(--neon); transform: translateY(-5px); }
+.tech-number { font-family: 'Oswald'; font-size: 4rem; color: var(--border); position: absolute; top: 10px; right: 20px; opacity: 0.5; pointer-events: none; }
 
-.tech-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 30px;
-  position: relative;
-  transition: 0.3s;
-}
-.tech-card:hover { border-color: var(--neon); }
+/* --- VERSUS SECTION --- */
+.versus-section { padding: 60px 0; }
+.versus-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+.versus-card { background: #0a0a0a; border: 1px solid var(--border); padding: 40px; text-align: center; position: relative; display: flex; flex-direction: column; height: 100%; }
+.versus-card h3 { font-size: 1.8rem; }
+.versus-card .price-approx { margin-top: auto; padding-top: 20px; color: var(--text-muted); font-size: 0.9rem; }
 
-.tech-number {
-  font-family: 'Oswald';
-  font-size: 4rem;
-  color: var(--border);
-  position: absolute;
-  top: 10px; right: 20px;
-  opacity: 0.5;
-}
-
-.tech-title { font-size: 1.5rem; margin-bottom: 15px; color: #fff; }
-.tech-desc { color: var(--text-muted); font-size: 0.95rem; }
-
-/* --- 15-in-1 vs 17-in-1 COMPARISON --- */
-.versus-section { padding: 80px 0; }
-.versus-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 40px;
-}
-@media(max-width: 768px) { .versus-container { grid-template-columns: 1fr; } }
-
-.versus-card {
-  background: #0a0a0a;
-  border: 1px solid var(--border);
-  padding: 40px;
-  text-align: center;
-}
 .versus-card.recommended {
   border: 2px solid var(--neon);
-  background: radial-gradient(circle at top right, rgba(204,255,0,0.05), transparent 40%);
+  background: radial-gradient(circle at top right, rgba(204,255,0,0.08), transparent 50%);
+}
+.badge-rec {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--neon); color: #000; padding: 4px 12px;
+    font-weight: bold; font-family: 'Oswald'; font-size: 0.8rem; border-radius: 2px;
 }
 
-.model-name { font-size: 2rem; font-family: 'Oswald'; margin-bottom: 10px; }
-.model-spec { display: block; color: var(--neon); font-weight: bold; margin-bottom: 20px; letter-spacing: 2px; font-size: 0.9rem;}
-.weight-range { font-size: 3rem; font-weight: bold; display: block; line-height: 1; color: #fff; }
-.unit { font-size: 1rem; color: #666; font-weight: normal; }
+.weight-range { font-size: 3.5rem; font-family: 'Oswald'; font-weight: bold; display: block; line-height: 1; color: #fff; margin: 15px 0; }
+.unit { font-size: 1.2rem; color: #666; font-weight: normal; }
+.spec-list { list-style: none; margin: 30px 0; text-align: left; flex-grow: 1; }
+.spec-list li { border-bottom: 1px solid #222; padding: 12px 0; color: #ccc; font-size: 0.95rem; display: flex; justify-content: space-between; }
 
-.spec-list { list-style: none; margin: 30px 0; text-align: left; }
-.spec-list li { border-bottom: 1px solid #222; padding: 10px 0; color: #ccc; font-size: 0.9rem; }
-.spec-list li strong { color: #fff; }
+/* --- MECHANISMS & FAQ --- */
+.mechanism-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+.mechanism-card { background: #0a0a0a; padding: 25px; border-top: 4px solid var(--border); }
+.mechanism-card.smart-click { border-top-color: var(--neon); box-shadow: 0 -10px 30px -15px rgba(204,255,0,0.15); }
+.pros-list li:before { content: "✓ "; color: var(--neon); margin-right: 5px; }
+.cons-list li:before { content: "✕ "; color: #ff4444; margin-right: 5px; }
 
-/* --- NOUVEAU : ACCORDEON FAQ STYLE --- */
-.faq-section, .mechanism-section { padding: 60px 0; border-bottom: 1px solid var(--border); }
-.faq-item { margin-bottom: 15px; }
-.faq-item details {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-.faq-item summary {
-  padding: 20px;
-  cursor: pointer;
-  font-weight: 700;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.1rem;
-  color: #fff;
-  list-style: none; /* Cache la flèche par défaut */
-  border-bottom: 1px solid transparent;
-}
-.faq-item summary:hover { color: var(--neon); }
+.faq-item details { background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px; margin-bottom: 10px; transition: 0.3s; }
+.faq-item summary { padding: 20px; cursor: pointer; font-weight: 700; font-family: 'Oswald'; font-size: 1.1rem; list-style: none; position: relative; }
+.faq-item summary::-webkit-details-marker { display: none; } /* Hide default marker chrome */
+.faq-item summary::after { content: '+'; position: absolute; right: 20px; color: var(--neon); font-size: 1.5rem; line-height: 1; }
+.faq-item details[open] summary::after { content: '-'; }
+.faq-item details[open] { border-color: #444; }
+.faq-item-content { padding: 0 20px 20px; color: #ccc; font-size: 0.95rem; line-height: 1.6; }
 
-.faq-item details[open] summary {
-  border-bottom: 1px solid #333;
-  color: var(--neon);
+/* --- FOOTER --- */
+footer { padding: 60px 0 100px; text-align: center; border-top: 1px solid var(--border); margin-top: 60px; background: #020202; }
+.trust-badges { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; opacity: 0.6; flex-wrap: wrap; }
+.badge-item { border: 1px solid #333; padding: 5px 10px; font-size: 0.8rem; text-transform: uppercase; }
+
+/* --- MOBILE STICKY CTA (NOUVEAU) --- */
+.mobile-sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.9); border-top: 1px solid var(--border);
+    padding: 15px 20px; z-index: 1000;
+    display: none; /* Caché sur desktop */
+    backdrop-filter: blur(10px);
+}
+.mobile-cta-btn {
+    width: 100%; display: block; text-align: center;
+    background: var(--neon); color: #000; padding: 12px;
+    font-family: 'Oswald'; font-weight: bold; text-transform: uppercase;
+    font-size: 1.1rem;
 }
 
-.faq-item-content {
-  padding: 15px 20px 20px;
-  color: #ccc;
-  font-size: 0.95rem;
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+@media(max-width: 768px) {
+  .hero h1 { font-size: 3rem; }
+  .versus-container { grid-template-columns: 1fr; }
+  .nav-flex .btn { display: none; } /* Cache le bouton du header sur mobile pour éviter l'encombrement */
+  .mobile-sticky-cta { display: block; } /* Affiche le bouton sticky en bas */
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-buttons .btn, .hero-buttons .btn-outline { width: 100%; margin: 0; text-align: center; }
+  .tech-number { font-size: 3rem; top: 20px; right: 20px; }
+  .promo-bar { font-size: 0.75rem; padding: 0 10px; }
 }
-.faq-item-content p { margin-bottom: 15px; }
 
-/* --- Styles pour la section Mécanismes --- */
-.mechanism-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+@media(max-width: 380px) {
+    /* Optimisation pour très petits écrans (iPhone SE) */
+    .hero h1 { font-size: 2.5rem; }
+    .weight-range { font-size: 2.8rem; }
 }
-.mechanism-card {
-    background: #0a0a0a;
-    padding: 25px;
-    border-top: 5px solid var(--border);
-}
-.mechanism-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-.mechanism-card.smart-click {
-    border-top-color: var(--neon);
-    box-shadow: 0 0 10px rgba(204,255,0,0.1);
-}
-.pros-list, .cons-list {
-    list-style: none;
-    margin: 15px 0;
-    padding-left: 0;
-}
-.pros-list li:before { content: "✓ "; color: var(--neon); font-weight: bold; }
-.cons-list li:before { content: "✕ "; color: red; font-weight: bold; }
-
-/* Footer */
-footer { padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 60px; }
 </style>
 </head>
 
@@ -291,7 +245,7 @@ footer { padding: 40px 0; text-align: center; color: var(--text-muted); font-siz
 
 <div class="promo-bar">
   <span class="promo-tag">FLASH</span>
-  LIVRAISON OFFERTE SUR LES SETS 40KG - CODE : POWER25
+  <span>-20% SUR LE SET 40KG | CODE : POWER25</span>
 </div>
 
 <header>
@@ -302,199 +256,166 @@ footer { padding: 40px 0; text-align: center; color: var(--text-muted); font-siz
 </header>
 
 <section class="hero container">
-  <span class="hero-tag">// INGÉNIERIE HOME GYM</span>
-  <h1>Le Système <br><span class="highlight">All-in-One</span> Ultime.</h1>
-  <p style="max-width: 650px; margin-bottom: 30px; color: #aaa;">
-    Ne perdez plus votre temps à visser des écrous. Découvrez le système **haltère réglable BRAINGAIN Smart Click**. Remplacez 34 haltères par une seule paire. Disponible en 24kg et 40kg.
-  </p>
-  <div>
-    <a href="#comparatif" class="btn">COMPARER LES MODÈLES</a>
-    <a href="#mecanismes" class="btn btn-outline">L'ANATOMIE TECHNIQUE</a>
+  <div class="animate-entry">
+      <span class="hero-tag">// INGÉNIERIE HOME GYM</span>
+      <h1>Le Système <br><span class="highlight">All-in-One</span> Ultime.</h1>
+      <p>
+        Oubliez la fonte qui traîne. Découvrez l'haltère **BRAINGAIN Smart Click**. Remplacez 34 haltères par une seule paire. Le standard Or du Home Gym.
+      </p>
+      <div class="hero-buttons">
+        <a href="#comparatif" class="btn">COMPARER LES MODÈLES</a>
+        <a href="#mecanismes" class="btn btn-outline">L'ANATOMIE TECHNIQUE</a>
+      </div>
   </div>
 </section>
 
 <section id="tech" class="container">
   <div class="tech-grid">
-    <div class="tech-card">
+    <div class="tech-card animate-entry delay-1">
       <span class="tech-number">01</span>
-      <h3 class="tech-title">Technologie Smart Click (Haltère Réglable Breveté)</h3>
-      <p class="tech-desc">
-        Le cœur du système. Posez l'haltère dans son socle, tournez la poignée. Vous entendez le **"CLICK"** ? C'est verrouillé. Mécanisme interne en acier haute densité conçu pour durer des années de rotations.
-      </p>
+      <h3 class="tech-title">Smart Click™</h3>
+      <p class="tech-desc">Posez. Tournez. Cliquez. Soulevez. Le mécanisme breveté en acier change le poids en < 2 secondes. Zéro friction dans votre entraînement.</p>
     </div>
 
-    <div class="tech-card">
+    <div class="tech-card animate-entry delay-2">
       <span class="tech-number">02</span>
-      <h3 class="tech-title">Gain de Place (95%) pour Home Gym</h3>
+      <h3 class="tech-title">Gain de Place 95%</h3>
       <p class="tech-desc">
-        Une paire remplace un mur entier d'haltères.
-        <br>• Le modèle **15-en-1** remplace 15 paires (2kg à 24kg).
-        <br>• Le modèle **17-en-1** remplace 17 paires (5kg à 40kg).
-        <br>Empreinte au sol : moins de 0.2m².
+        • <strong>15-en-1 :</strong> Remplace 15 paires (max 24kg).<br>
+        • <strong>17-en-1 :</strong> Remplace 17 paires (max 40kg).<br>
+        Votre salle de sport complète tient sous un lit.
       </p>
     </div>
 
-    <div class="tech-card">
+    <div class="tech-card animate-entry delay-3">
       <span class="tech-number">03</span>
-      <h3 class="tech-title">Ergonomie Octogonale Anti-Roulement</h3>
-      <p class="tech-desc">
-        Contrairement aux haltères ronds qui roulent dangereusement entre les séries, le design octogonal BRAINGAIN reste ancré au sol. Parfait pour les pompes sur haltères (Renegade Rows).
-      </p>
+      <h3 class="tech-title">Design Octogonal</h3>
+      <p class="tech-desc">Stabilité absolue. Idéal pour les Renegade Rows et les Pompes. Ne roule jamais, protège votre sol et vos orteils.</p>
     </div>
   </div>
 </section>
 
 <section id="comparatif" class="versus-section container">
-  <h2 style="text-align: center; margin-bottom: 10px;">CHOISISSEZ VOTRE HALTÈRE RÉGLABLE : 24KG VS 40KG</h2>
-  <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Quel modèle pour vos objectifs ? Analyse détaillée.</p>
+  <h2 style="text-align: center; margin-bottom: 10px;">24KG VS 40KG : LE DUEL</h2>
+  <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Choisissez selon votre ambition.</p>
 
   <div class="versus-container">
     
-    <div class="versus-card">
-      <h3 class="model-name">Modèle 24KG (15-en-1)</h3>
-      <span class="model-spec">L'OPTION "FITNESS"</span>
-      <span class="weight-range">2.5 - 24 <span class="unit">KG</span></span>
+    <div class="versus-card animate-entry">
+      <h3 class="model-name">Modèle 24KG</h3>
+      <span style="color:#888; letter-spacing:1px; font-size:0.8rem; font-weight:bold;">FITNESS & ENDURANCE</span>
+      <span class="weight-range">24 <span class="unit">KG MAX</span></span>
       
       <ul class="spec-list">
-        <li>**Incréments :** 15 niveaux (2.5kg, 3.5kg... jusqu'à 24kg)</li>
-        <li>**Cible :** Débutants, remise en forme, travail d'endurance.</li>
-        <li>**Limites :** Vous serez bloqué sur les pectoraux et le dos après 6 mois.</li>
-        <li>**Prix :** Plus abordable.</li>
+        <li><span>Incréments</span> <strong>15 niveaux</strong></li>
+        <li><span>Départ</span> <strong>2.5 kg</strong></li>
+        <li><span>Usage</span> <strong>Biceps / Épaules</strong></li>
       </ul>
       
-      <a href="https://amzn.to/48djvPb" class="btn btn-outline" style="width: 100%; border-color: #333; color: #888;">VOIR LE 24KG</a>
+      <a href="https://amzn.to/48djvPb" class="btn btn-outline" style="width: 100%; border-color: #333; color: #aaa;">VOIR LE 24KG</a>
+      <div class="price-approx">Env. 180€ / haltère</div>
     </div>
 
-    <div class="versus-card recommended">
-      <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--neon); color: #000; padding: 5px 15px; font-weight: bold; font-family: 'Oswald'; font-size: 0.8rem;">RECOMMANDÉ</div>
-      <h3 class="model-name">Modèle 40KG (17-en-1)</h3>
-      <span class="model-spec">L'OPTION "HYPERTROPHIE SÉRIEUSE"</span>
-      <span class="weight-range">5 - 40 <span class="unit">KG</span></span>
+    <div class="versus-card recommended animate-entry delay-1">
+      <div class="badge-rec">CHOIX DE L'ÉDITEUR</div>
+      <h3 class="model-name">Modèle 40KG</h3>
+      <span style="color:var(--neon); letter-spacing:1px; font-size:0.8rem; font-weight:bold;">HYPERTROPHIE & FORCE</span>
+      <span class="weight-range" style="color:var(--neon);">40 <span class="unit" style="color:var(--neon-dim);">KG MAX</span></span>
       
       <ul class="spec-list">
-        <li>**Incréments :** 17 niveaux (5kg, 7kg... jusqu'à 40kg)</li>
-        <li>**Cible :** Prise de masse sérieuse, progression long terme.</li>
-        <li>**Avantage :** Permet de travailler les gros muscles (Développé couché, Rowing) sans limite.</li>
-        <li>**Rentabilité :** Meilleur investissement sur 5 ans.</li>
+        <li><span>Incréments</span> <strong>17 niveaux</strong></li>
+        <li><span>Départ</span> <strong>5 kg</strong></li>
+        <li><span>Usage</span> <strong>Pecs / Dos / Jambes</strong></li>
       </ul>
       
       <a href="https://amzn.to/48djvPb" class="btn" style="width: 100%;">ACHETER LE 40KG →</a>
+      <div class="price-approx">Env. 280€ / haltère</div>
     </div>
 
   </div>
 </section>
 
-<section id="mecanismes" class="mechanism-section container">
-    <h2 style="margin-bottom: 10px;">COMPARAISON : LES 3 SYSTÈMES D'HALTÈRES RÉGLABLES (SMART CLICK vs AUTRES)</h2>
-    <p style="color: var(--text-muted); margin-bottom: 40px;">Comprendre la technologie est crucial pour choisir le bon haltère réglable.</p>
+<section id="mecanismes" class="mechanism-section container" style="padding: 60px 20px; border-bottom: 1px solid var(--border);">
+    <h2 style="margin-bottom: 10px;">POURQUOI PAYER PLUS CHER ?</h2>
+    <p style="color: var(--text-muted);">La différence entre un gadget et un équipement.</p>
 
     <div class="mechanism-grid">
-        
-        <div class="mechanism-card smart-click">
-            <h3 style="color: var(--neon);">1. Smart Click / Rotation Poignée</h3>
-            <p>Le système utilisé par **BRAINGAIN** et d'autres marques premium. L'indexation du poids est intégrée à la poignée.</p>
-            <ul class="pros-list">
-                <li>Très rapide (moins de 2 secondes).</li>
-                <li>Verrouillage mécanique robuste et précis.</li>
-                <li>Peu d'encombrement, l'haltère grossit avec le poids.</li>
-            </ul>
-            <ul class="cons-list">
-                <li>Prix initial élevé.</li>
-                <li>Nécessite le socle pour le changement.</li>
+        <div class="mechanism-card smart-click animate-entry">
+            <h3 style="color: var(--neon);">BRAINGAIN (Smart Click)</h3>
+            <p style="font-size:0.9rem; margin-bottom:15px; color:#ddd;">Rotation du manche. C'est la technologie des salles pro. Robuste, rapide, sans pièces plastiques externes.</p>
+            <ul class="pros-list" style="list-style:none; font-size:0.9rem;">
+                <li>Changement en 1.5 seconde</li>
+                <li>Sensation d'un "vrai" haltère</li>
+                <li>Très compact</li>
             </ul>
         </div>
         
-        <div class="mechanism-card">
-            <h3>2. Système à Molette Latérale (Type Bowflex)</h3>
-            <p>Le mécanisme popularisé par Bowflex. Deux molettes (une de chaque côté) ajustent le poids.</p>
-            <ul class="pros-list">
-                <li>Intuitif et facile à comprendre.</li>
-                <li>Moins cher que le Smart Click.</li>
-            </ul>
-            <ul class="cons-list">
-                <li>Mécanisme souvent en plastique (fragile aux chocs).</li>
-                <li>Grand jeu dans les disques (rattling) lors de l'exécution.</li>
-                <li>Longueur fixe (long même à faible poids).</li>
-            </ul>
-        </div>
-        
-        <div class="mechanism-card">
-            <h3>3. Goupille / Broche (Sélection Manuelle)</h3>
-            <p>Le système le plus ancien et le plus sûr. Une goupille traverse les disques pour verrouiller le poids.</p>
-            <ul class="pros-list">
-                <li>Extrêmement durable et fiable.</li>
-                <li>Design souvent très compact (carré/rectangulaire).</li>
-            </ul>
-            <ul class="cons-list">
-                <li>Lent (nécessite de placer la goupille avec précision).</li>
-                <li>Design massif, non adapté à tous les exercices.</li>
+        <div class="mechanism-card animate-entry delay-1">
+            <h3>Les autres (Molette)</h3>
+            <p style="font-size:0.9rem; margin-bottom:15px; color:#888;">Système type Bowflex souvent copié. Moins cher, mais fragile.</p>
+            <ul class="cons-list" style="list-style:none; font-size:0.9rem;">
+                <li>Mécanisme plastique fragile</li>
+                <li>Haltère très large (gêne les mouvements)</li>
+                <li>Bruit de "cliquetis" (Rattling)</li>
             </ul>
         </div>
     </div>
 </section>
 
-
-<section id="faq" class="faq-section container">
-    <h2 style="margin-bottom: 30px;">FAQ : QUESTIONS FRÉQUENTES SUR LES HALTÈRES RÉGLABLES</h2>
-    <p style="color: var(--text-muted); margin-bottom: 40px;">Nous répondons aux questions les plus fréquentes sur l'utilisation et l'entretien des haltères réglables.</p>
-
+<section id="faq" class="faq-section container" style="padding: 60px 20px;">
+    <h2 style="margin-bottom: 30px;">QUESTIONS FRÉQUENTES</h2>
     <div class="faq-list">
-        
         <div class="faq-item">
             <details>
-                <summary>Quel est le poids minimum et maximum des haltères réglables BRAINGAIN ?</summary>
+                <summary>Le poids est-il en KG ou en LBS ?</summary>
                 <div class="faq-item-content">
-                    <p>Le modèle **15-en-1** commence à **2.5 kg** et monte jusqu'à **24 kg** par main. Le modèle **17-en-1** est plus adapté à l'hypertrophie sérieuse, commençant à **5 kg** et allant jusqu'à **40 kg** par main. Assurez-vous de choisir le 40kg si vous faites du développé couché régulier.</p>
+                    <p>Les versions européennes de BRAINGAIN vendues sur Amazon sont calibrées en <strong>Kilogrammes (KG)</strong>. Pas besoin de calculatrice pendant votre séance.</p>
                 </div>
             </details>
         </div>
-        
         <div class="faq-item">
             <details>
-                <summary>Comment fonctionne la garantie du système Smart Click ?</summary>
+                <summary>Est-ce solide si je le fais tomber ?</summary>
                 <div class="faq-item-content">
-                    <p>La plupart des vendeurs de la marque BRAINGAIN (via Amazon) offrent une garantie standard de 2 ans contre les défauts de fabrication sur le **mécanisme Smart Click**. Cette garantie ne couvre pas les dommages causés par une chute de l'haltère, qui peut détériorer le système interne.</p>
+                    <p style="color: #ff4444; font-weight: bold;">Non.</p>
+                    <p>Aucun haltère réglable (même à 600€) ne supporte les chutes (drops). Le mécanisme de précision interne risque de se désaxer. Si vous devez jeter vos poids, achetez des haltères monoblocs en caoutchouc.</p>
                 </div>
             </details>
         </div>
-        
         <div class="faq-item">
             <details>
-                <summary>Les haltères réglables font-ils du bruit (rattling) lors de l'exercice ?</summary>
+                <summary>Garantie & SAV ?</summary>
                 <div class="faq-item-content">
-                    <p>Tous les **haltères réglables** ont un léger jeu (rattling) par nature, car les disques ne sont pas vissés. Cependant, le design octogonal de BRAINGAIN et son verrouillage centralisé minimisent ce jeu par rapport aux modèles à molette latérale. Il est crucial que l'haltère soit toujours parfaitement verrouillé avant de le soulever.</p>
+                    <p>Garantie constructeur standard de 2 ans sur le mécanisme via Amazon. En cas de problème de blocage, le SAV envoie généralement une poignée de remplacement.</p>
                 </div>
             </details>
         </div>
-        
-        <div class="faq-item">
-            <details>
-                <summary>Puis-je faire tomber les haltères réglables comme des haltères classiques ?</summary>
-                <div class="faq-item-content">
-                    <p style="font-weight: bold; color: red;">NON ! NE JAMAIS LAISSER TOMBER UN HALTÈRE RÉGLABLE.</p>
-                    <p>Le mécanisme interne de sélection du poids est sophistiqué. Un impact violent (même léger) peut désaligner les broches et rendre l'haltère inutilisable. Utilisez-les toujours avec contrôle sur une surface stable.</p>
-                </div>
-            </details>
-        </div>
-        
     </div>
 </section>
 
-<section class="container" style="text-align:center; padding: 80px 0;">
-  <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Le Prochain Clic est le Vôtre.</h2>
-  <p style="margin-bottom: 30px; color: #888;">C'est l'investissement le plus rentable pour votre progression à domicile.</p>
-  <a href="https://amzn.to/48djvPb" class="btn" style="font-size: 1.3rem; padding: 20px 50px; box-shadow: 0 0 20px rgba(204,255,0,0.2);">VOIR LES MEILLEURS PRIX SUR AMAZON</a>
+<section class="container" style="text-align:center; padding: 60px 0;">
+  <h2 style="font-size: 2rem; margin-bottom: 20px;">Passez au niveau supérieur.</h2>
+  <p style="margin-bottom: 30px; color: #888;">Stock souvent limité sur les versions 40kg.</p>
+  <a href="https://amzn.to/48djvPb" class="btn" style="font-size: 1.2rem; padding: 18px 40px; box-shadow: 0 0 20px rgba(204,255,0,0.2);">VÉRIFIER LE STOCK AMAZON</a>
 </section>
 
 <footer>
   <div class="container">
+    <div class="trust-badges">
+        <span class="badge-item">🔒 Paiement Sécurisé</span>
+        <span class="badge-item">🚚 Expédition Amazon</span>
+        <span class="badge-item">⭐ 4.6/5 Avis Clients</span>
+    </div>
     <p style="font-family: 'Oswald'; font-size: 1.2rem; margin-bottom: 10px; color: #fff;">POWER ADJUST // 2025</p>
-    <p>Guide indépendant spécialisé en équipement de force.</p>
-    <p style="opacity: 0.5; margin-top: 20px; font-size: 0.75rem;">
-      *Lien affilié : En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats éligibles. Cela ne change pas le prix pour vous.
+    <p style="opacity: 0.5; font-size: 0.75rem;">
+      Ce site participe au Programme Partenaires d’Amazon EU.
     </p>
   </div>
 </footer>
+
+<div class="mobile-sticky-cta">
+    <a href="https://amzn.to/48djvPb" class="mobile-cta-btn">VOIR L'OFFRE (AMAZON)</a>
+</div>
 
 </body>
 </html>
