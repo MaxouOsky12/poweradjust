@@ -297,26 +297,36 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  margin: 0 auto;
 }
 thead {
   background: rgba(204, 255, 0, 0.1);
 }
 th {
   padding: 15px;
-  text-align: left;
+  text-align: center;
   font-family: 'Oswald';
   font-size: 0.95rem;
   border-bottom: 2px solid var(--neon);
 }
+th:first-child {
+  text-align: left;
+}
 td {
   padding: 15px;
   border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+td:first-child {
+  text-align: left;
+  font-weight: 600;
 }
 tr:hover {
   background: rgba(255,255,255,0.02);
 }
 .highlight-col {
   background: rgba(204, 255, 0, 0.05);
+  font-weight: 600;
 }
 
 /* --- MECHANISMS --- */
